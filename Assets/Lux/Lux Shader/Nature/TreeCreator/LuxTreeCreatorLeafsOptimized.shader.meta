@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: f232fd32319984ff69af71f38061c829
+ShaderImporter:
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 821592e4d1dc80247959ee37a44abc40, type: 3}
+  - _ShadowTex: {fileID: 2800000, guid: a07067e6d29f7654da94f5e269df3535, type: 3}
+  - _BumpSpecMap: {fileID: 2800000, guid: 2ca47b1f62fb1c64381a1031e93a5d2d, type: 3}
+  - _TranslucencyMap: {fileID: 2800000, guid: b6d4890d5123f024e921fafbf04650a5, type: 3}
+  - _DiffCubeIBL: {instanceID: 0}
+  - _SpecCubeIBL: {instanceID: 0}
+  userData: 

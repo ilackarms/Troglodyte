@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{E47BE562-82A3-98DF-6B73-4DD93732C126}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_4;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/UnityPro/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/UnityPro/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\CustomTerrainScriptAtsV2.cs" />
+     <Compile Include="Assets\Arms\Arms_Level_1.fbm\AnimationController.cs" />
+     <Compile Include="Assets\Arms\Arms_Level_1.fbm\TestAnimationScript.cs" />
+     <Compile Include="Assets\AstarExtension.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\AIPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\NavmeshController.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AI\Seeker.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarData.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarMath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\GraphUpdateScene.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\GraphUpdateShape.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AnimationLink.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AstarDebugger.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\AstarEnumFlagAttr.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\BinaryHeap.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\GraphEditorBase.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\GraphModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\Int3.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ListPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink2.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\NodeLink3.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ObjectPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\PathPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\StackPool.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\ThreadControlQueue.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Misc\WindowsStoreCompatibility.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Nodes\GraphNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Path.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\PathHandler.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\JsonConverters.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\JsonSerializer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\SimpleJsonReplacement.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\Serialization\SimpleZipReplacement.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Core\astarclasses.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralGridMover.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\Example12_Procedural\ProceduralWorld.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AIFollow.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\AstarSmoothFollow2.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DoorController.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\DynamicGridObstacle.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\MineBotAI.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\ObjectPlacer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\ExampleScenes\ExampleScripts\TargetMover.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Base.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\GridGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NavMeshGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\GridNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\PointNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\NodeClasses\TriangleMeshNode.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\PointGenerator.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\QuadtreeGraph.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\BBTree.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\EuclideanEmbedding.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\NavMeshRenderer.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Generators\Utilities\ObjImporter.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\AlternativePath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\FunnelModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\Modifiers.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\RaycastModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\SimpleSmoothModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Modifiers\StartEndModifier.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Navmesh\RelevantGraphSurface.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Pathfinders\ABPath.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarChecksum.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarMemory.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarParallel.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\AstarProfiler.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\DotNetReplacements.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\GraphUpdateUtilities.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\LockFreeStack.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\PathUtilities.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
+     <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\CameraShake_StaticNova\ExampleScene\Scripts\ExampleScene.cs" />
+     <Compile Include="Assets\CameraShake_StaticNova\Shake.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\Download\FT_CaveWorm\Script\PlayAnimation.cs" />
+     <Compile Include="Assets\Download\FT_CaveWorm\Script\SubstanceGUI.cs" />
+     <Compile Include="Assets\Download\KnightInChainMail\MyScripts\Mecanim_Control_melee.cs" />
+     <Compile Include="Assets\Lux\Lux Scripts\Lux Cubemapper\Scripts\LuxCubeProcessor.cs" />
+     <Compile Include="Assets\Lux\Lux Scripts\Lux Cubemapper\Scripts\LuxEnvProbe.cs" />
+     <Compile Include="Assets\Lux\Lux Scripts\SetupLux.cs" />
+     <Compile Include="Assets\Lux\Lux Shader\Terrain\Scripts\LuxTerrainControl.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Demo\MyGuiV2.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Balls\AddMaterialOnHit.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Balls\AnimatorBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Balls\LazyLoad.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Balls\ProjectileCollisionBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Balls\SetRandomStartPoint.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Buffs\ShieldCollisionBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Objects\MoveOnGround.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Shots\LineRendererBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Waves\ClothGridCollisionBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Prefabs\Waves\InstanceMaterial.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\Billboard.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\CollisionActiveBehaviour.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\DeadTime.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\EffectSettings.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutLight.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutParticles.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutScale.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutShaderColor.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutShaderFloat.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\FadeInOutStatus.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\InvokeInterval.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\OnStartSendCollision.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\RandomRotateOnStart.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\SetPositionOnHit.cs" />
+     <Compile Include="Assets\Realistic Effects Pack\Scripts\Share\UVTextureAnimator.cs" />
+     <Compile Include="Assets\Resources\Prefabs\Blood\BloodTrails.cs" />
+     <Compile Include="Assets\Resources\Prefabs\Blood\ParticleDestroyer.cs" />
+     <Compile Include="Assets\Scripts\Code\CustomSendMessage.cs" />
+     <Compile Include="Assets\Scripts\Code\DamageBundle.cs" />
+     <Compile Include="Assets\Scripts\Code\Hittable.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\AIState.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\AudioSensor.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\BasicAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\DetectMe.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\Monsters\CaveWormAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\Monsters\Claw.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\Monsters\SquibAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\NavAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\VisualSensor.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\WaypointPath.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BasicTargetingAI.cs" />
+     <Compile Include="Assets\Scripts\Enemy\ConsumableCorpse.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyHighlighting.cs" />
+     <Compile Include="Assets\Scripts\Enemy\FloatingHitPointBar.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Pathfinding\SimplePather.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Soul.cs" />
+     <Compile Include="Assets\Scripts\GUI\CustomCursor.cs" />
+     <Compile Include="Assets\Scripts\GUI\FloatingText.cs" />
+     <Compile Include="Assets\Scripts\GUI\HoveringText.cs" />
+     <Compile Include="Assets\Scripts\GUI\HoveringTexture.cs" />
+     <Compile Include="Assets\Scripts\Global\Global.cs" />
+     <Compile Include="Assets\Scripts\Items\Armor.cs" />
+     <Compile Include="Assets\Scripts\Items\Consumable.cs" />
+     <Compile Include="Assets\Scripts\Items\Equippable.cs" />
+     <Compile Include="Assets\Scripts\Items\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Items\Item.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemFactory.cs" />
+     <Compile Include="Assets\Scripts\Items\PickUpItem.cs" />
+     <Compile Include="Assets\Scripts\Items\Potion.cs" />
+     <Compile Include="Assets\Scripts\Items\Scroll.cs" />
+     <Compile Include="Assets\Scripts\Items\Sellable.cs" />
+     <Compile Include="Assets\Scripts\Items\Slot.cs" />
+     <Compile Include="Assets\Scripts\Items\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Player\Buff.cs" />
+     <Compile Include="Assets\Scripts\Player\Camera\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Player\Camera\HeadBobCamera.cs" />
+     <Compile Include="Assets\Scripts\Player\Camera\SmoothLook.cs" />
+     <Compile Include="Assets\Scripts\Player\CharacterPage.cs" />
+     <Compile Include="Assets\Scripts\Player\CombatSystem.cs" />
+     <Compile Include="Assets\Scripts\Player\FallDamage.cs" />
+     <Compile Include="Assets\Scripts\Player\Inventory\EquippedItemIndex.cs" />
+     <Compile Include="Assets\Scripts\Player\Inventory\Inventory.cs" />
+     <Compile Include="Assets\Scripts\Player\ItemInteractionSystem.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerState.cs" />
+     <Compile Include="Assets\Scripts\Player\SlotInventory.cs" />
+     <Compile Include="Assets\Scripts\Player\SpellSystem.cs" />
+     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
+     <Compile Include="Assets\Scripts\Spells\SpellParticleFactory.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Arrow.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Bow.cs" />
+     <Compile Include="Assets\Scripts\Weapons\Unarmed.cs" />
+     <Compile Include="Assets\Scripts\Weapons\WeaponCollision.cs" />
+     <Compile Include="Assets\Scripts\WorldGen\MapGenerator.cs" />
+     <Compile Include="Assets\Scripts\WorldGen\Piece.cs" />
+     <Compile Include="Assets\Scripts\WorldGen\PieceContent.cs" />
+     <Compile Include="Assets\Shaders\Sources\LightningBolt.cs" />
+     <Compile Include="Assets\Underworld\Origin\Tools\Image Based\DesaturateEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\ColorCorrectionEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\ContrastStretchEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\EdgeDetectEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\GlowEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\GrayscaleEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\MotionBlur.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\NoiseEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\SSAOEffectDepthCutoff.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\SepiaToneEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
+     <Compile Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\_Lux Terrain Shader.txt" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorBark.shader" />
+     <None Include="Assets\0000 ats V2 package\readme_treeBarkShader.txt" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorLeafs.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Lux Internal-PrePassLighting.shader" />
+     <None Include="Assets\Shaders\AlphaVertexLitZ.shader" />
+     <None Include="Assets\Lux\Lux Shader\Detail\Lux Bumped Specular Detail.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Specular.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditive.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Bump.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorBarkRendertex.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Details\WavingGrassBillboard.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\TreeVertexLit.cginc" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Specular.shader" />
+     <None Include="Assets\Lux\Lux Shader\Human\Eye\Lux Eye Ball.shader" />
+     <None Include="Assets\0000 ats V2 package\readme_grassShader.txt" />
+     <None Include="Assets\Underworld\Origin\Tools\Image Based\DesaturateEffect.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\Lux\Demos\02 Lux Terrain Demo\Nobiax Free Rocks\Nobiax Free Rocks.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\Free\FreeDistortionCullBack.shader" />
+     <None Include="Assets\Lux\Lux Shader\Parallax\Lux Bumped Specular Parallax.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorLeafsOptimized.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Specular.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\NFAA.shader" />
+     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Particles.shader" />
+     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular Metalness.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Bump.shader" />
+     <None Include="Assets\Lux\Lux Shader\Transparent\Lux Transparent Eye AO.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Details\VertexLit.shader" />
+     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorLeavesRendertex.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\TreeCreatorBarkRendertex.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\IceShaderDistortion.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\VignetteShader.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
+     <None Include="Assets\Lux\Lux Shader\Lux Bumped Diffuse.shader" />
+     <None Include="Assets\Lux\Lux Shader\Transparent\Lux AlphaTest Bumped Specular.shader" />
+     <None Include="Assets\0000 ats V2 package\ats pathShader Package\Shader\ats Road Path bumped diffuse alphatest.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\Tree.cginc" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Bump.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowCompose.shader" />
+     <None Include="Assets\Realistic Effects Pack\Readme.txt" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Lux Terrain Far.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\SSAA.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Diffuse.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\RadialBlur.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\Distortion.shader" />
+     <None Include="Assets\0000 ats V2 package\ats vertexLitShader Package\Shader\atsv2 vertexlit.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\0000 ats V2 package\atsV2 grassShader Package\atsV2WavingGrass.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorLeafsRendertex.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Lux\Lux Shader\VertexBlend\Lux VertexBlend Simple Bumped Spec .shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionParticlesCutout.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-SimpleWater4.shader" />
+     <None Include="Assets\Lux\Lux Shader\VertexBlend\_Lux VertexBlend Shader.txt" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\DiffuseRimSpecular.shader" />
+     <None Include="Assets\Lux\Lux Shader\VertexBlend\Lux VertexBlend Parallax Height Bumped Spec.shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCullBack+1.shader" />
+     <None Include="Assets\0000 ats V2 package\readme_billboardShader.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Bump.shader" />
+     <None Include="Assets\Shaders\Outlined Diffuse.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Lux Terrain Add Pass.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Rim.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent.shader" />
+     <None Include="Assets\0000 ats V2 package\atsV2 billboardShader package\Tree.cginc" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\Free\FreeDistortionCutOut.shader" />
+     <None Include="Assets\Lux\Lux Shader\Human\Hair\_Lux Hair Shader.txt" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditiveTwoColor.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Explosion.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxLightingDirect.cginc" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Diffuse.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Transparent Diffuse.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\Underworld\!info.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
+     <None Include="Assets\SimpleBloodSplatterSystem\Readme.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Diffuse.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\Free\FreeDistortionCullOff.shader" />
+     <None Include="Assets\Necromancer GUI\Kingthings.txt" />
+     <None Include="Assets\Lux\Lux Shader\BoxProjected\Lux Bumped Specular Boxprojected.shader" />
+     <None Include="Assets\Lux\_Lux Documentation.txt" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Diffuse.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SSAOShader.shader" />
+     <None Include="Assets\0000 ats V2 package\readme_terrainBumpShader.txt" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\DiffuseRim.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ConvertDepth.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCullOff.shader" />
+     <None Include="Assets\Download\KY_magicEffectsFree\ReadMe.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Details\WavingGrass.shader" />
+     <None Include="Assets\Lux\__Lux Readme first important!!!!!!.txt" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
+     <None Include="Assets\Lux\Lux Scripts\Lux Cubemapper\_Lux Cubemapper.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Specular.shader" />
+     <None Include="Assets\0000 ats V2 package\atsV2 UnityTerrainBump Package\TerrainReplacementAtsV2.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Bump.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\Lux\Lux Shader\Human\Hair\Lux Hair.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditiveRGB.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\_Lux TreeCreator Shaders.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Opaque Specular.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\MultiplyDouble.shader" />
+     <None Include="Assets\Underworld\Modules\info_modules.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\Necromancer GUI\Readme.txt" />
+     <None Include="Assets\Lux\Lux Shader\Human\Eye\_Lux Eye Shaders.txt" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionParticles.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Bump.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Details\_Lux Detail Shaders.txt" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxVertFunc.cginc" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+     <None Include="Assets\Lux\Lux Shader\AO_UsingUV2\Lux Bumped Specular AO_UV2.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Explosion2.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Sources\Shaders\FX-Water.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCutOutBack.shader" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Camera-DepthNormalTexture.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque.shader" />
+     <None Include="Assets\JoveFree\Shader\JoveFree.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Ice.shader" />
+     <None Include="Assets\Lux\Demos\00 Shared assets\fontMaterialsetc\FontZtest.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Specular.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Cut Out Opaque Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Transparent Bump.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionEffect.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SepiaToneEffect.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\SimpleBloodSplatterSystem\Scripts\BlendedDecal.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\Lux\Lux Shader\Human\Skin\_Lux Skin Shader.txt" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\VignettingShader.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Distortion\DistortionCutOut.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Tonemapper.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+     <None Include="Assets\Lux\Lux Shader\Human\Skin\Lux Skin.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\IceShaderFastSimple.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\Dissolve.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\Lux\Lux Shader\Human\Eye\Lux Eye AO.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\Lux\Lux Shader\Terrain\Lux Terrain First Pass.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
+     <None Include="Assets\Shaders\Light Bumped Outline.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Lux\Lux Shader\Nature\TreeCreator\LuxTreeCreatorBarkOptimized.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
+     <None Include="Assets\Lux\Lux Shader\Transparent\Lux Transparent Bumped Specular.shader" />
+     <None Include="Assets\Lux\Lux Shader\Transparent\Lux Transparent Bumped Specular 2 Sided.shader" />
+     <None Include="Assets\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\FX-Water4.shader" />
+     <None Include="Assets\Realistic Effects Pack\Shaders\GlowAdditiveSimple.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SimpleClear.shader" />
+     <None Include="Assets\Shaders\Silhouetted Bumped Diffuse.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Cut Out Bump.shader" />
+     <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface Free Opaque Specular.shader" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\Resources\Camera-DepthTexture.shader" />
+     <None Include="Assets\Shaders\Silhouetted Diffuse.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\Lux\Lux Shader\Lux Bumped Specular Materialtest.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurfacePro Hidden Front Opaque Specular.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\Hard Surface Free\HardSurface Shaders\HardSurface SFX Depth Write Only.shader" />
+     <None Include="Assets\Lux\Lux Shader\LuxCore\LuxLightingAmbient.cginc" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
+     <None Include="Assets\Lux\Demos\01 Lux Base Demo\Cerberus Metalness Test\Disclaimer.txt" />
+     <None Include="Assets\0000 ats V2 package\readme_vertexLitShader.txt" />
+     <None Include="Assets\Lux\Lux Shader\Illumination\Lux Illumin AlphaTest Bumped Specular.shader" />
+     <None Include="Assets\Underworld\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>C:/Users/taco crazy/Documents/Darkling/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.JsonFx">
+ <HintPath>C:/Users/taco crazy/Documents/Darkling/Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll</HintPath>
+ </Reference>
+ <Reference Include="RAIN">
+ <HintPath>C:/Users/taco crazy/Documents/Darkling/Assets/RAIN/RAIN.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{0AF34DF8-617F-07E5-0D68-7E2F5208DFA0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{28E2A974-F72A-EE7E-84A3-891DA4D14062}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

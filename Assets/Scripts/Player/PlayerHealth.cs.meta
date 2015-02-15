@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: fd7ed124faa694048bc2417b8cfbc242
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - backgroundTexture: {fileID: 2800000, guid: 97f5a567bf637064789640bd9fcb81c8, type: 3}
+  - foregroundTexture: {fileID: 2800000, guid: c4f0d98f36eb2b24b88d584041776d12, type: 3}
+  - frameTexture: {fileID: 2800000, guid: ffeb202a1a297244b8ccded52f7878be, type: 3}
+  executionOrder: 500
+  icon: {instanceID: 0}
+  userData: 

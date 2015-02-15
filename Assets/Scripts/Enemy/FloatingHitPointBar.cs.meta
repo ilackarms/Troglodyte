@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 03ba52a68bd11f8458ff5e4a1a1f52d5
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - myCamera: {instanceID: 0}
+  - foregroundTexture: {fileID: 2800000, guid: 380f89a3a819fd34389f9454dbb48e82, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

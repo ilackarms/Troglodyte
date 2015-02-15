@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 23b270fd728652740aff62aef34e0081
+labels:
+- CameraShake
+- ObjectShake
+- Shake
+- Vibration
+- Vibrate
+- Motion
+- Camera
+- Object
+- Cam
+- Procedural
+NativeFormatImporter:
+  userData: 

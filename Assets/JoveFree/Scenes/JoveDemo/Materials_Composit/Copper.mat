@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Copper
+  m_Shader: {fileID: 4800000, guid: 5f34199bd90b0a24da78a66b97a16a93, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 690c4912954d15548890a5bedaefbca3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 2881ba8a58849cc429d5c2de1f43fc7c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffMap
+        second:
+          m_Texture: {fileID: 8900000, guid: 28a04add7c9b1964f904b6695cc359ba, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MaskMap
+        second:
+          m_Texture: {fileID: 2800000, guid: c0d9788d9b427ca46a00dfc941a570f7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EnvMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectCube
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RoughMap
+        second:
+          m_Texture: {fileID: 2800000, guid: c156111428dc6ba4ebdf5173c81a090e, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Lightmap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Masktex
+        second:
+          m_Texture: {fileID: 2800000, guid: 1d1d55b5655aaa444b3b9e46a284ebf4, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _nMips
+        second: 1
+      data:
+        first:
+          name: _sphereOffset
+        second: 0
+      data:
+        first:
+          name: _Bumpiness
+        second: 3
+      data:
+        first:
+          name: _Roughness
+        second: 2.74000001
+      data:
+        first:
+          name: _Reflective
+        second: 1
+      data:
+        first:
+          name: _MipLVL
+        second: .349999994
+      data:
+        first:
+          name: _Metal
+        second: 1
+      data:
+        first:
+          name: _Glow
+        second: 1
+      data:
+        first:
+          name: _SpecPower
+        second: 20
+      data:
+        first:
+          name: _AmbPower
+        second: 10
+      data:
+        first:
+          name: _Specularity
+        second: 1
+      data:
+        first:
+          name: _Reflectivity
+        second: 0
+      data:
+        first:
+          name: _SpecDebug
+        second: 0
+      data:
+        first:
+          name: _Exposure
+        second: .923076928
+      data:
+        first:
+          name: _Intensity
+        second: .403846145
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .940298498, g: .923516214, b: .877144098, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: .0399999991, g: .0399999991, b: .0399999991, a: 1}
+      data:
+        first:
+          name: _boxOffset
+        second: {r: 0, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _cSpec
+        second: {r: .949019611, g: .639215708, b: .541176498, a: 1}
+      data:
+        first:
+          name: _zonePos
+        second: {r: 0, g: 0, b: 0, a: 0}

@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\CharacterMotor.js">
+    <Files>
+      <File FileName="Assets\Arms\Arms_Level_1.fbm\AnimationController.cs" Line="35" Column="53" />
+      <File FileName="Assets\Scripts\Items\Weapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\Inventory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Global\Global.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\Inventory\EquippedItemIndex.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\AI\AIState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerState.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\CombatSystem.cs" Line="7" Column="24" />
+      <File FileName="Assets\Scripts\Weapons\Bow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\AI\BasicAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\AI\Monsters\Claw.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\CharacterMotor.js" Line="589" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

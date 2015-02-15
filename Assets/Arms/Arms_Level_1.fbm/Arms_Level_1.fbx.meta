@@ -1,0 +1,2661 @@
+fileFormatVersion: 2
+guid: 943e58803fe08924db3a90f516aa42a8
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature
+    100002: //RootNode
+    100004: CustomShapes
+    100006: GZM_Ball025
+    100008: GZM_Breast_L
+    100010: GZM_Breast_R
+    100012: GZM_Circle025
+    100014: GZM_CircleChest
+    100016: GZM_CircleHips
+    100018: GZM_CircleSpine
+    100020: GZM_CrownHips
+    100022: GZM_Cube025
+    100024: GZM_FaceHead
+    100026: GZM_FaceJaw
+    100028: GZM_Foot
+    100030: GZM_FootIK
+    100032: GZM_Gaze
+    100034: GZM_Hand
+    100036: GZM_HandIK
+    100038: GZM_Head
+    100040: GZM_Jaw
+    100042: GZM_Knuckle
+    100044: GZM_LoLid
+    100046: GZM_Master
+    100048: GZM_Neck
+    100050: GZM_RevFoot
+    100052: GZM_RevToe
+    100054: GZM_Root
+    100056: GZM_Shoulder
+    100058: GZM_Toe
+    100060: GZM_Tongue
+    100062: GZM_UpLid
+    100064: makehuman_transformation_stage_1
+    100066: makehuman_transformation_stage_1:Body
+    100068: makehuman_transformation_stage_1|clavicle.L
+    100070: makehuman_transformation_stage_1|clavicle.R
+    100072: makehuman_transformation_stage_1|deltoid.L
+    100074: makehuman_transformation_stage_1|deltoid.R
+    100076: makehuman_transformation_stage_1|f_index.01.L
+    100078: makehuman_transformation_stage_1|f_index.01.R
+    100080: makehuman_transformation_stage_1|f_index.02.L
+    100082: makehuman_transformation_stage_1|f_index.02.R
+    100084: makehuman_transformation_stage_1|f_index.03.L
+    100086: makehuman_transformation_stage_1|f_index.03.R
+    100088: makehuman_transformation_stage_1|f_middle.01.L
+    100090: makehuman_transformation_stage_1|f_middle.01.R
+    100092: makehuman_transformation_stage_1|f_middle.02.L
+    100094: makehuman_transformation_stage_1|f_middle.02.R
+    100096: makehuman_transformation_stage_1|f_middle.03.L
+    100098: makehuman_transformation_stage_1|f_middle.03.R
+    100100: makehuman_transformation_stage_1|f_pinky.01.L
+    100102: makehuman_transformation_stage_1|f_pinky.01.R
+    100104: makehuman_transformation_stage_1|f_pinky.02.L
+    100106: makehuman_transformation_stage_1|f_pinky.02.R
+    100108: makehuman_transformation_stage_1|f_pinky.03.L
+    100110: makehuman_transformation_stage_1|f_pinky.03.R
+    100112: makehuman_transformation_stage_1|f_ring.01.L
+    100114: makehuman_transformation_stage_1|f_ring.01.R
+    100116: makehuman_transformation_stage_1|f_ring.02.L
+    100118: makehuman_transformation_stage_1|f_ring.02.R
+    100120: makehuman_transformation_stage_1|f_ring.03.L
+    100122: makehuman_transformation_stage_1|f_ring.03.R
+    100124: makehuman_transformation_stage_1|forearm.L
+    100126: makehuman_transformation_stage_1|forearm.L.001
+    100128: makehuman_transformation_stage_1|forearm.R
+    100130: makehuman_transformation_stage_1|forearm.R.001
+    100132: makehuman_transformation_stage_1|hand.L
+    100134: makehuman_transformation_stage_1|hand.R
+    100136: makehuman_transformation_stage_1|palm_index.L
+    100138: makehuman_transformation_stage_1|palm_index.R
+    100140: makehuman_transformation_stage_1|palm_middle.L
+    100142: makehuman_transformation_stage_1|palm_middle.R
+    100144: makehuman_transformation_stage_1|palm_pinky.L
+    100146: makehuman_transformation_stage_1|palm_pinky.R
+    100148: makehuman_transformation_stage_1|palm_ring.L
+    100150: makehuman_transformation_stage_1|palm_ring.R
+    100152: makehuman_transformation_stage_1|thumb.01.L
+    100154: makehuman_transformation_stage_1|thumb.01.R
+    100156: makehuman_transformation_stage_1|thumb.02.L
+    100158: makehuman_transformation_stage_1|thumb.02.R
+    100160: makehuman_transformation_stage_1|thumb.03.L
+    100162: makehuman_transformation_stage_1|thumb.03.R
+    100164: makehuman_transformation_stage_1|upper_arm.L
+    100166: makehuman_transformation_stage_1|upper_arm.R
+    400000: Armature
+    400002: //RootNode
+    400004: CustomShapes
+    400006: GZM_Ball025
+    400008: GZM_Breast_L
+    400010: GZM_Breast_R
+    400012: GZM_Circle025
+    400014: GZM_CircleChest
+    400016: GZM_CircleHips
+    400018: GZM_CircleSpine
+    400020: GZM_CrownHips
+    400022: GZM_Cube025
+    400024: GZM_FaceHead
+    400026: GZM_FaceJaw
+    400028: GZM_Foot
+    400030: GZM_FootIK
+    400032: GZM_Gaze
+    400034: GZM_Hand
+    400036: GZM_HandIK
+    400038: GZM_Head
+    400040: GZM_Jaw
+    400042: GZM_Knuckle
+    400044: GZM_LoLid
+    400046: GZM_Master
+    400048: GZM_Neck
+    400050: GZM_RevFoot
+    400052: GZM_RevToe
+    400054: GZM_Root
+    400056: GZM_Shoulder
+    400058: GZM_Toe
+    400060: GZM_Tongue
+    400062: GZM_UpLid
+    400064: makehuman_transformation_stage_1
+    400066: makehuman_transformation_stage_1:Body
+    400068: makehuman_transformation_stage_1|clavicle.L
+    400070: makehuman_transformation_stage_1|clavicle.R
+    400072: makehuman_transformation_stage_1|deltoid.L
+    400074: makehuman_transformation_stage_1|deltoid.R
+    400076: makehuman_transformation_stage_1|f_index.01.L
+    400078: makehuman_transformation_stage_1|f_index.01.R
+    400080: makehuman_transformation_stage_1|f_index.02.L
+    400082: makehuman_transformation_stage_1|f_index.02.R
+    400084: makehuman_transformation_stage_1|f_index.03.L
+    400086: makehuman_transformation_stage_1|f_index.03.R
+    400088: makehuman_transformation_stage_1|f_middle.01.L
+    400090: makehuman_transformation_stage_1|f_middle.01.R
+    400092: makehuman_transformation_stage_1|f_middle.02.L
+    400094: makehuman_transformation_stage_1|f_middle.02.R
+    400096: makehuman_transformation_stage_1|f_middle.03.L
+    400098: makehuman_transformation_stage_1|f_middle.03.R
+    400100: makehuman_transformation_stage_1|f_pinky.01.L
+    400102: makehuman_transformation_stage_1|f_pinky.01.R
+    400104: makehuman_transformation_stage_1|f_pinky.02.L
+    400106: makehuman_transformation_stage_1|f_pinky.02.R
+    400108: makehuman_transformation_stage_1|f_pinky.03.L
+    400110: makehuman_transformation_stage_1|f_pinky.03.R
+    400112: makehuman_transformation_stage_1|f_ring.01.L
+    400114: makehuman_transformation_stage_1|f_ring.01.R
+    400116: makehuman_transformation_stage_1|f_ring.02.L
+    400118: makehuman_transformation_stage_1|f_ring.02.R
+    400120: makehuman_transformation_stage_1|f_ring.03.L
+    400122: makehuman_transformation_stage_1|f_ring.03.R
+    400124: makehuman_transformation_stage_1|forearm.L
+    400126: makehuman_transformation_stage_1|forearm.L.001
+    400128: makehuman_transformation_stage_1|forearm.R
+    400130: makehuman_transformation_stage_1|forearm.R.001
+    400132: makehuman_transformation_stage_1|hand.L
+    400134: makehuman_transformation_stage_1|hand.R
+    400136: makehuman_transformation_stage_1|palm_index.L
+    400138: makehuman_transformation_stage_1|palm_index.R
+    400140: makehuman_transformation_stage_1|palm_middle.L
+    400142: makehuman_transformation_stage_1|palm_middle.R
+    400144: makehuman_transformation_stage_1|palm_pinky.L
+    400146: makehuman_transformation_stage_1|palm_pinky.R
+    400148: makehuman_transformation_stage_1|palm_ring.L
+    400150: makehuman_transformation_stage_1|palm_ring.R
+    400152: makehuman_transformation_stage_1|thumb.01.L
+    400154: makehuman_transformation_stage_1|thumb.01.R
+    400156: makehuman_transformation_stage_1|thumb.02.L
+    400158: makehuman_transformation_stage_1|thumb.02.R
+    400160: makehuman_transformation_stage_1|thumb.03.L
+    400162: makehuman_transformation_stage_1|thumb.03.R
+    400164: makehuman_transformation_stage_1|upper_arm.L
+    400166: makehuman_transformation_stage_1|upper_arm.R
+    2300000: GZM_Ball025
+    2300002: GZM_Breast_L
+    2300004: GZM_Breast_R
+    2300006: GZM_Circle025
+    2300008: GZM_CircleChest
+    2300010: GZM_CircleHips
+    2300012: GZM_CircleSpine
+    2300014: GZM_CrownHips
+    2300016: GZM_Cube025
+    2300018: GZM_FaceHead
+    2300020: GZM_FaceJaw
+    2300022: GZM_Foot
+    2300024: GZM_FootIK
+    2300026: GZM_Gaze
+    2300028: GZM_Hand
+    2300030: GZM_HandIK
+    2300032: GZM_Head
+    2300034: GZM_Jaw
+    2300036: GZM_Knuckle
+    2300038: GZM_LoLid
+    2300040: GZM_Master
+    2300042: GZM_Neck
+    2300044: GZM_RevFoot
+    2300046: GZM_RevToe
+    2300048: GZM_Root
+    2300050: GZM_Shoulder
+    2300052: GZM_Toe
+    2300054: GZM_Tongue
+    2300056: GZM_UpLid
+    3300000: GZM_Ball025
+    3300002: GZM_Breast_L
+    3300004: GZM_Breast_R
+    3300006: GZM_Circle025
+    3300008: GZM_CircleChest
+    3300010: GZM_CircleHips
+    3300012: GZM_CircleSpine
+    3300014: GZM_CrownHips
+    3300016: GZM_Cube025
+    3300018: GZM_FaceHead
+    3300020: GZM_FaceJaw
+    3300022: GZM_Foot
+    3300024: GZM_FootIK
+    3300026: GZM_Gaze
+    3300028: GZM_Hand
+    3300030: GZM_HandIK
+    3300032: GZM_Head
+    3300034: GZM_Jaw
+    3300036: GZM_Knuckle
+    3300038: GZM_LoLid
+    3300040: GZM_Master
+    3300042: GZM_Neck
+    3300044: GZM_RevFoot
+    3300046: GZM_RevToe
+    3300048: GZM_Root
+    3300050: GZM_Shoulder
+    3300052: GZM_Toe
+    3300054: GZM_Tongue
+    3300056: GZM_UpLid
+    4300000: makehuman_transformation_stage_1:Body
+    7400000: slam
+    7400002: makehuman_transformation_stage_1|CameraAction.001
+    7400004: slash
+    7400006: makehuman_transformation_stage_1:Body|CameraAction.001
+    7400008: CustomShapes|CameraAction.001
+    7400010: GZM_CircleHips|CameraAction.001
+    7400012: GZM_FaceHead|CameraAction.001
+    7400014: GZM_Tongue|CameraAction.001
+    7400016: GZM_LoLid|CameraAction.001
+    7400018: GZM_Gaze|CameraAction.001
+    7400020: GZM_Root|CameraAction.001
+    7400022: GZM_Neck|CameraAction.001
+    7400024: GZM_Foot|CameraAction.001
+    7400026: GZM_RevToe|CameraAction.001
+    7400028: GZM_Cube025|CameraAction.001
+    7400030: GZM_Breast_R|CameraAction.001
+    7400032: GZM_Toe|CameraAction.001
+    7400034: GZM_Knuckle|CameraAction.001
+    7400036: GZM_UpLid|CameraAction.001
+    7400038: GZM_Hand|CameraAction.001
+    7400040: GZM_Circle025|CameraAction.001
+    7400042: GZM_HandIK|CameraAction.001
+    7400044: GZM_Breast_L|CameraAction.001
+    7400046: GZM_Jaw|CameraAction.001
+    7400048: GZM_RevFoot|CameraAction.001
+    7400050: GZM_Master|CameraAction.001
+    7400052: GZM_Ball025|CameraAction.001
+    7400054: GZM_CrownHips|CameraAction.001
+    7400056: GZM_FootIK|CameraAction.001
+    7400058: GZM_CircleChest|CameraAction.001
+    7400060: GZM_FaceJaw|CameraAction.001
+    7400062: GZM_Shoulder|CameraAction.001
+    7400064: GZM_CircleSpine|CameraAction.001
+    7400066: GZM_Head|CameraAction.001
+    7400068: ready
+    7400070: stab
+    7400072: walk
+    7400074: idle
+    7400076: shootLoad
+    7400078: shootRelease
+    7400080: spell1
+    7400082: spell2
+    7400084: spell3
+    7400086: spell4
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: makehuman_transformation_stage_1:Body
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ready
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 0
+      lastFrame: 37
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: slash
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 37
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: slam
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 78
+      lastFrame: 106
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: stab
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 103
+      lastFrame: 132
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 143
+      lastFrame: 175
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 190
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: shootLoad
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 245
+      lastFrame: 271
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: shootRelease
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 271
+      lastFrame: 281
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: spell1
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 281
+      lastFrame: 305
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: spell2
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 305
+      lastFrame: 329
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: spell3
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 329
+      lastFrame: 353
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: spell4
+      takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
+      firstFrame: 353
+      lastFrame: 371
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: CustomShapes
+        weight: 1
+      - path: CustomShapes/GZM_Ball025
+        weight: 1
+      - path: CustomShapes/GZM_Breast_L
+        weight: 1
+      - path: CustomShapes/GZM_Breast_R
+        weight: 1
+      - path: CustomShapes/GZM_Circle025
+        weight: 1
+      - path: CustomShapes/GZM_CircleChest
+        weight: 1
+      - path: CustomShapes/GZM_CircleHips
+        weight: 1
+      - path: CustomShapes/GZM_CircleSpine
+        weight: 1
+      - path: CustomShapes/GZM_CrownHips
+        weight: 1
+      - path: CustomShapes/GZM_Cube025
+        weight: 1
+      - path: CustomShapes/GZM_FaceHead
+        weight: 1
+      - path: CustomShapes/GZM_FaceJaw
+        weight: 1
+      - path: CustomShapes/GZM_Foot
+        weight: 1
+      - path: CustomShapes/GZM_FootIK
+        weight: 1
+      - path: CustomShapes/GZM_Gaze
+        weight: 1
+      - path: CustomShapes/GZM_Hand
+        weight: 1
+      - path: CustomShapes/GZM_HandIK
+        weight: 1
+      - path: CustomShapes/GZM_Head
+        weight: 1
+      - path: CustomShapes/GZM_Jaw
+        weight: 1
+      - path: CustomShapes/GZM_Knuckle
+        weight: 1
+      - path: CustomShapes/GZM_LoLid
+        weight: 1
+      - path: CustomShapes/GZM_Master
+        weight: 1
+      - path: CustomShapes/GZM_Neck
+        weight: 1
+      - path: CustomShapes/GZM_RevFoot
+        weight: 1
+      - path: CustomShapes/GZM_RevToe
+        weight: 1
+      - path: CustomShapes/GZM_Root
+        weight: 1
+      - path: CustomShapes/GZM_Shoulder
+        weight: 1
+      - path: CustomShapes/GZM_Toe
+        weight: 1
+      - path: CustomShapes/GZM_Tongue
+        weight: 1
+      - path: CustomShapes/GZM_UpLid
+        weight: 1
+      - path: makehuman_transformation_stage_1
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.L/makehuman_transformation_stage_1|deltoid.L/makehuman_transformation_stage_1|upper_arm.L/makehuman_transformation_stage_1|forearm.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|clavicle.R/makehuman_transformation_stage_1|deltoid.R/makehuman_transformation_stage_1|upper_arm.R/makehuman_transformation_stage_1|forearm.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_index.L/makehuman_transformation_stage_1|f_index.01.L/makehuman_transformation_stage_1|f_index.02.L/makehuman_transformation_stage_1|f_index.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_middle.L/makehuman_transformation_stage_1|f_middle.01.L/makehuman_transformation_stage_1|f_middle.02.L/makehuman_transformation_stage_1|f_middle.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_pinky.L/makehuman_transformation_stage_1|f_pinky.01.L/makehuman_transformation_stage_1|f_pinky.02.L/makehuman_transformation_stage_1|f_pinky.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|palm_ring.L/makehuman_transformation_stage_1|f_ring.01.L/makehuman_transformation_stage_1|f_ring.02.L/makehuman_transformation_stage_1|f_ring.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.L.001/makehuman_transformation_stage_1|hand.L/makehuman_transformation_stage_1|thumb.01.L/makehuman_transformation_stage_1|thumb.02.L/makehuman_transformation_stage_1|thumb.03.L
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_index.R/makehuman_transformation_stage_1|f_index.01.R/makehuman_transformation_stage_1|f_index.02.R/makehuman_transformation_stage_1|f_index.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_middle.R/makehuman_transformation_stage_1|f_middle.01.R/makehuman_transformation_stage_1|f_middle.02.R/makehuman_transformation_stage_1|f_middle.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_pinky.R/makehuman_transformation_stage_1|f_pinky.01.R/makehuman_transformation_stage_1|f_pinky.02.R/makehuman_transformation_stage_1|f_pinky.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|palm_ring.R/makehuman_transformation_stage_1|f_ring.01.R/makehuman_transformation_stage_1|f_ring.02.R/makehuman_transformation_stage_1|f_ring.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R
+        weight: 1
+      - path: makehuman_transformation_stage_1/makehuman_transformation_stage_1|forearm.R.001/makehuman_transformation_stage_1|hand.R/makehuman_transformation_stage_1|thumb.01.R/makehuman_transformation_stage_1|thumb.02.R/makehuman_transformation_stage_1|thumb.03.R
+        weight: 1
+      - path: makehuman_transformation_stage_1:Body
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .349999994
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

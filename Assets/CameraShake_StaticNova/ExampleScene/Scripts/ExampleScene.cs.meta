@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: fb6e80f8d8eae15438469c92004c23e3
+labels:
+- CameraShake
+- ObjectShake
+- Shake
+- Vibration
+- Vibrate
+- Motion
+- Camera
+- Object
+- Cam
+- Procedural
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
