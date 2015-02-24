@@ -142,10 +142,23 @@ namespace AssemblyCSharp
 			return null;
 		}
 
+
 		public GameObject InstantiateProjectile(string prefabName, Transform transform, float speed){
 			Vector3 position = transform.position + transform.forward*0.5f;
 			GameObject clone = (GameObject) MonoBehaviour.Instantiate(itemPrefabDatabase[prefabName],position,transform.rotation);
 			Rigidbody cloneRigidBody  = clone.GetComponentInChildren<Rigidbody>();
+			cloneRigidBody.velocity = transform.forward * speed;
+			return clone;
+		}
+
+
+		//instantiate arrow!
+		public GameObject InstantiateArrow(Transform transform, float speed){
+//			Vector3 position = transform.position + transform.forward*0.5f;
+			GameObject clone = (GameObject) MonoBehaviour.Instantiate(Global.LoadArrow, Global.LoadArrow.transform.position + transform.forward.normalized, Global.LoadArrow.transform.rotation);
+			clone.SetActive(true);
+			clone.layer = 0;
+			Rigidbody cloneRigidBody  = clone.AddComponent<Rigidbody>();
 			cloneRigidBody.velocity = transform.forward * speed;
 			return clone;
 		}

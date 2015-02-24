@@ -1,18 +1,21 @@
 using System;	
+using System.Collections;
 using UnityEngine;
 
 public class Bow : WeaponCollision {
 	//public static float ARROW_COOLDOWN=1; //2 second cooldown
 	public float arrowCooldown=0;
+	public Boolean fireDelay = false;
 
 	//bows never actually collide or anythig! no collider!
 	public override void notifyAttacking(bool value, Weapon weapon){
-		if(value){
+		if(value && arrowCooldown<=0){
 			//Debug.Log ("Attacking with bow! (this is the bow collider speaking");
 			attacking = value;
 			this.weapon = weapon;
-			Invoke ("fireArrow",0.001f);
+			fireArrow();
 			//fireArrow ();
+			arrowCooldown = 0.25f;
 		}
 	}
 
@@ -38,13 +41,18 @@ public class Bow : WeaponCollision {
 		if(weapon!=null){
 			GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
 			Transform arrowTransform = camera.transform;
-			GameObject arrow = Global.itemFactory.InstantiateProjectile ("Arrow", arrowTransform, 40.0f);
-			arrow.transform.RotateAround (arrow.transform.position, arrow.transform.up, 90);
-			arrow.AddComponent<Arrow>();
-			Arrow arrowCollision = arrow.GetComponent<Arrow> ();
+			GameObject arrow = Global.itemFactory.InstantiateArrow (arrowTransform, 40.0f);
+			//arrow.transform.RotateAround (arrow.transform.position, arrow.transform.up, 90);
+			Arrow arrowCollision = arrow.AddComponent<Arrow>();
 			arrowCollision.weapon = weapon;
 			arrowCollision.parent = parent;
+			StartCoroutine(destroyArrow(3.0f, arrow));
 		}
+	}
+
+	IEnumerator destroyArrow(float waitTime, GameObject arrow){
+		yield return new WaitForSeconds(waitTime);
+		GameObject.Destroy(arrow);
 	}
 }
 

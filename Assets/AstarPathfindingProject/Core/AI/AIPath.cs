@@ -34,7 +34,7 @@ using Pathfinding.RVO;
  * it will use Transform.Translate which is guaranteed to always work.
  */
 [RequireComponent(typeof(Seeker))]
-[RequireComponent(typeof(CharacterController))]
+//[RequireComponent(typeof(CharacterController))]
 [AddComponentMenu("Pathfinding/AI/AIPath (generic)")]
 public class AIPath : MonoBehaviour {
 	
@@ -63,7 +63,7 @@ public class AIPath : MonoBehaviour {
 	/** Maximum velocity.
 	 * This is the maximum speed in world units per second.
 	 */
-	public float speed = 3;
+	public float speed = 1;
 	
 	/** Rotation speed.
 	 * Rotation is calculated using Quaternion.SLerp. This variable represents the damping, the higher, the faster it will be able to rotate.
@@ -134,6 +134,9 @@ public class AIPath : MonoBehaviour {
 	protected Vector3 lastFoundWaypointPosition;
 	protected float lastFoundWaypointTime = -9999;
 
+
+	public BasicAI ai;
+
 	/** Returns if the end-of-path has been reached
 	 * \see targetReached */
 	public bool TargetReached {
@@ -161,6 +164,8 @@ public class AIPath : MonoBehaviour {
 		controller = GetComponent<CharacterController>();
 		navController = GetComponent<NavmeshController>();
 		rigid = rigidbody;
+		ai = GetComponent<BasicAI>();
+
 	}
 	
 	/** Starts searching for paths.
@@ -318,7 +323,7 @@ public class AIPath : MonoBehaviour {
 
 		return tr.position;
 	}
-	
+
 	public virtual void Update () {
 		
 		if (!canMove) { return; }
@@ -328,13 +333,17 @@ public class AIPath : MonoBehaviour {
 		//Rotate towards targetDirection (filled in by CalculateVelocity)
 		RotateTowards (targetDirection);
 	
+		ai.RotateTowards(dir);
+
 		if (navController != null) {
-		} else if (controller != null) {
-			controller.SimpleMove (dir);
 		} else if (rigid != null) {
-			rigid.AddForce (dir);
+			//rigid.AddForce (dir * ai.baseMoveSpeed);
+			rigid.velocity = (dir * ai.baseMoveSpeed);
+		} else if (controller != null) {
+			//controller.SimpleMove (dir);
+			controller.SimpleMove(dir * ai.baseMoveSpeed); //???
 		} else {
-			transform.Translate (dir*Time.deltaTime, Space.World);
+			transform.Translate (dir*Time.deltaTime* ai.baseMoveSpeed, Space.World);
 		}
 	}
 	
@@ -364,7 +373,12 @@ public class AIPath : MonoBehaviour {
 	 * /see currentWaypointIndex
 	 */
 	protected Vector3 CalculateVelocity (Vector3 currentPosition) {
-		if (path == null || path.vectorPath == null || path.vectorPath.Count == 0) return Vector3.zero; 
+		if (path == null || path.vectorPath == null || path.vectorPath.Count == 0){
+			Debug.LogWarning(gameObject +"'s path is "+path);
+//			Debug.Log("path.vectorPath is "+path.vectorPath);
+//			Debug.Log("path.vectorPath.Count is"+path.vectorPath.Count);
+			return Vector3.zero; 
+		}
 		
 		List<Vector3> vPath = path.vectorPath;
 		//Vector3 currentPosition = GetFeetPosition();
@@ -437,6 +451,8 @@ public class AIPath : MonoBehaviour {
 		
 		Quaternion rot = tr.rotation;
 		Quaternion toTarget = Quaternion.LookRotation (dir);
+
+		transform.rotation = Quaternion.Slerp (transform.rotation, toTarget, Time.deltaTime);
 		
 		rot = Quaternion.Slerp (rot,toTarget,turningSpeed*Time.deltaTime);
 		Vector3 euler = rot.eulerAngles;

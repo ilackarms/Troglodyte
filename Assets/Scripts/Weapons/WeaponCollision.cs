@@ -24,6 +24,10 @@ public class WeaponCollision : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
+		if(other.gameObject.tag == "Sensor"){
+			Physics.IgnoreCollision(other.collider, transform.root.collider); // return; //ignore collisions with sensor layer
+			return;
+		}
 		if (attacking){
 			RaycastHit hit;
 			if(Physics.Raycast(transform.position, transform.forward, out hit))

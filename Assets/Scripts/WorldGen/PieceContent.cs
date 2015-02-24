@@ -68,6 +68,7 @@ public class PieceContent : MonoBehaviour {
 			//think of possible uses.. when monsters die, piece gets altered in some way.
 			GameObject obj = (GameObject) Instantiate(randomGameObjects[i], transform.position, randomGameObjects[i].transform.rotation );
 			obj.SetActive(true); //in case the instantiated objects are still inactive
+			obj.transform.localScale = new Vector3(1,1,1);
 		}
 	}
 

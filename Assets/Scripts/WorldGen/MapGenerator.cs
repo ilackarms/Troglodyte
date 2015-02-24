@@ -716,6 +716,8 @@ public class MapGenerator : MonoBehaviour {
 		foreach(GridGraph gg in AstarPath.active.graphs){
 			gg.ErodeWalkableArea();
 		}
+
+
 	}
 
 	void populateMap(){

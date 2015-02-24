@@ -18,12 +18,15 @@ public class AnimationController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		animation.CrossFade(animationName);
+		if(!animation[animationName].enabled){
+			animation.CrossFade(animationName);
+		}
 		animation[animationName].speed = animationSpeed;
 	}
 
 	public void notifyAnimation(string animationName, float speed){
 		this.animationName = animationName;
+		animationSpeed=speed;
 	}
 
 	public float getAnimationTime(string animaationName, float speed){

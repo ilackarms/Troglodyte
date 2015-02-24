@@ -35,7 +35,7 @@ public class CaveWormAI : BasicAI {
 		chasing = new ChasingState (this);
 		dead = new DeadState(this);
 		
-		setState(idleState);
+		setState(wanderState);
 		Debug.Log("State initialized to"+state);
 
 		destination = new GameObject(); //make empty gameobject, move position to random point and set Waypoint as the target
@@ -59,7 +59,7 @@ public class CaveWormAI : BasicAI {
 		baseIceDamage = 0;
 		baseChaosDamage = 0;
 		baseHealthRegen = 0;
-		baseMoveSpeed = 5;
+		baseMoveSpeed = 5f;
 		baseAttackSpeed = 1;
 		baseLifeLeech = 0;
 		baseSpellDamage = 0; //int
@@ -209,7 +209,7 @@ public class CaveWormAI : BasicAI {
 		{
 			if(!executedThisCycle){
 				executedThisCycle = true;
-				randomPoint = AstarExtension.findRandomConnectedNodeFast(ai.transform.position, 25);
+				randomPoint = AstarExtension.findRandomConnectedNodeFast(ai.transform.position, 5);
 			}
 		}
 	}
@@ -261,6 +261,7 @@ public class CaveWormAI : BasicAI {
 			//ai.pathfinder.target = ai.transform;
 			//ai.pathfinder.canMove = false;
 			executeOncePerCycle();
+			ai.RotateTowards(ai.target.transform);
 		}
 		protected override void executeOnce ()
 		{

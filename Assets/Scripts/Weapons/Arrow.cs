@@ -20,20 +20,30 @@ public class Arrow : WeaponCollision{
 	
 	//arrow prefab must have trigger collider and rigidbody
 	void OnTriggerEnter(Collider other){
+		if(other.gameObject.tag == "Sensor"){
+			Physics.IgnoreCollision(other.collider, transform.root.collider); // return; //ignore collisions with sensor layer
+			return;
+		}
 		if(weapon!=null){
 			if (attacking){				
 				RaycastHit hit;
 				if(Physics.Raycast(transform.position, transform.forward, out hit)){
 					Debug.Log("Point of contact :" + hit.point);
 				}
-				CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
-				CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "bleed", hit, SendMessageOptions.DontRequireReceiver);
+				//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
+				//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "bleed", hit, SendMessageOptions.DontRequireReceiver);
 				//other.transform.SendMessageUpwards ("GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
 				//other.transform.SendMessageUpwards ("bleed", hit, SendMessageOptions.DontRequireReceiver);
+				other.transform.SendMessageUpwards("GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
+				other.transform.BroadcastMessage("GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
 				attacking=false;
 				destroyTimer=0.05f;
 			}
 		}
+	}
+
+	void OnCollisionEnter(Collision collision){
+		Physics.IgnoreCollision(this.collider, collision.collider);
 	}
 }
 

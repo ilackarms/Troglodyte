@@ -210,7 +210,9 @@ abstract public class PlayerState {
 			base.execute();
 			//if player releases click or somehow switches weapons
 			if(Input.GetButtonUp("Fire1")) bowDrawn = false;
+
 			if(stateTime <= 0 && !bowDrawn) {
+				animationSpeed = 1.0f;
 				player.setState("BowRelease");
 //				Debug.LogWarning("bow release is a go!");
 			}

@@ -19,6 +19,9 @@ public class SquibAI : BasicAI {
 	// Use this for initialization
 	new void Start () {
 		base.Start ();
+		if(pathfinder == null){
+			pathfinder = gameObject.AddComponent<AIPath>();
+		}
 		pathfinder.endReachedDistance = baseAttackRange / 2;
 		ATTACK_TIME = animation["Attack"].clip.length / statistics.AttackSpeed;
 		
@@ -31,7 +34,8 @@ public class SquibAI : BasicAI {
 		
 		setState(wanderState);
 		Debug.Log("State initialized to"+state);
-		
+
+		destination = new GameObject(); //make empty gameobject, move position to random point and set Waypoint as the target
 	}
 	
 	/// <summary>
@@ -51,7 +55,7 @@ public class SquibAI : BasicAI {
 		baseIceDamage = 0;
 		baseChaosDamage = 0;
 		baseHealthRegen = 0;
-		baseMoveSpeed = 3;
+		baseMoveSpeed = 3f;
 		baseAttackSpeed = 1;
 		baseLifeLeech = 0;
 		baseSpellDamage = 0; //int
@@ -135,7 +139,7 @@ public class SquibAI : BasicAI {
 		
 	//idle state
 	public class IdleState : AIState {
-		public IdleState(BasicAI ai) : base(ai, "Idle", 1){
+		public IdleState(BasicAI ai) : base(ai, "Floating", 1){
 			
 		}
 		protected override void execute ()
@@ -159,7 +163,7 @@ public class SquibAI : BasicAI {
 		public const float WANDER_RANGE = 5.0f;
 		public Vector3 randomPoint;
 		
-		public WanderingState(BasicAI ai) : base(ai, "Walk", 0.5f){
+		public WanderingState(BasicAI ai) : base(ai, "Floating", 0.5f){
 			
 		}
 		protected override void execute ()

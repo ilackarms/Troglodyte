@@ -1462,7 +1462,7 @@ ModelImporter:
       takeName: makehuman_transformation_stage_1|makehuman_transformation_stage_1Action.002
       firstFrame: 245
       lastFrame: 271
-      wrapMode: 0
+      wrapMode: 8
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0

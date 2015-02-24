@@ -79,10 +79,14 @@ public abstract class BasicAI : Hittable {
 			if(ally.activeSelf) ally.SendMessage("notifyHostileEncountered", SendMessageOptions.DontRequireReceiver);
 		}
 	}
-	
+
+	public string stateName;
 	// Update is called once per frame
 	protected void Update () {
-		if(state!=null) state.update ();
+		if(state!=null){
+			state.update ();
+			stateName = state.animationClip;
+		}
 		checkStateConditions();
 		//update health status
 		healthBar.currentHealth = statistics.CurrentHP;
@@ -170,11 +174,17 @@ public abstract class BasicAI : Hittable {
 	/// Rotates towards target (used when stopped but still rotating)
 	/// </summary>
 	/// <param name="target">Target.</param>
-	/*public void RotateTowards(Transform target){
+	public void RotateTowards(Transform target){
 		Vector3 direction = (target.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation (direction);
 		transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime);
-	}*/
+	}
+
+	
+	public void RotateTowards(Vector3 direction){
+		Quaternion lookRotation = Quaternion.LookRotation (direction);
+		transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime);
+	}
 
 	/// <summary>
 	/// Sets the destination.
@@ -244,6 +254,8 @@ public abstract class BasicAI : Hittable {
 		
 		public float HealthRegen;
 		public float ManaRegen;
+
+		public string stateName;
 
 
 		public float calculateDamage(Weapon weapon){
