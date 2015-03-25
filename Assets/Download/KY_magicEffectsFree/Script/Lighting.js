@@ -5,7 +5,7 @@ public var flashFlg:boolean = false;
 public var flashTimer:float = 0.3;
 
 function Start () {
-	lightPower = this.light;
+	lightPower = this.GetComponent.<Light>();
 	
 	if( flashFlg ){
 		lightPower.enabled = false;

@@ -18,10 +18,10 @@ public class AnimationController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(!animation[animationName].enabled){
-			animation.CrossFade(animationName);
+		if(!GetComponent<Animation>()[animationName].enabled){
+			GetComponent<Animation>().CrossFade(animationName);
 		}
-		animation[animationName].speed = animationSpeed;
+		GetComponent<Animation>()[animationName].speed = animationSpeed;
 	}
 
 	public void notifyAnimation(string animationName, float speed){
@@ -30,9 +30,9 @@ public class AnimationController : MonoBehaviour {
 	}
 
 	public float getAnimationTime(string animaationName, float speed){
-		float originalSpeed = animation[animationName].speed;
-		animation[animationName].speed = speed;
-		float animTime = animation[animationName].clip.length;
+		float originalSpeed = GetComponent<Animation>()[animationName].speed;
+		GetComponent<Animation>()[animationName].speed = speed;
+		float animTime = GetComponent<Animation>()[animationName].clip.length;
 //		Debug.LogWarning("Animation Time: "+animTime);
 		//animation[animationName].speed = originalSpeed;
 		if(animationName == "shootRelease") animTime *= 3;

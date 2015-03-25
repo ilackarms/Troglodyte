@@ -49,7 +49,7 @@ public class ClothGridCollisionBehaviour : MonoBehaviour
     var force = Vector3.Normalize(tTarget.position - point) * effectSettings.MoveSpeed / 100f;
     for (int i = 0; i < AttachedPoints.Length; i++) {
       var ap = AttachedPoints[i];
-      var rig = ap.rigidbody;
+      var rig = ap.GetComponent<Rigidbody>();
       rig.useGravity = false;
       rig.AddForce(force, ForceMode.Impulse);
       ap.SetActive(true);

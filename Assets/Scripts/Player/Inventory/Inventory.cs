@@ -142,8 +142,11 @@ public class Inventory : MonoBehaviour {
 
 	void OpenOrCloseGUI(){		
 		if(Input.GetButtonDown("Inventory") && !draw){
-			draw=true;
-			Screen.lockCursor = false;
+            draw = true;
+            //Screen.lockCursor = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
 			Time.timeScale = 0;
 			Global.OpenGUICount++;
 			//Debug.Log(Global.OpenGUICount);
@@ -152,15 +155,19 @@ public class Inventory : MonoBehaviour {
 			draw=false;
 			Global.OpenGUICount--;
 			if (Global.OpenGUICount<=0){
-				Global.OpenGUICount=0;
-				Screen.lockCursor = true;
+                Global.OpenGUICount = 0;
+                //Screen.lockCursor = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 				Time.timeScale = 1;
 			}
 			//Debug.Log(Global.OpenGUICount);
 		}
 		if((Input.GetButtonDown("CloseGUI") && draw)){
-			draw=draw^true;
-			Screen.lockCursor = Screen.lockCursor^true;
+			draw=false;
+            //Screen.lockCursor = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 			Time.timeScale = (draw) ? 0 : 1;
 			Debug.Log(Global.OpenGUICount);
 		}
@@ -171,8 +178,10 @@ public class Inventory : MonoBehaviour {
 			draw=false;
 			Global.OpenGUICount--;
 			if (Global.OpenGUICount<=0){
-				Global.OpenGUICount=0;
-				Screen.lockCursor = true;
+                Global.OpenGUICount = 0;
+                //Screen.lockCursor = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 				Time.timeScale = 1;
 			}
 			//Debug.Log(Global.OpenGUICount);

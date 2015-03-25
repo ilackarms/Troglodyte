@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic; 
-using Pathfinding;
+//using Pathfinding;
 
 [RequireComponent (typeof(AIPath))]
 public abstract class BasicAI : Hittable {
@@ -11,7 +11,7 @@ public abstract class BasicAI : Hittable {
 	public VisualSensor visualSensor;
 	public AudioSensor audioSensor;
 
-	public AIPath pathfinder;
+	public BasicAI.DarklingPath pathfinder;
 	
 	public GameObject target;
 	public GameObject destination; //the waypoint is an empty gameobject which gets moved to wherever
@@ -58,13 +58,14 @@ public abstract class BasicAI : Hittable {
 	protected void Start () {
 		visualSensor = GetComponentInChildren<VisualSensor> ();
 		audioSensor = GetComponentInChildren<AudioSensor> ();
-		pathfinder = transform.GetComponent<AIPath> ();
+		//pathfinder = transform.GetComponent<AIPath> ();
 		claws = GetComponentsInChildren<Claw> ();
 		healthBar = GetComponent<FloatingHitPointBar>();
 		statistics = new Statistics(this);
 		setLoot ();
 
 		renderers = GetComponentsInChildren<Renderer> ();
+		pathfinder = gameObject.AddComponent<BasicAI.DarklingPath>();
 	}
 
 	public abstract void setBaseStats(); //called at START, what base stats should i have
@@ -143,12 +144,15 @@ public abstract class BasicAI : Hittable {
 
 	
 	protected bool detectPlayer(){
-		//if player is unreachable return false; we're not chasing/detecting these guys
+		/*//if player is unreachable return false; we're not chasing/detecting these guys
+		TODO: Implement new navigation System Astar SUCKS DICK
+
 		GraphNode a = AstarPath.active.GetNearest ( transform.position, NNConstraint.Default ).node;
 		GraphNode b = AstarPath.active.GetNearest ( target.transform.position, NNConstraint.Default ).node;
 		if ( !PathUtilities.IsPathPossible (a,b) ) {
 			return false;
 		}
+		*/
 
 		//Debug.DrawLine(transform.position, target.transform.position);
 		if(visualSensor.sensesObject(target)){
@@ -192,7 +196,7 @@ public abstract class BasicAI : Hittable {
 	/// <param name="destination">Destination.</param>
 	public void setDestination(Vector3 dest){
 		destination.transform.position = dest;
-		pathfinder.target = destination.transform;
+		//pathfinder.target = destination.transform;
 	}
 
 //			 ______     __         ______     __     __     ______    
@@ -443,6 +447,42 @@ public abstract class BasicAI : Hittable {
 			r.material.shader = Shader.Find ("Transparent/VertexLit with Z");
 		}
 	}
+	
+    public class DarklingPath : MonoBehaviour
+    {
+        //fill in a path interface here :)
+		public float endReachedDistance;
+		public Transform target;
+		public float speed;
+		public bool canMove;
+		public AIPath aiPath;
+
+		public Vector3 getRandomReachablePoint(){
+			return AstarExtension.findRandomConnectedNodeFast(transform.position, 5);;
+		}
+
+        public void Start()
+        {
+			aiPath = GetComponent<AIPath> ();
+			if (aiPath == null) {
+				aiPath = gameObject.AddComponent<AIPath>();
+				gameObject.AddComponent<Pathfinding.SimpleSmoothModifier>();
+				gameObject.AddComponent<Pathfinding.AlternativePath>();
+			}
+			canMove = true;
+        }
+
+        public void Update()
+        {
+            if (canMove)
+            {
+				aiPath.target = target;
+				aiPath.speed = speed/10;
+				aiPath.endReachedDistance = endReachedDistance;
+            }
+        }
+
+    }
 
 
 }

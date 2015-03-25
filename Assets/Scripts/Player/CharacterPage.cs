@@ -51,7 +51,10 @@ public class CharacterPage : MonoBehaviour
 			if(Input.GetButtonDown("CharacterSheet") && !draw){
 					initializeDrawBoxes();
 					draw=true;
-					Screen.lockCursor = false;
+                    //Screen.lockCursor = false;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+
 					Time.timeScale = 0;
 					Global.OpenGUICount++;
 					//Debug.Log(Global.OpenGUICount);
@@ -60,8 +63,10 @@ public class CharacterPage : MonoBehaviour
 					draw=false;
 					Global.OpenGUICount--;
 					if (Global.OpenGUICount<=0){
-						Global.OpenGUICount=0;
-						Screen.lockCursor = true;
+                        Global.OpenGUICount = 0;
+                        //Screen.lockCursor = true;
+                        Cursor.lockState = CursorLockMode.Locked;
+                        Cursor.visible = false;
 						Time.timeScale = 1;
 					}
 					//Debug.Log(Global.OpenGUICount);
@@ -265,8 +270,10 @@ public class CharacterPage : MonoBehaviour
 			draw=false;
 			Global.OpenGUICount--;
 			if (Global.OpenGUICount<=0){
-				Global.OpenGUICount=0;
-				Screen.lockCursor = true;
+                Global.OpenGUICount = 0;
+                //Screen.lockCursor = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 				Time.timeScale = 1;
 			}
 			//Debug.Log(Global.OpenGUICount);

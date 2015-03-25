@@ -22,7 +22,7 @@ public class Interactable : MonoBehaviour {
 		//defaultShader = Shader.Find (defaultShaderName);
 		//outlineShader = Shader.Find ("Outlined/Diffuse");
 		renderObject = gameObject;
-		if (renderObject.renderer == null) {
+		if (renderObject.GetComponent<Renderer>() == null) {
 //			Debug.Log(name+" searching children for mesh renderer");
 			if(GetComponentInChildren<MeshRenderer>() != null)
 				renderObject = GetComponentInChildren<MeshRenderer>().gameObject;
@@ -32,7 +32,7 @@ public class Interactable : MonoBehaviour {
 //			Debug.Log(renderObject.name+" found");
 		}
 		
-		defaultShaderName = renderObject.renderer.material.shader.name;
+		defaultShaderName = renderObject.GetComponent<Renderer>().material.shader.name;
 	}
 	
 	// Update is called once per frame
@@ -44,7 +44,7 @@ public class Interactable : MonoBehaviour {
 		//if(defaultShader.name.Contains("Bumped"))
 		//	gameObject.renderer.material.shader = Shader.Find ("Outlined/Bumped Diffuse");
 		//else
-		foreach(Material material in renderObject.renderer.materials){
+		foreach(Material material in renderObject.GetComponent<Renderer>().materials){
 			material.shader = Shader.Find ("Outlined/Diffuse");
 			material.SetColor ("_OutlineColor", outlineColor);
 			material.SetFloat("_Outline", outlineThickness);
@@ -54,7 +54,7 @@ public class Interactable : MonoBehaviour {
 	public virtual void RemoveOutline(){
 		//gameObject.renderer.material.shader = defaultShader;
 		
-		foreach(Material material in renderObject.renderer.materials){
+		foreach(Material material in renderObject.GetComponent<Renderer>().materials){
 			material.shader = Shader.Find (defaultShaderName);
 			material.SetColor ("_OutlineColor", outlineColor);
 		}

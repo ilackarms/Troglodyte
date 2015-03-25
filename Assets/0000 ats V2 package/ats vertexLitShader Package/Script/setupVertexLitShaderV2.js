@@ -14,7 +14,7 @@ function Start ()
     // Set up layer 9 to cull at our detail distance.
     var distances = new float[32];
     distances[9] = VertexLitDetailDistance; // small things like DetailDistance of the terrain engine
-    camera.main.layerCullDistances = distances;
+    GetComponent.<Camera>().main.layerCullDistances = distances;
 }
 
 

@@ -30,8 +30,8 @@ public class PickUpItem : Interactable {
 						Destroy(gameObject);
 					}
 					else{
-						rigidbody.velocity = new Vector3(0,8.5f,0);
-						rigidbody.angularVelocity = new Vector3(Random.Range(-6,6),Random.Range(-6,6),Random.Range(-6,6));
+						GetComponent<Rigidbody>().velocity = new Vector3(0,8.5f,0);
+						GetComponent<Rigidbody>().angularVelocity = new Vector3(Random.Range(-6,6),Random.Range(-6,6),Random.Range(-6,6));
 					}
 				}
 				else{

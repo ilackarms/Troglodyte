@@ -18,7 +18,7 @@ private var Size:float;  //dont get in mind , just for system uses
 
 
 function Start(){
-gameObject.rigidbody.AddForce (Random.Range(-ChunkSpeed,ChunkSpeed), Random.Range(-ChunkSpeed,ChunkSpeed), Random.Range(-ChunkSpeed,ChunkSpeed)); //Adding random force to each chunk for realizm
+gameObject.GetComponent.<Rigidbody>().AddForce (Random.Range(-ChunkSpeed,ChunkSpeed), Random.Range(-ChunkSpeed,ChunkSpeed), Random.Range(-ChunkSpeed,ChunkSpeed)); //Adding random force to each chunk for realizm
 Destroy(gameObject,TimeToLive); //Start timer to destroy
 }
 
@@ -40,7 +40,7 @@ if (col.gameObject.CompareTag(item)) //if chunk hit something with allowed tag
 		contact = col.contacts[0]; //dont get in mind it should be here
 	  	var rot = Quaternion.FromToRotation(Vector3.up, contact.normal); // calculate rotation from prefab normal to contact.normal
 	    var Splat = Instantiate(BloodSplatterPrefabSmall, contact.point, rot); //Instantiation of our splat depends on contact point and its normal and rotation
-	   	Splat.renderer.material = SplatterMaterials[splatMaterial]; //apply random material to splat
+	   	Splat.GetComponent.<Renderer>().material = SplatterMaterials[splatMaterial]; //apply random material to splat
 	    Splat.parent = col.transform; // child the hole to the hit object
 	    Destroy(gameObject); //destroy blood chunk
 	}

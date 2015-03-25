@@ -28,7 +28,7 @@ public class MapGenerator : MonoBehaviour {
 	void Start () {
 		Pathfinding = GetComponent<AstarPath>();
 
-		cell3D = new Cell[10,10,1];
+		cell3D = new Cell[4,4,1];
 		
 		for(int x = 0; x< cell3D.GetLength(0); x++){
 			for(int y = 0; y< cell3D.GetLength(1); y++){
@@ -79,6 +79,9 @@ public class MapGenerator : MonoBehaviour {
 
 		configureAstar();
 		populateMap();
+
+        GameObject.FindGameObjectWithTag("Pathfinder").SetActive(true);
+
 		Debug.Log ("Finished!");
 				
 		string bigAssLogMessage = "";
@@ -683,42 +686,40 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 
-	void configureAstar(){
-		AstarData data = Pathfinding.astarData;
+    void configureAstar(){
+        AstarData data = Pathfinding.astarData;
 
-		int graphWidth = (int) (2000 / (cellXDimension/2) * cell3D.GetLength(0));
-		int graphLength = (int) (2000 / (cellZDimension/2) * cell3D.GetLength(1));
-		int numberOfGraphs = cell3D.GetLength(2); //one graph for each z level
-		//2 per?
-		for(int i = 0; i < numberOfGraphs; i++){
-			int graphHeight = (int) ((i-numberOfGraphs/2) * cellYDimension - 15);
-			GridGraph gg = data.AddGraph(typeof(GridGraph)) as GridGraph;
-			gg.width = graphWidth;
-			gg.depth = graphLength;
-			gg.nodeSize = 0.25f;
-			gg.center = new Vector3(0,graphHeight,0);
-			gg.maxClimb = cellYDimension;
-			//gg.autoLinkGrids = true;
-			//gg.autoLinkDistLimit = 10; //??
-			gg.collision.fromHeight = cellYDimension/2;
-			gg.collision.heightMask = LayerMask.GetMask("Terrain"); //Terrain
-			gg.collision.thickRaycast = true;
-			gg.collision.thickRaycastDiameter = 2.0f;
-			//gg.cutCorners = false;
-			gg.erodeIterations = 1;
-			gg.maxSlope = 45;
-			//gg.collision.collisionCheck = false;
-			//gg.maxClimb = 2.5f;
-			gg.collision.diameter = 4.5f;
-			gg.UpdateSizeFromWidthDepth();
-		}
-		AstarPath.active.Scan();
-		foreach(GridGraph gg in AstarPath.active.graphs){
-			gg.ErodeWalkableArea();
-		}
-
-
-	}
+        int graphWidth = (int) (2000 / (cellXDimension/2) * cell3D.GetLength(0));
+        int graphLength = (int) (2000 / (cellZDimension/2) * cell3D.GetLength(1));
+        int numberOfGraphs = cell3D.GetLength(2); //one graph for each z level
+        //2 per?
+        for(int i = 0; i < numberOfGraphs; i++){
+            int graphHeight = (int) ((i-numberOfGraphs/2) * cellYDimension - 15);
+            GridGraph gg = data.AddGraph(typeof(GridGraph)) as GridGraph;
+            gg.width = graphWidth;
+            gg.depth = graphLength;
+            gg.nodeSize = 0.25f;
+            gg.center = new Vector3(0,graphHeight,0);
+            gg.maxClimb = cellYDimension;
+            //gg.autoLinkGrids = true;
+            //gg.autoLinkDistLimit = 10; //??
+            gg.collision.fromHeight = cellYDimension/2;
+            gg.collision.heightMask = LayerMask.GetMask("Terrain"); //Terrain
+            gg.collision.thickRaycast = true;
+            gg.collision.thickRaycastDiameter = 2.0f;
+            //gg.cutCorners = false;
+            gg.erodeIterations = 1;
+            gg.maxSlope = 80;
+            //gg.collision.collisionCheck = false;
+            //gg.maxClimb = 2.5f;
+            gg.collision.diameter = 4.5f;
+            gg.UpdateSizeFromWidthDepth();
+        }
+        AstarPath.active.Scan();
+        foreach(GridGraph gg in AstarPath.active.graphs){
+            gg.ErodeWalkableArea();
+        }
+    }
 
 	void populateMap(){
 		foreach(Piece piece in instantiatedPieces){

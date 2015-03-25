@@ -54,7 +54,7 @@ public class FadeInOutShaderColor : MonoBehaviour
   private void InitMaterial()
   {
     if (isInitialized) return;
-    if (renderer!=null) mat = renderer.material;
+    if (GetComponent<Renderer>()!=null) mat = GetComponent<Renderer>().material;
     else if(mat == null) return;
    
     oldColor = mat.GetColor(ShaderColorName);

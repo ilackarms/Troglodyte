@@ -14,19 +14,19 @@ private var fadeout:boolean; //helping var
 
 function Start(){
 transform.localRotation.eulerAngles.y = Random.value * 360; //rotate our splat in random
-renderer.material.color.a=0; //start with no visible for fade in feature
+GetComponent.<Renderer>().material.color.a=0; //start with no visible for fade in feature
 fadeout=false;
 if(!SmartDestroy) Destroy(gameObject,ManualDestroyTime); //if SD unchecked, than start timer of manual destroy
 }
 
 function Update () {
-	if(renderer.material.color.a<1.0 && !fadeout) { //Fading in
-		renderer.material.color.a +=Time.deltaTime*fadeInTime;
+	if(GetComponent.<Renderer>().material.color.a<1.0 && !fadeout) { //Fading in
+		GetComponent.<Renderer>().material.color.a +=Time.deltaTime*fadeInTime;
 	} else {
 		fadeout=true; //activation of fading out
-		if(fadeout && renderer.material.color.a<=0.0 && SmartDestroy){ //if SD and our splat become dissapeared - destroy go
+		if(fadeout && GetComponent.<Renderer>().material.color.a<=0.0 && SmartDestroy){ //if SD and our splat become dissapeared - destroy go
 			Destroy(gameObject);
 		}
-		if(fadeout) renderer.material.color.a -= Time.deltaTime *fadeOutTime; //if its still not destroyed fading out
+		if(fadeout) GetComponent.<Renderer>().material.color.a -= Time.deltaTime *fadeOutTime; //if its still not destroyed fading out
 	}
 }

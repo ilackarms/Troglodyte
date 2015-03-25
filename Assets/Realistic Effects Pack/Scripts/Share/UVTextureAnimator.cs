@@ -42,7 +42,7 @@ internal class UVTextureAnimator : MonoBehaviour
 
   private void InitDefaultVariables()
   {
-    currentRenderer = renderer;
+    currentRenderer = GetComponent<Renderer>();
     allCount = 0;
     deltaFps = 1f / Fps;
     count = Rows * Columns;

@@ -19,7 +19,7 @@ public class TestAnimationScript : MonoBehaviour {
 		if(Input.GetButtonDown("Fire1")){
 			Debug.Log("True");
 			anim.SetBool("spell1",true);
-			AnimationInfo[] currentAnimationInfo = anim.GetCurrentAnimationClipState (0);
+			AnimatorClipInfo[] currentAnimationInfo = anim.GetCurrentAnimatorClipInfo (0);
 			AnimationClip currentClip = currentAnimationInfo [0].clip;
 			float animTime = currentClip.length/3;
 			Debug.Log(currentClip.name);

@@ -21,7 +21,7 @@ public class Arrow : WeaponCollision{
 	//arrow prefab must have trigger collider and rigidbody
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Sensor"){
-			Physics.IgnoreCollision(other.collider, transform.root.collider); // return; //ignore collisions with sensor layer
+			Physics.IgnoreCollision(other.GetComponent<Collider>(), transform.root.GetComponent<Collider>()); // return; //ignore collisions with sensor layer
 			return;
 		}
 		if(weapon!=null){
@@ -43,7 +43,7 @@ public class Arrow : WeaponCollision{
 	}
 
 	void OnCollisionEnter(Collision collision){
-		Physics.IgnoreCollision(this.collider, collision.collider);
+		Physics.IgnoreCollision(this.GetComponent<Collider>(), collision.collider);
 	}
 }
 

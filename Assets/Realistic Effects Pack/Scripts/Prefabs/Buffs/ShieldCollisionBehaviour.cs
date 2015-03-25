@@ -38,12 +38,12 @@ public class ShieldCollisionBehaviour : MonoBehaviour
           else {
             var effectInstance = Instantiate(EffectOnHit) as GameObject;
             var tr = effectInstance.transform;
-            tr.parent = renderer.transform;
+            tr.parent = GetComponent<Renderer>().transform;
             tr.localPosition = Vector3.zero;
             tr.localScale = transform.localScale * ScaleWave;
             tr.LookAt(e.Hit.point);
             tr.Rotate(AngleFix);
-            effectInstance.renderer.material.renderQueue = currentQueue-1000;
+            effectInstance.GetComponent<Renderer>().material.renderQueue = currentQueue-1000;
           }
         }
         if (currentQueue > 4000) currentQueue = 3001;

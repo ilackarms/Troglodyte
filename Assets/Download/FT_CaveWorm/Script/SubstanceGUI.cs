@@ -14,7 +14,7 @@ public class SubstanceGUI : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		creatureSubstance = creature.renderer.sharedMaterial as ProceduralMaterial;
+		creatureSubstance = creature.GetComponent<Renderer>().sharedMaterial as ProceduralMaterial;
 		creatureProperties = creatureSubstance.GetProceduralPropertyDescriptions();
 	
 	}

@@ -25,7 +25,7 @@ public class CaveWormAI : BasicAI {
 	new void Start () {
 		base.Start ();
 		pathfinder.endReachedDistance = baseAttackRange / 2;
-		ATTACK_TIME = animation["Attack"].clip.length / statistics.AttackSpeed;
+		ATTACK_TIME = GetComponent<Animation>()["Attack"].clip.length / statistics.AttackSpeed;
 		
 		target = GameObject.FindGameObjectWithTag("Player");
 		
@@ -195,6 +195,7 @@ public class CaveWormAI : BasicAI {
 			//wander to a random point on the grid
 			executeOncePerCycle();
 			ai.setDestination(randomPoint);
+			ai.pathfinder.speed = ai.baseMoveSpeed / 2;
 		}
 		
 		public override void initialize() {
@@ -209,7 +210,7 @@ public class CaveWormAI : BasicAI {
 		{
 			if(!executedThisCycle){
 				executedThisCycle = true;
-				randomPoint = AstarExtension.findRandomConnectedNodeFast(ai.transform.position, 5);
+				randomPoint = ai.pathfinder.getRandomReachablePoint();
 			}
 		}
 	}

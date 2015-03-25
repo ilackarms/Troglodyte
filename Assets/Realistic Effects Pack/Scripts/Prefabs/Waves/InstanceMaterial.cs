@@ -9,7 +9,7 @@ public class InstanceMaterial : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-    renderer.material = Material;
+    GetComponent<Renderer>().material = Material;
 	}
 	
 	// Update is called once per frame

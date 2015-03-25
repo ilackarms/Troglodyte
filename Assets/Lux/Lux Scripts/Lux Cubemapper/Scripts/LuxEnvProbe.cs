@@ -155,17 +155,17 @@ public class LuxEnvProbe : MonoBehaviour {
         // Get all objects
         for (int i = 0; i < AssignedMeshes.Count; i++)
         {
-            if(AssignedMeshes[i].renderer != null)
+            if(AssignedMeshes[i].GetComponent<Renderer>() != null)
             {
-                int materials = AssignedMeshes[i].renderer.sharedMaterials.Length;
+                int materials = AssignedMeshes[i].GetComponent<Renderer>().sharedMaterials.Length;
                 // Get all materials
                 for (int j = 0; j < materials; j++) {
-                    if (AssignedMeshes[i].renderer.sharedMaterials[j].HasProperty("_CubemapPositionWS"))
+                    if (AssignedMeshes[i].GetComponent<Renderer>().sharedMaterials[j].HasProperty("_CubemapPositionWS"))
                     {
-                        AssignedMeshes[i].renderer.sharedMaterials[j].SetVector("_CubemapPositionWS", new Vector4(transform.position.x, transform.position.y, transform.position.z, 0));
-                        AssignedMeshes[i].renderer.sharedMaterials[j].SetVector("_CubemapSize", new Vector4(BoxSize.x/2f, BoxSize.y, BoxSize.z/2f, 0));
+                        AssignedMeshes[i].GetComponent<Renderer>().sharedMaterials[j].SetVector("_CubemapPositionWS", new Vector4(transform.position.x, transform.position.y, transform.position.z, 0));
+                        AssignedMeshes[i].GetComponent<Renderer>().sharedMaterials[j].SetVector("_CubemapSize", new Vector4(BoxSize.x/2f, BoxSize.y, BoxSize.z/2f, 0));
                         if (SPECCube != null){
-                            AssignedMeshes[i].renderer.sharedMaterials[j].SetTexture("_SpecCubeIBL", SPECCube);
+                            AssignedMeshes[i].GetComponent<Renderer>().sharedMaterials[j].SetTexture("_SpecCubeIBL", SPECCube);
                         }
                     }
                 }

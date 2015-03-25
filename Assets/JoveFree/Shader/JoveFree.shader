@@ -1,4 +1,10 @@
-﻿
+﻿// Upgrade NOTE: commented out 'float4 unity_LightmapST', a built-in variable
+// Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
+// Upgrade NOTE: commented out 'sampler2D unity_LightmapInd', a built-in variable
+// Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
+// Upgrade NOTE: replaced tex2D unity_LightmapInd with UNITY_SAMPLE_TEX2D_SAMPLER
+
+
 Shader "Jove/Free" 
 {
 	Properties 
@@ -72,10 +78,10 @@ Shader "Jove/Free"
 			};	
 
 			#ifndef LIGHTMAP_OFF
-				sampler2D unity_Lightmap;
-				float4 unity_LightmapST;
+				// sampler2D unity_Lightmap;
+				// float4 unity_LightmapST;
 				#ifndef DIRLIGHTMAP_OFF
-					sampler2D unity_LightmapInd;
+					// sampler2D unity_LightmapInd;
 				#endif
 			#endif
 
@@ -148,9 +154,9 @@ Shader "Jove/Free"
 			    float3x3 local2World = float3x3(input.tangentDir, input.binormalDir, input.normalDir);   
 			    
 				#ifndef LIGHTMAP_OFF
-				   	fixed3 lightMap = DecodeLightmap(tex2D(unity_Lightmap, input.lightmapUV));
+				   	fixed3 lightMap = DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, input.lightmapUV));
 					#ifndef DIRLIGHTMAP_OFF
-						half3 scalePerBasis = DecodeLightmap(tex2D(unity_LightmapInd, input.lightmapUV));
+						half3 scalePerBasis = DecodeLightmap(UNITY_SAMPLE_TEX2D_SAMPLER(unity_LightmapInd,unity_Lightmap, input.lightmapUV));
 						UNITY_DIRBASIS
 						half3 normalRNM = saturate(mul(unity_DirBasis, NormalMap));
 						lightMap *= dot(normalRNM, scalePerBasis);

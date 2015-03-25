@@ -4,7 +4,7 @@ function Update ()
 {
     if (Input.GetMouseButtonDown(0))
     {
-        var ray = camera.ScreenPointToRay (Input.mousePosition);
+        var ray = GetComponent.<Camera>().ScreenPointToRay (Input.mousePosition);
         var hit : RaycastHit;
 
         if (Physics.Raycast (ray, hit, Mathf.Infinity)) 

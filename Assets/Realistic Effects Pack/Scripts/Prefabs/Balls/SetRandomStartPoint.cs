@@ -40,8 +40,8 @@ public class SetRandomStartPoint : MonoBehaviour
 
   private void InitDefaultVariables()
   {
-    if (particleSystem!=null)
-      particleSystem.Stop();
+    if (GetComponent<ParticleSystem>()!=null)
+      GetComponent<ParticleSystem>().Stop();
     var targetPos = effectSettings.Target.transform.position;
     var curentPos = new Vector3(targetPos.x, Height, targetPos.z);
     var randomX = Random.Range(0, (RandomRange.x) * 200) / 100 - RandomRange.x;
@@ -52,8 +52,8 @@ public class SetRandomStartPoint : MonoBehaviour
       tRoot.position = randomPos;
     else
       StartPointGo.transform.position = randomPos;
-    if (particleSystem!=null)
-      particleSystem.Play();
+    if (GetComponent<ParticleSystem>()!=null)
+      GetComponent<ParticleSystem>().Play();
   }
 
   // Update is called once per frame

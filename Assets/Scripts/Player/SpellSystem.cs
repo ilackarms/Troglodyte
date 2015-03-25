@@ -14,8 +14,11 @@ public class SpellSystem : MonoBehaviour
 	
 	void OpenOrCloseGUI(){		
 		if(Input.GetButtonDown("SpellGUI") && !spellGUI.doWindow2){
-			spellGUI.doWindow2=true;
-			Screen.lockCursor = false;
+            spellGUI.doWindow2 = true;
+            //Screen.lockCursor = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
 			Time.timeScale = 0;
 			Global.OpenGUICount++;
 			
@@ -25,8 +28,10 @@ public class SpellSystem : MonoBehaviour
 			spellGUI.doWindow2=false;
 			Global.OpenGUICount--;
 			if (Global.OpenGUICount<=0){
-				Global.OpenGUICount=0;
-				Screen.lockCursor = true;
+                Global.OpenGUICount = 0;
+                //Screen.lockCursor = true;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
 				Time.timeScale = 1;
 			}
 			
@@ -34,7 +39,9 @@ public class SpellSystem : MonoBehaviour
 		}
 		if((Input.GetButtonDown("CloseGUI") && spellGUI.doWindow2)){
 			spellGUI.doWindow2=false;
-			Screen.lockCursor = Screen.lockCursor^true;
+            //Screen.lockCursor = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
 			Time.timeScale = (spellGUI.doWindow2) ? 0 : 1;
 			Debug.Log(Global.OpenGUICount);
 

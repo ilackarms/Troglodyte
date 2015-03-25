@@ -36,7 +36,7 @@ public class FadeInOutLight : MonoBehaviour
     if (effectSettings!=null)
       effectSettings.CollisionEnter += prefabSettings_CollisionEnter;
 
-    goLight = light;
+    goLight = GetComponent<Light>();
     startIntensity = goLight.intensity;
     isStartDelay = StartDelay > 0.001f;
     isIn = FadeInSpeed > 0.001f;

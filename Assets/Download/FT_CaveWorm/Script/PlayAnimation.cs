@@ -13,23 +13,23 @@ public class PlayAnimation : MonoBehaviour {
 	// Update is called once per frame
 	void OnGUI() {
 		if (GUI.Button(new Rect(Screen.width - 150, 20, 140, 25),"Idle")){
-			creature.animation.wrapMode= WrapMode.Loop;
-			creature.animation.CrossFade("Idle");
+			creature.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			creature.GetComponent<Animation>().CrossFade("Idle");
 		}
 
 		if (GUI.Button(new Rect(Screen.width - 150, 50, 140, 25),"Attack")){
-			creature.animation.wrapMode= WrapMode.Default;
-			creature.animation.CrossFade("Attack");
+			creature.GetComponent<Animation>().wrapMode= WrapMode.Default;
+			creature.GetComponent<Animation>().CrossFade("Attack");
 		}
 
 		if (GUI.Button(new Rect(Screen.width - 150, 80, 140, 25),"Walk")){
-			creature.animation.wrapMode= WrapMode.Loop;
-			creature.animation.CrossFade("Walk");
+			creature.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			creature.GetComponent<Animation>().CrossFade("Walk");
 		}
 
 		if (GUI.Button(new Rect(Screen.width - 150, 110, 140, 25),"Dead")){
-			creature.animation.wrapMode= WrapMode.Default;
-			creature.animation.CrossFade("Dead");
+			creature.GetComponent<Animation>().wrapMode= WrapMode.Default;
+			creature.GetComponent<Animation>().CrossFade("Dead");
 		}
 
 

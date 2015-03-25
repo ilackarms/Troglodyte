@@ -227,8 +227,8 @@ public class ProjectileCollisionBehaviour : MonoBehaviour
   {
     RaycastHit raycastHit; 
     var ray = new Ray(tRoot.position, Vector3.Normalize(tTarget.position + randomTargetOffsetXZVector - tRoot.position));
-    var coll = tTarget.collider;
-    if (coll != null && tTarget.collider.Raycast(ray, out raycastHit, effectSettings.MoveDistance)) {
+    var coll = tTarget.GetComponent<Collider>();
+    if (coll != null && tTarget.GetComponent<Collider>().Raycast(ray, out raycastHit, effectSettings.MoveDistance)) {
       hit = raycastHit;
     }
   }

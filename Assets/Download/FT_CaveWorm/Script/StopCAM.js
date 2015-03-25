@@ -3,11 +3,11 @@ var camAnim : Animation;
 
 function OnMouseDown () {
 	if(myCheck == true){
-	camAnim.animation.Stop ();
+	camAnim.GetComponent.<Animation>().Stop ();
 	myCheck = false;
 	}
 	else if(myCheck == false){
-	camAnim.animation.Play ();
+	camAnim.GetComponent.<Animation>().Play ();
 	myCheck = true;
 	}
 	return myCheck;

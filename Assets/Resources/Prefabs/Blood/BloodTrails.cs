@@ -40,7 +40,7 @@ public class BloodTrails : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		ParticleSystem.Particle[] parts = new ParticleSystem.Particle[NUM];
-		int iPart = particleSystem.GetParticles (parts);
+		int iPart = GetComponent<ParticleSystem>().GetParticles (parts);
 		if (iPart == 0){
 			return;
 		}

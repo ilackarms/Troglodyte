@@ -140,12 +140,12 @@ public class MyGuiV2 : MonoBehaviour
     }
     if (GUI.Button(new Rect(10, 105, 225, 30), "Change environment")) {
       if (isDefaultPlaneTexture) {
-        Plane1.renderer.material = PlaneMaterials[0];
-        Plane2.renderer.material = PlaneMaterials[0];
+        Plane1.GetComponent<Renderer>().material = PlaneMaterials[0];
+        Plane2.GetComponent<Renderer>().material = PlaneMaterials[0];
       }
       else {
-        Plane1.renderer.material = PlaneMaterials[1];
-        Plane2.renderer.material = PlaneMaterials[2];
+        Plane1.GetComponent<Renderer>().material = PlaneMaterials[1];
+        Plane2.GetComponent<Renderer>().material = PlaneMaterials[2];
       }
       isDefaultPlaneTexture = !isDefaultPlaneTexture;
     }

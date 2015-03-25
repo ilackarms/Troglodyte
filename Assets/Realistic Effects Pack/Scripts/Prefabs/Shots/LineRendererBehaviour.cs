@@ -47,7 +47,7 @@ public class LineRendererBehaviour : MonoBehaviour
 
   void InitializeDefault()
   {
-    renderer.material.SetFloat("_Chanel", currentShaderIndex);
+    GetComponent<Renderer>().material.SetFloat("_Chanel", currentShaderIndex);
     ++currentShaderIndex;
     if (currentShaderIndex == 3) currentShaderIndex = 0;
     line.SetPosition(0, tRoot.position);

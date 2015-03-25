@@ -87,13 +87,16 @@ public class SmoothLook : MonoBehaviour
 		
 		//Lock/Hide cursor
 		
-		Screen.lockCursor = true;
-		Screen.showCursor = false;
+		//Screen.lockCursor = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+		Cursor.visible = false;
 		
 		
-		if (rigidbody)
+		if (GetComponent<Rigidbody>())
 			
-			rigidbody.freezeRotation = true;
+			GetComponent<Rigidbody>().freezeRotation = true;
 		
 		
 		
@@ -106,8 +109,8 @@ public class SmoothLook : MonoBehaviour
 	void Update ()
 		
 	{
-		
-		if (Screen.lockCursor) {
+
+		if (Cursor.lockState == CursorLockMode.Locked) {
 			
 			//Mouse/Camera Movement Smoothing:  
 			

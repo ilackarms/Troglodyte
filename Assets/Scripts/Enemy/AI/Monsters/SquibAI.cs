@@ -19,11 +19,8 @@ public class SquibAI : BasicAI {
 	// Use this for initialization
 	new void Start () {
 		base.Start ();
-		if(pathfinder == null){
-			pathfinder = gameObject.AddComponent<AIPath>();
-		}
 		pathfinder.endReachedDistance = baseAttackRange / 2;
-		ATTACK_TIME = animation["Attack"].clip.length / statistics.AttackSpeed;
+		ATTACK_TIME = GetComponent<Animation>()["Attack"].clip.length / statistics.AttackSpeed;
 		
 		target = GameObject.FindGameObjectWithTag("Player");
 
@@ -186,7 +183,7 @@ public class SquibAI : BasicAI {
 		{
 			if(!executedThisCycle){
 				executedThisCycle = true;
-				randomPoint = AstarExtension.findRandomConnectedNodeFast(ai.transform.position, 25);
+				randomPoint = ai.pathfinder.getRandomReachablePoint();
 			}
 		}
 	}

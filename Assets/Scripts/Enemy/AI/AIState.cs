@@ -23,10 +23,11 @@ public abstract class AIState {
 	
 	public void update(){
 		if(animationClip!=null){
-			ai.animation.CrossFade (animationClip);
-			ai.animation [animationClip].speed = animationSpeed;
+			ai.GetComponent<Animation>().CrossFade (animationClip);
+			ai.GetComponent<Animation>() [animationClip].speed = animationSpeed;
 		}
 		stateTime += Time.deltaTime;
+		//ai.pathfinder.speed = ai.baseMoveSpeed;
 		execute ();
 	}
 

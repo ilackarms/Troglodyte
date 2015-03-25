@@ -7,7 +7,7 @@ var goUp : boolean = true;
 
 function Start () 
 {
-	alpha = this.gameObject.renderer.sharedMaterial.color.a;
+	alpha = this.gameObject.GetComponent.<Renderer>().sharedMaterial.color.a;
 }
 
 function FixedUpdate()
@@ -18,5 +18,5 @@ function FixedUpdate()
 	if (goUp) alpha += incr;
 	else alpha -= incr;
 	
-	this.gameObject.renderer.sharedMaterial.color.a = alpha;
+	this.gameObject.GetComponent.<Renderer>().sharedMaterial.color.a = alpha;
 }
