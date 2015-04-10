@@ -417,6 +417,7 @@ public abstract class BasicAI : Hittable {
 			gameObject.AddComponent<ConsumableCorpse>();
 
 			//stop motion
+			pathfinder.canMove = false;
 
 			onDeath();
 			StartCoroutine(destroyOnDeath());
@@ -486,6 +487,10 @@ public abstract class BasicAI : Hittable {
 				aiPath.speed = speed/2.5f;
 				aiPath.endReachedDistance = endReachedDistance;
             }
+			else{
+				aiPath.target = transform;
+				aiPath.speed = 0;
+			}
         }
 
     }

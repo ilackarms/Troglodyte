@@ -285,6 +285,7 @@ public class CaveWormAI : BasicAI {
 		protected override void execute ()
 		{
 			ai.pathfinder.canMove = false;
+			ai.pathfinder.speed = 0;
 			//so animation only plays once
 			animationClip = null; 
 
