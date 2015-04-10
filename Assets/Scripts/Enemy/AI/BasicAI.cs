@@ -412,6 +412,12 @@ public abstract class BasicAI : Hittable {
 				Global.itemFactory.InstantiateItemFromPrefab (itemName,transform, statistics.Level);
 			}
 			Global.combatSystem.notifyExperienceGain (statistics.Level*3, 200);
+
+			//ADD CONSUMABLE CORPSE
+			gameObject.AddComponent<ConsumableCorpse>();
+
+			//stop motion
+
 			onDeath();
 			StartCoroutine(destroyOnDeath());
 		}
@@ -477,7 +483,7 @@ public abstract class BasicAI : Hittable {
             if (canMove)
             {
 				aiPath.target = target;
-				aiPath.speed = speed/10;
+				aiPath.speed = speed/2.5f;
 				aiPath.endReachedDistance = endReachedDistance;
             }
         }

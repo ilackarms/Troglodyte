@@ -1,0 +1,4 @@
+I. Monsters
+	A. Leaper - Lizardlike Leaping Monster
+		1. Moves somewhat slow, turns towards player
+		2. Leap Attack

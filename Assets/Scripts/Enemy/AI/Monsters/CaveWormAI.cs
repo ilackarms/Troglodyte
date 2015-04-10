@@ -103,7 +103,6 @@ public class CaveWormAI : BasicAI {
 	/// </summary>
 	public override void onDeath(){
 		setState(dead);
-
 	}
 
 	// Update is called once per frame
