@@ -28,7 +28,7 @@ public class MapGenerator : MonoBehaviour {
 	void Start () {
 		Pathfinding = GetComponent<AstarPath>();
 
-		cell3D = new Cell[4,4,1];
+		cell3D = new Cell[8,8,1];
 		
 		for(int x = 0; x< cell3D.GetLength(0); x++){
 			for(int y = 0; y< cell3D.GetLength(1); y++){
