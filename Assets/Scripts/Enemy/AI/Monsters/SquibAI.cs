@@ -30,7 +30,7 @@ public class SquibAI : BasicAI {
 		dead = new DeadState(this);
 		
 		setState(wanderState);
-		Debug.Log("State initialized to"+state);
+		//Debug.Log("State initialized to"+state);
 
 		destination = new GameObject(); //make empty gameobject, move position to random point and set Waypoint as the target
 	}

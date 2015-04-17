@@ -247,7 +247,7 @@ public class CaveWormAI : BasicAI {
 		public AttackingState(BasicAI ai) : base(ai, "Attack", 1){
 			Weapon.WeaponPropertyBundle clawProperties = new Weapon.WeaponPropertyBundle(Item.ItemPropertyBundle.Rarity.Common, ai.statistics.Level);
 			//w.baseDamage += ai.statistics
-			Debug.Log("Damage = "+ai.statistics.PhysicalDamage);
+			//Debug.Log("Damage = "+ai.statistics.PhysicalDamage);
 			clawProperties.bonusAttackSpeed = ai.statistics.AttackSpeed;
 			clawProperties.fireDamage = ai.statistics.FireDamage;
 			clawProperties.iceDamage = ai.statistics.IceDamage;

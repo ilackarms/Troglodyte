@@ -15,6 +15,7 @@ public class WeaponCollision : MonoBehaviour {
 	protected void Start () {
 		//collider = GetComponent<Collider> ();
 		parent = GetComponentInParent<CombatSystem>().gameObject;
+        Debug.LogWarning("Parent of Weapon " + name + " is " + parent);
 		armsAnimations = GetComponentInParent<AnimationController>();
 	}
 	
@@ -49,6 +50,6 @@ public class WeaponCollision : MonoBehaviour {
 	public virtual void notifyAttacking(bool value, Weapon weapon){
 		attacking = value;
 		this.weapon = weapon;
-		if(attacking) Debug.Log ("Notified: Attacking");
+		//if(attacking) Debug.Log ("Notified: Attacking");
 	}
 }

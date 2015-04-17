@@ -135,7 +135,7 @@ public abstract class BasicAI : Hittable {
 		//Debug.Log("DISTANCE IS"+ (new Vector3 (transform.position.x, 0,transform.position.z) - new Vector3 (destination.x, 0, destination.z)).magnitude
 		 //        +"\n Close enough distance is: "+CloseEnoughDistance);
 		if ((new Vector3 (transform.position.x, 0, transform.position.z) - new Vector3 (destination.x, 0, destination.z)).magnitude <= CloseEnoughDistance) {
-						Debug.Log ("close enough!");
+						//Debug.Log ("close enough!");
 						return true;
 				} else
 						return false;

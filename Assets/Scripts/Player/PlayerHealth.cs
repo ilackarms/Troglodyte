@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(CombatSystem))]
 public class PlayerHealth : MonoBehaviour {
 	
 	public float maxHealth;

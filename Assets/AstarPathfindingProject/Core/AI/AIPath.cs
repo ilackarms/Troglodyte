@@ -374,7 +374,7 @@ public class AIPath : MonoBehaviour {
 	 */
 	protected Vector3 CalculateVelocity (Vector3 currentPosition) {
 		if (path == null || path.vectorPath == null || path.vectorPath.Count == 0){
-			Debug.LogWarning(gameObject +"'s path is "+path);
+			//Debug.LogWarning(gameObject +"'s path is "+path);
 //			Debug.Log("path.vectorPath is "+path.vectorPath);
 //			Debug.Log("path.vectorPath.Count is"+path.vectorPath.Count);
 			return Vector3.zero; 

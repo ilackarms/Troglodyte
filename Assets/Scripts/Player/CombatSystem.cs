@@ -115,7 +115,7 @@ public class CombatSystem : Hittable {
 		else{
 //			Debug.LogWarning("Damage Source = "+damageBundle.source);
 			float damage = resistanceInfo.calculateDamage(damageBundle.weapon);
-			Debug.Log(damage + " damage dealt to player by "+damageBundle.source);
+			Debug.Log(damage + " damage dealt to "+gameObject+" by "+damageBundle.source);
 			Statistics.CurrentHP -= damage;
 			if(cameraShake!=null) cameraShake.Shake (damage * 2);
 			if(cameraShake!=null) cameraShake.flashBloodBorder (damage/Statistics.MaxHP);
