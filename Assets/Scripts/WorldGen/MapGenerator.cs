@@ -68,21 +68,19 @@ public class MapGenerator : MonoBehaviour {
 		while(connectorNeededQueue.Count > 0){
 			yield return new WaitForSeconds(0.05f);
 			Vector3 addConnectorHere = connectorNeededQueue.Dequeue();
-			Debug.Log ("Trying to add a piece here:"+addConnectorHere);
+			//Debug.Log ("Trying to add a piece here:"+addConnectorHere);
 			Cell cell = cell3D[(int) addConnectorHere.x, (int) addConnectorHere.y, (int) addConnectorHere.z];
 			if(cell.needsConnector())attachPiece(addConnectorHere);	
 			
 			foreach(Vector3 v in connectorNeededQueue){
-				Debug.Log(v);
+				//Debug.Log(v);
 			}
 		}
 
 		configureAstar();
 		populateMap();
 
-        GameObject.FindGameObjectWithTag("Pathfinder").SetActive(true);
-
-		Debug.Log ("Finished!");
+		//Debug.Log ("Finished!");
 				
 		string bigAssLogMessage = "";
 		for(int x = 0; x < cell3D.GetLength(0); x++){
@@ -98,7 +96,7 @@ public class MapGenerator : MonoBehaviour {
 			}
 		}
 		
-		Debug.Log (bigAssLogMessage);
+		//Debug.Log (bigAssLogMessage);
 
 	}
 	
@@ -133,7 +131,7 @@ public class MapGenerator : MonoBehaviour {
 		if(randomizedPieceList.Count!=prioritizedList.Count) Debug.LogError("Not all pieces were moved to prioritized random list!");
 		*/
 		
-		Debug.Log("Searching for the right piece for "+connectorNeededPosition);
+		//Debug.Log("Searching for the right piece for "+connectorNeededPosition);
 		
 		//todo: set priority list to read in order
 		//foreach(Piece piece in prioritizedList){
@@ -157,7 +155,7 @@ public class MapGenerator : MonoBehaviour {
 					Piece pieceCopyScript = pieceCopy.GetComponent<Piece>();
 					pieceCopyScript.positionInGrid = position;
 					instantiatedPieces.Add(pieceCopyScript);
-					Debug.Log("Attaching piece: "+piece.gameObject.name+" "+ connectorNeededPosition + "\n Number of possible matches: " + possibleMatches.Count);
+					//Debug.Log("Attaching piece: "+piece.gameObject.name+" "+ connectorNeededPosition + "\n Number of possible matches: " + possibleMatches.Count);
 					return;
 				}
 			}
@@ -195,7 +193,7 @@ public class MapGenerator : MonoBehaviour {
 				Piece pieceCopyScript = pieceCopy.GetComponent<Piece>();
 				pieceCopyScript.positionInGrid = connectorNeededPosition;
 				instantiatedPieces.Add(pieceCopyScript);
-				Debug.Log("Attaching piece: "+ connectorNeededPosition + "\n Number of possible matches: " + possibleMatches.Count);
+				//Debug.Log("Attaching piece: "+ connectorNeededPosition + "\n Number of possible matches: " + possibleMatches.Count);
 				return;
 			}
 		}
@@ -336,7 +334,7 @@ public class MapGenerator : MonoBehaviour {
 					if(addToQueue){
 						connectorNeededQueue.Enqueue(new Vector3(x,y,z));
 					}
-					Debug.Log(x+","+y+","+z+" enqueued");
+					//Debug.Log(x+","+y+","+z+" enqueued");
 				}
 			}
 			
@@ -398,7 +396,7 @@ public class MapGenerator : MonoBehaviour {
 			}
 		}
 		
-		Debug.Log("After piece "+piece+" was added, current queue: "+connectorNeededQueue+ " of length "+ connectorNeededQueue.Count);
+		//Debug.Log("After piece "+piece+" was added, current queue: "+connectorNeededQueue+ " of length "+ connectorNeededQueue.Count);
 		
 	}
 	
