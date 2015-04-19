@@ -194,6 +194,7 @@ public class CaveWormAI : BasicAI {
 			//wander to a random point on the grid
 			executeOncePerCycle();
 			ai.setDestination(randomPoint);
+            ai.pathfinder.target = ai.destination.transform;
 			ai.pathfinder.speed = ai.baseMoveSpeed / 2;
 		}
 		

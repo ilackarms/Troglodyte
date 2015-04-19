@@ -15,7 +15,7 @@ public class WeaponCollision : MonoBehaviour {
 	protected void Start () {
 		//collider = GetComponent<Collider> ();
 		parent = GetComponentInParent<CombatSystem>().gameObject;
-        Debug.LogWarning("Parent of Weapon " + name + " is " + parent);
+        //Debug.LogWarning("Parent of Weapon " + name + " is " + parent);
 		armsAnimations = GetComponentInParent<AnimationController>();
 	}
 	
@@ -33,7 +33,7 @@ public class WeaponCollision : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(transform.position, transform.forward, out hit))
 			{
-				Debug.Log("Point of contact :" + hit.point);
+				//Debug.Log("Point of contact :" + hit.point);
 			}
 			//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
 			other.transform.SendMessageUpwards("GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
