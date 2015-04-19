@@ -524,9 +524,10 @@ public abstract class BasicAI : Hittable
             aiPath = GetComponent<AIPath>();
             if (aiPath == null)
             {
-                aiPath.repathRate = 0.25f;
 
                 aiPath = gameObject.AddComponent<AIPath>();
+                aiPath.repathRate = 0.25f;
+
                 Seeker seeker = gameObject.GetComponent<Seeker>();
                 /*
                 Pathfinding.AlternativePath altPath = gameObject.AddComponent<Pathfinding.AlternativePath>();
@@ -539,8 +540,8 @@ public abstract class BasicAI : Hittable
                 seeker.RegisterModifier(simpleSmooth);
                                
 
-                Pathfinding.FunnelModifier funnel = gameObject.AddComponent<Pathfinding.FunnelModifier>();
-                seeker.RegisterModifier(funnel);
+                //Pathfinding.FunnelModifier funnel = gameObject.AddComponent<Pathfinding.FunnelModifier>();
+                //seeker.RegisterModifier(funnel);
 
                 //seeker.DeregisterModifier(seeker.startEndModifier);
 
