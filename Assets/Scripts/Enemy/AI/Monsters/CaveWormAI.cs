@@ -65,6 +65,14 @@ public class CaveWormAI : BasicAI {
 		baseSpellDamage = 0; //int
 		baseAttackRange = 3.0f;
 	}
+    
+    /// <summary>
+    /// Become aggressive when getting hit
+    /// </summary>
+    public override void becomeAggressive()
+    {
+        setState(chasing);
+    }
 
 	/// <summary>
 	/// Randomly calculate the loot.

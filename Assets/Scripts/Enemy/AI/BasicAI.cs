@@ -7,7 +7,7 @@ using System.Collections.Generic;
 public abstract class BasicAI : Hittable
 {
     public string debugStateName;
-
+    
     int bloodAmount = 1; //change if u needa
 
     public AIState state;
@@ -78,6 +78,7 @@ public abstract class BasicAI : Hittable
     public abstract void notifyHostileDetected(); //what to do when an ally notifies me to be hostile
     public abstract void alertDamage(); //what to do when i get damaged
     public abstract void onDeath(); //what to do when i die
+    public abstract void becomeAggressive(); //called when they get hit (tell them to become hostile)
 
     public void notifyAllies()
     {
@@ -416,6 +417,7 @@ public abstract class BasicAI : Hittable
         }
         else
         {
+            becomeAggressive();
             float damage = statistics.calculateDamage(damageBundle.weapon);
             Debug.Log(gameObject + " was hit by " + damageBundle.source + " for " + damage);
             statistics.CurrentHP -= damage;

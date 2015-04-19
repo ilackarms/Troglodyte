@@ -58,6 +58,14 @@ public class SquibAI : BasicAI {
 		baseSpellDamage = 0; //int
 		baseAttackRange = 2.5f;
 	}
+
+    /// <summary>
+    /// Become aggressive when getting hit
+    /// </summary>
+    public override void becomeAggressive()
+    {
+        setState(chasing);
+    }
 	
 	/// <summary>
 	/// Randomly calculate the loot.

@@ -50,6 +50,6 @@ UnityLockfile
 *.sln
 
 #Unity Temp folder
-./Temp
-./Library
-./obj
+Temp/
+Library/
+obj/
