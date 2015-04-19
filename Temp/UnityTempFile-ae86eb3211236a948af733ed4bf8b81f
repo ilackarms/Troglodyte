@@ -1,0 +1,266 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll
+-r:Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll
+-r:Assets/RAIN/RAIN.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:\Program Files\Unity\Editor\Data\PlaybackEngines\iossupport\UnityEditor.iOS.Extensions.Xcode.dll"
+-define:UNITY_5_0_0
+-define:UNITY_5_0
+-define:UNITY_5
+-define:ENABLE_LICENSE_RENAME
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_4_6_FEATURES
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_NEW_HIERARCHY
+-define:ENABLE_PHYSICS
+-define:ENABLE_PHYSICS_PHYSX3
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_AUDIOMIXER_SUSPEND
+-define:ENABLE_NONPRO
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+"Assets/0000 ats V2 package/atsV2 UnityTerrainBump Package/CustomTerrainScriptAtsV2.cs"
+Assets/Arms/Arms_Level_1.fbm/AnimationController.cs
+Assets/Arms/Arms_Level_1.fbm/TestAnimationScript.cs
+Assets/AstarExtension.cs
+Assets/AstarPathfindingProject/Core/AI/AIPath.cs
+Assets/AstarPathfindingProject/Core/AI/NavmeshController.cs
+Assets/AstarPathfindingProject/Core/AI/Seeker.cs
+Assets/AstarPathfindingProject/Core/AstarData.cs
+Assets/AstarPathfindingProject/Core/AstarMath.cs
+Assets/AstarPathfindingProject/Core/AstarPath.cs
+Assets/AstarPathfindingProject/Core/GraphUpdateScene.cs
+Assets/AstarPathfindingProject/Core/GraphUpdateShape.cs
+Assets/AstarPathfindingProject/Core/Misc/AnimationLink.cs
+Assets/AstarPathfindingProject/Core/Misc/AstarDebugger.cs
+Assets/AstarPathfindingProject/Core/Misc/AstarEnumFlagAttr.cs
+Assets/AstarPathfindingProject/Core/Misc/BinaryHeap.cs
+Assets/AstarPathfindingProject/Core/Misc/GraphEditorBase.cs
+Assets/AstarPathfindingProject/Core/Misc/GraphModifier.cs
+Assets/AstarPathfindingProject/Core/Misc/Int3.cs
+Assets/AstarPathfindingProject/Core/Misc/ListPool.cs
+Assets/AstarPathfindingProject/Core/Misc/NodeLink.cs
+Assets/AstarPathfindingProject/Core/Misc/NodeLink2.cs
+Assets/AstarPathfindingProject/Core/Misc/NodeLink3.cs
+Assets/AstarPathfindingProject/Core/Misc/ObjectPool.cs
+Assets/AstarPathfindingProject/Core/Misc/PathPool.cs
+Assets/AstarPathfindingProject/Core/Misc/StackPool.cs
+Assets/AstarPathfindingProject/Core/Misc/ThreadControlQueue.cs
+Assets/AstarPathfindingProject/Core/Misc/WindowsStoreCompatibility.cs
+Assets/AstarPathfindingProject/Core/Nodes/GraphNode.cs
+Assets/AstarPathfindingProject/Core/Path.cs
+Assets/AstarPathfindingProject/Core/PathHandler.cs
+Assets/AstarPathfindingProject/Core/Serialization/JsonConverters.cs
+Assets/AstarPathfindingProject/Core/Serialization/JsonSerializer.cs
+Assets/AstarPathfindingProject/Core/Serialization/SimpleJsonReplacement.cs
+Assets/AstarPathfindingProject/Core/Serialization/SimpleZipReplacement.cs
+Assets/AstarPathfindingProject/Core/astarclasses.cs
+Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralGridMover.cs
+Assets/AstarPathfindingProject/ExampleScenes/Example12_Procedural/ProceduralWorld.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/AIFollow.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/AstarSmoothFollow2.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/DoorController.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/DynamicGridObstacle.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAI.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/ObjectPlacer.cs
+Assets/AstarPathfindingProject/ExampleScenes/ExampleScripts/TargetMover.cs
+Assets/AstarPathfindingProject/Generators/Base.cs
+Assets/AstarPathfindingProject/Generators/GridGenerator.cs
+Assets/AstarPathfindingProject/Generators/NavMeshGenerator.cs
+Assets/AstarPathfindingProject/Generators/NodeClasses/GridNode.cs
+Assets/AstarPathfindingProject/Generators/NodeClasses/PointNode.cs
+Assets/AstarPathfindingProject/Generators/NodeClasses/TriangleMeshNode.cs
+Assets/AstarPathfindingProject/Generators/PointGenerator.cs
+Assets/AstarPathfindingProject/Generators/QuadtreeGraph.cs
+Assets/AstarPathfindingProject/Generators/Utilities/BBTree.cs
+Assets/AstarPathfindingProject/Generators/Utilities/EuclideanEmbedding.cs
+Assets/AstarPathfindingProject/Generators/Utilities/NavMeshRenderer.cs
+Assets/AstarPathfindingProject/Generators/Utilities/ObjImporter.cs
+Assets/AstarPathfindingProject/Modifiers/AlternativePath.cs
+Assets/AstarPathfindingProject/Modifiers/FunnelModifier.cs
+Assets/AstarPathfindingProject/Modifiers/Modifiers.cs
+Assets/AstarPathfindingProject/Modifiers/RaycastModifier.cs
+Assets/AstarPathfindingProject/Modifiers/SimpleSmoothModifier.cs
+Assets/AstarPathfindingProject/Modifiers/StartEndModifier.cs
+Assets/AstarPathfindingProject/Navmesh/RelevantGraphSurface.cs
+Assets/AstarPathfindingProject/Pathfinders/ABPath.cs
+Assets/AstarPathfindingProject/Utilities/AstarChecksum.cs
+Assets/AstarPathfindingProject/Utilities/AstarMemory.cs
+Assets/AstarPathfindingProject/Utilities/AstarParallel.cs
+Assets/AstarPathfindingProject/Utilities/AstarProfiler.cs
+Assets/AstarPathfindingProject/Utilities/DotNetReplacements.cs
+Assets/AstarPathfindingProject/Utilities/GraphUpdateUtilities.cs
+Assets/AstarPathfindingProject/Utilities/LockFreeStack.cs
+Assets/AstarPathfindingProject/Utilities/PathUtilities.cs
+Assets/AstarPathfindingProject/Utilities/ProfileHelper.cs
+Assets/AstarPathfindingProject/Utilities/UnityReferenceHelper.cs
+Assets/AstarPathfindingProject/changelog.cs
+Assets/CameraShake_StaticNova/ExampleScene/Scripts/ExampleScene.cs
+Assets/CameraShake_StaticNova/Shake.cs
+"Assets/Detonator Explosion Framework/Sample Supporting Emitters/DetonatorSprayHelper.cs"
+"Assets/Detonator Explosion Framework/System/Detonator.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorBurstEmitter.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorCloudRing.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorComponent.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorFireball.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorForce.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorGlow.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorHeatwave.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorLight.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorShockwave.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSmoke.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSound.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSparks.cs"
+"Assets/Detonator Explosion Framework/System/DetonatorSpray.cs"
+"Assets/Detonator Explosion Framework/TestScene/DetonatorTest.cs"
+"Assets/Detonator Explosion Framework/TestScene/TouchToMouse.cs"
+Assets/Download/FT_CaveWorm/Script/PlayAnimation.cs
+Assets/Download/FT_CaveWorm/Script/SubstanceGUI.cs
+Assets/Download/KnightInChainMail/MyScripts/Mecanim_Control_melee.cs
+"Assets/Lux/Lux Scripts/Lux Cubemapper/Scripts/LuxCubeProcessor.cs"
+"Assets/Lux/Lux Scripts/Lux Cubemapper/Scripts/LuxEnvProbe.cs"
+"Assets/Lux/Lux Scripts/SetupLux.cs"
+"Assets/Lux/Lux Shader/Terrain/Scripts/LuxTerrainControl.cs"
+"Assets/Realistic Effects Pack/Scripts/Demo/MyGuiV2.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Balls/AddMaterialOnHit.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Balls/AnimatorBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Balls/LazyLoad.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Balls/ProjectileCollisionBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Balls/SetRandomStartPoint.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Buffs/ShieldCollisionBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Objects/MoveOnGround.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Shots/LineRendererBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Waves/ClothGridCollisionBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Prefabs/Waves/InstanceMaterial.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/Billboard.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/CollisionActiveBehaviour.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/DeadTime.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/EffectSettings.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutLight.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutParticles.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutScale.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutShaderColor.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutShaderFloat.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/FadeInOutStatus.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/InvokeInterval.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/OnStartSendCollision.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/RandomRotateOnStart.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/SetPositionOnHit.cs"
+"Assets/Realistic Effects Pack/Scripts/Share/UVTextureAnimator.cs"
+Assets/Resources/Prefabs/Blood/BloodTrails.cs
+Assets/Resources/Prefabs/Blood/ParticleDestroyer.cs
+Assets/Scripts/Code/CustomSendMessage.cs
+Assets/Scripts/Code/DamageBundle.cs
+Assets/Scripts/Code/Hittable.cs
+Assets/Scripts/Enemy/AI/AIState.cs
+Assets/Scripts/Enemy/AI/AudioSensor.cs
+Assets/Scripts/Enemy/AI/BasicAI.cs
+Assets/Scripts/Enemy/AI/DetectMe.cs
+Assets/Scripts/Enemy/AI/Monsters/CaveWormAI.cs
+Assets/Scripts/Enemy/AI/Monsters/Claw.cs
+Assets/Scripts/Enemy/AI/Monsters/SquibAI.cs
+Assets/Scripts/Enemy/AI/NavAI.cs
+Assets/Scripts/Enemy/AI/VisualSensor.cs
+Assets/Scripts/Enemy/AI/WaypointPath.cs
+Assets/Scripts/Enemy/BasicTargetingAI.cs
+Assets/Scripts/Enemy/ConsumableCorpse.cs
+Assets/Scripts/Enemy/EnemyHighlighting.cs
+Assets/Scripts/Enemy/FloatingHitPointBar.cs
+Assets/Scripts/Enemy/Pathfinding/SimplePather.cs
+Assets/Scripts/Enemy/Soul.cs
+Assets/Scripts/GUI/CustomCursor.cs
+Assets/Scripts/GUI/FloatingText.cs
+Assets/Scripts/GUI/HoveringText.cs
+Assets/Scripts/GUI/HoveringTexture.cs
+Assets/Scripts/Global/Global.cs
+Assets/Scripts/Items/Armor.cs
+Assets/Scripts/Items/Consumable.cs
+Assets/Scripts/Items/Equippable.cs
+Assets/Scripts/Items/Interactable.cs
+Assets/Scripts/Items/Item.cs
+Assets/Scripts/Items/ItemFactory.cs
+Assets/Scripts/Items/PickUpItem.cs
+Assets/Scripts/Items/Potion.cs
+Assets/Scripts/Items/Scroll.cs
+Assets/Scripts/Items/Sellable.cs
+Assets/Scripts/Items/Slot.cs
+Assets/Scripts/Items/Weapon.cs
+Assets/Scripts/Player/Buff.cs
+Assets/Scripts/Player/Camera/CameraShake.cs
+Assets/Scripts/Player/Camera/HeadBobCamera.cs
+Assets/Scripts/Player/Camera/SmoothLook.cs
+Assets/Scripts/Player/CharacterPage.cs
+Assets/Scripts/Player/CombatSystem.cs
+Assets/Scripts/Player/FallDamage.cs
+Assets/Scripts/Player/Inventory/EquippedItemIndex.cs
+Assets/Scripts/Player/Inventory/Inventory.cs
+Assets/Scripts/Player/ItemInteractionSystem.cs
+Assets/Scripts/Player/PlayerHealth.cs
+Assets/Scripts/Player/PlayerState.cs
+Assets/Scripts/Player/SlotInventory.cs
+Assets/Scripts/Player/SpellSystem.cs
+Assets/Scripts/Spells/Spell.cs
+Assets/Scripts/Spells/SpellParticleFactory.cs
+Assets/Scripts/Weapons/Arrow.cs
+Assets/Scripts/Weapons/Bow.cs
+Assets/Scripts/Weapons/Unarmed.cs
+Assets/Scripts/Weapons/WeaponCollision.cs
+Assets/Scripts/WorldGen/MapGenerator.cs
+Assets/Scripts/WorldGen/Piece.cs
+Assets/Scripts/WorldGen/PieceContent.cs
+Assets/Shaders/Sources/LightningBolt.cs
+"Assets/Underworld/Origin/Tools/Image Based/DesaturateEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/BlurEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/ColorCorrectionEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/ContrastStretchEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/EdgeDetectEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/GlowEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/GrayscaleEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/MotionBlur.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/NoiseEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/SSAOEffectDepthCutoff.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/SepiaToneEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/TwirlEffect.cs"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/VortexEffect.cs"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"

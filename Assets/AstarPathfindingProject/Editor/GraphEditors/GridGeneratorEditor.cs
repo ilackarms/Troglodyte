@@ -1,7 +1,3 @@
-#if UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5 || UNITY_4_6 || UNITY_4_7 || UNITY_4_8 || UNITY_4_9
-#define UNITY_4
-#endif
-
 #if UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_3_5 || UNITY_3_4 || UNITY_3_3
 #define UNITY_LE_4_3
 #endif
@@ -43,9 +39,8 @@ namespace Pathfinding {
 		
 		[JsonMember]
 		public GridPivot pivot;
-		
-		GraphNode node1;
-	
+
+
 		/** Rounds a vector's components to whole numbers if very close to them */
 		public static Vector3 RoundVector3 ( Vector3 v ) {
 			if (Mathf.Abs ( v.x - Mathf.Round(v.x)) < 0.001f ) v.x = Mathf.Round ( v.x );
@@ -54,93 +49,36 @@ namespace Pathfinding {
 			return v;
 		}
 	
-	#if UNITY_LE_4_3
-		/** Draws an integer field */
-		public int IntField (string label, int value, int offset, int adjust, out Rect r) {
-			return IntField (new GUIContent (label),value,offset,adjust,out r);
-		}
-		
-		/** Draws an integer field */
-		public int IntField (GUIContent label, int value, int offset, int adjust, out Rect r) {
-			GUIStyle intStyle = EditorStyles.numberField;
-	
-			EditorGUILayoutx.BeginIndent ();
-			Rect r1 = GUILayoutUtility.GetRect (label,intStyle);
-			
-			Rect r2 = GUILayoutUtility.GetRect (new GUIContent (value.ToString ()),intStyle);
-			
-			EditorGUILayoutx.EndIndent();
-			
-			
-			r2.width += (r2.x-r1.x);
-			r2.x = r1.x+offset;
-			r2.width -= offset+offset+adjust;
-			
-			r = new Rect ();
-			r.x = r2.x+r2.width;
-			r.y = r1.y;
-			r.width = offset;
-			r.height = r1.height;
-			
-			GUI.SetNextControlName ("IntField_"+label.text);
-			value = EditorGUI.IntField (r2,"",value);
-			
-			bool on = GUI.GetNameOfFocusedControl () == "IntField_"+label.text;
-			
-			if (Event.current.type == EventType.Repaint) {	
-				intStyle.Draw (r1,label,false,false,false,on);
-			}
-			
-			return value;
-		}
-	#endif
-	
 		public override void OnInspectorGUI (NavGraph target) {
-			
+
 			GridGraph graph = target as GridGraph;
-			
-			//GUILayout.BeginHorizontal ();
-			//GUILayout.BeginVertical ();
-			Rect lockRect;
-			
+
 			GUIStyle lockStyle = AstarPathEditor.astarSkin.FindStyle ("GridSizeLock");
 			if (lockStyle == null) {
 				lockStyle = new GUIStyle ();
 			}
 	
-	#if !UNITY_LE_4_3 || true
 			GUILayout.BeginHorizontal ();
 			GUILayout.BeginVertical ();
 			int newWidth = EditorGUILayout.IntField (new GUIContent ("Width (nodes)","Width of the graph in nodes"), graph.width);
 			int newDepth = EditorGUILayout.IntField (new GUIContent ("Depth (nodes)","Depth (or height you might also call it) of the graph in nodes"), graph.depth);
 			GUILayout.EndVertical ();
 	
-			lockRect = GUILayoutUtility.GetRect (lockStyle.fixedWidth,lockStyle.fixedHeight);
-	
-			// Add a small offset to make it better centred around the controls
-			lockRect.y += 3;
+			Rect lockRect = GUILayoutUtility.GetRect (lockStyle.fixedWidth,lockStyle.fixedHeight);
+
 			GUILayout.EndHorizontal ();
 	
 			// All the layouts mess up the margin to the next control, so add it manually
 			GUILayout.Space (2);
-	#elif UNITY_4
-			Rect tmpLockRect;
-			int newWidth = IntField (new GUIContent ("Width (nodes)","Width of the graph in nodes"),graph.width,100,0, out lockRect, out sizeSelected1);
-			int newDepth = IntField (new GUIContent ("Depth (nodes)","Depth (or height you might also call it) of the graph in nodes"),graph.depth,100,0, out tmpLockRect, out sizeSelected2);
-	#else
-			Rect tmpLockRect;
-			int newWidth = IntField (new GUIContent ("Width (nodes)","Width of the graph in nodes"),graph.width,50,0, out lockRect, out sizeSelected1);
-			int newDepth = IntField (new GUIContent ("Depth (nodes)","Depth (or height you might also call it) of the graph in nodes"),graph.depth,50,0, out tmpLockRect, out sizeSelected2);
-	#endif
-			
+
+			// Add a small offset to make it better centred around the controls
+			lockRect.y += 3;
 			lockRect.width = lockStyle.fixedWidth;
 			lockRect.height = lockStyle.fixedHeight;
 			lockRect.x += lockStyle.margin.left;
 			lockRect.y += lockStyle.margin.top;
 			
 			locked = GUI.Toggle (lockRect,locked,new GUIContent ("","If the width and depth values are locked, changing the node size will scale the grid which keeping the number of nodes consistent instead of keeping the size the same and changing the number of nodes in the graph"),lockStyle);
-			
-			//GUILayout.EndHorizontal ();
 			
 			if (newWidth != graph.width || newDepth != graph.depth) {
 				SnapSizeToNodes (newWidth,newDepth,graph);
@@ -154,7 +92,30 @@ namespace Pathfinding {
 			float prevRatio = graph.aspectRatio;
 			graph.aspectRatio = EditorGUILayout.FloatField (new GUIContent ("Aspect Ratio","Scaling of the nodes width/depth ratio. Good for isometric games"),graph.aspectRatio);
 
-			graph.isometricAngle = EditorGUILayout.FloatField (new GUIContent ("Isometric Angle", "For an isometric 2D game, you can use this parameter to scale the graph correctly."), graph.isometricAngle);
+			float standardIsometric = 90-Mathf.Atan (1/Mathf.Sqrt(2))*Mathf.Rad2Deg;
+
+			var isometricGUIContent = new GUIContent ("Isometric Angle", "For an isometric 2D game, you can use this parameter to scale the graph correctly.\nIt can also be used to create a hexagon grid.");
+			var isometricOptions = new GUIContent[] {new GUIContent ("None (0°)"), new GUIContent ("Isometric (≈54.74°)"), new GUIContent("Custom")};
+			var isometricValues = new float[] {0, standardIsometric};
+			var isometricOption = 2;
+			for (int i = 0; i < isometricValues.Length; i++) {
+				if (Mathf.Approximately (graph.isometricAngle, isometricValues[i])) {
+					isometricOption = i;
+				}
+			}
+
+			var prevIsometricOption = isometricOption;
+			isometricOption = EditorGUILayout.IntPopup (isometricGUIContent, isometricOption, isometricOptions, new int[] {0, 1, 2});
+			if (prevIsometricOption != isometricOption) {
+				// Change to something that will not match the predefined values above
+				graph.isometricAngle = 45;
+			}
+
+			if (isometricOption < 2) {
+				graph.isometricAngle = isometricValues[isometricOption];
+			} else {
+				graph.isometricAngle = EditorGUILayout.FloatField (isometricGUIContent, graph.isometricAngle);
+			}
 
 			if (graph.nodeSize != newNodeSize || prevRatio != graph.aspectRatio) {
 				if (!locked) {
@@ -169,9 +130,10 @@ namespace Pathfinding {
 				} else {
 					float delta = newNodeSize / graph.nodeSize;
 					graph.nodeSize = newNodeSize;
-					graph.unclampedSize = new Vector2 (newWidth*graph.nodeSize,newDepth*graph.nodeSize);
+					graph.unclampedSize = RoundVector3 (new Vector2 (newWidth*graph.nodeSize,newDepth*graph.nodeSize));
 					Vector3 newCenter = graph.matrix.MultiplyPoint3x4 (new Vector3 ((newWidth/2F)*delta,0,(newDepth/2F)*delta));
-					graph.center = newCenter;
+					graph.center = RoundVector3 (newCenter);
+
 					graph.GenerateMatrix ();
 					
 					//Make sure the width & depths stay the same
@@ -184,15 +146,7 @@ namespace Pathfinding {
 			Vector3 pivotPoint;
 			Vector3 diff;
 	
-	#if UNITY_LE_4_3
-			EditorGUIUtility.LookLikeControls ();
-	#endif
-	
-	#if !UNITY_4
-			EditorGUILayoutx.BeginIndent ();
-	#else
 			GUILayout.BeginHorizontal ();
-	#endif
 			
 			switch (pivot) {
 				case GridPivot.Center:
@@ -228,33 +182,14 @@ namespace Pathfinding {
 					graph.center = pivotPoint-diff;
 					break;
 			}
-			
+
 			graph.GenerateMatrix ();
 			
 			pivot = PivotPointSelector (pivot);
-			
-	#if !UNITY_4
-			EditorGUILayoutx.EndIndent ();
-			
-			EditorGUILayoutx.BeginIndent ();
-	#else
+
 			GUILayout.EndHorizontal ();
-	#endif
 			
 			graph.rotation = EditorGUILayout.Vector3Field ("Rotation",graph.rotation);
-	
-	#if UNITY_LE_4_3
-			//Add some space to make the Rotation and postion fields be better aligned (instead of the pivot point selector)
-			//GUILayout.Space (19+7);
-	#endif
-			//GUILayout.EndHorizontal ();
-			
-	#if !UNITY_4
-			EditorGUILayoutx.EndIndent ();
-	#endif
-	#if UNITY_LE_4_3
-			EditorGUIUtility.LookLikeInspector ();
-	#endif
 	
 			if (GUILayout.Button (new GUIContent ("Snap Size","Snap the size to exactly fit nodes"),GUILayout.MaxWidth (100),GUILayout.MaxHeight (16))) {
 				SnapSizeToNodes (newWidth,newDepth,graph);
@@ -264,6 +199,17 @@ namespace Pathfinding {
 			
 			graph.cutCorners = EditorGUILayout.Toggle (new GUIContent ("Cut Corners","Enables or disables cutting corners. See docs for image example"),graph.cutCorners);
 			graph.neighbours = (NumNeighbours)EditorGUILayout.EnumPopup (new GUIContent ("Connections","Sets how many connections a node should have to it's neighbour nodes."),graph.neighbours);
+
+			if (graph.neighbours == NumNeighbours.Six) {
+				if ((isometricOption != 1 || !graph.uniformEdgeCosts) && GUILayout.Button ("Configure as hexagon graph")) {
+					graph.isometricAngle = standardIsometric;
+					graph.uniformEdgeCosts = true;
+				}
+				graph.uniformEdgeCosts = EditorGUILayout.Toggle (new GUIContent ("Hexagon connection costs", "Tweak the edge costs in the graph to be more suitable for hexagon graphs"), graph.uniformEdgeCosts);
+			} else {
+				graph.uniformEdgeCosts = false;
+			}
+
 
 			graph.maxClimb = EditorGUILayout.FloatField (new GUIContent ("Max Climb","How high, relative to the graph, should a climbable level be. A zero (0) indicates infinity"),graph.maxClimb);
 			if ( graph.maxClimb < 0 ) graph.maxClimb = 0;
@@ -352,12 +298,8 @@ namespace Pathfinding {
 		 */
 		[System.Obsolete("Use ObjectField instead")]
 		public UnityEngine.Object ResourcesField (string label, UnityEngine.Object obj, System.Type type) {
-			
-	#if UNITY_3_3
-			obj = EditorGUILayout.ObjectField (label,obj,type);
-	#else
+
 			obj = EditorGUILayout.ObjectField (label,obj,type,false);
-	#endif
 			
 			if (obj != null) {
 				string path = AssetDatabase.GetAssetPath (obj);
@@ -446,16 +388,11 @@ namespace Pathfinding {
 					
 			return pivot;
 		}
-		
-		//GraphUndo undoState;
-		//byte[] savedBytes;
-		
+
 		public override void OnSceneGUI (NavGraph target) {
 			
 			Event e = Event.current;
-			
-			
-			
+
 			GridGraph graph = target as GridGraph;
 			
 			Matrix4x4 matrixPre = graph.matrix;
@@ -488,82 +425,66 @@ namespace Pathfinding {
 			Handles.DrawCapFunction cap = Handles.CylinderCap;
 			
 			Vector2 extents = graph.unclampedSize*0.5F;
-			
+
 			Vector3 center = inversed.MultiplyPoint3x4 (graph.center);
-			
-			
-	#if UNITY_3_3
-			if (Tools.current == 3) {
-	#else
+
+
 			if (Tools.current == Tool.Scale) {
-	#endif
-			
-				Vector3 p1 = Handles.Slider (center+new Vector3 (extents.x,0,0),	Vector3.right,		0.1F*HandleUtility.GetHandleSize (center+new Vector3 (extents.x,0,0)),cap,0);
-				Vector3 p2 = Handles.Slider (center+new Vector3 (0,0,extents.y),	Vector3.forward,	0.1F*HandleUtility.GetHandleSize (center+new Vector3 (0,0,extents.y)),cap,0);
-				//Vector3 p3 = Handles.Slider (center+new Vector3 (0,extents.y,0),	Vector3.up,			0.1F*HandleUtility.GetHandleSize (center+new Vector3 (0,extents.y,0)),cap,0);
+				const float HandleScale = 0.1f;
+
+				EditorGUI.BeginChangeCheck ();
+
+				Vector3 p1 = Handles.Slider (center+new Vector3 (extents.x,0,0),	Vector3.right,		HandleScale*HandleUtility.GetHandleSize (center+new Vector3 (extents.x,0,0)),cap,0);
+				Vector3 p2 = Handles.Slider (center+new Vector3 (0,0,extents.y),	Vector3.forward,	HandleScale*HandleUtility.GetHandleSize (center+new Vector3 (0,0,extents.y)),cap,0);
 				
-				Vector3 p4 = Handles.Slider (center+new Vector3 (-extents.x,0,0),	-Vector3.right,		0.1F*HandleUtility.GetHandleSize (center+new Vector3 (-extents.x,0,0)),cap,0);
-				Vector3 p5 = Handles.Slider (center+new Vector3 (0,0,-extents.y),	-Vector3.forward,	0.1F*HandleUtility.GetHandleSize (center+new Vector3 (0,0,-extents.y)),cap,0);
+				Vector3 p4 = Handles.Slider (center+new Vector3 (-extents.x,0,0),	-Vector3.right,		HandleScale*HandleUtility.GetHandleSize (center+new Vector3 (-extents.x,0,0)),cap,0);
+				Vector3 p5 = Handles.Slider (center+new Vector3 (0,0,-extents.y),	-Vector3.forward,	HandleScale*HandleUtility.GetHandleSize (center+new Vector3 (0,0,-extents.y)),cap,0);
 				
-				Vector3 p6 = Handles.Slider (center,	Vector3.up,		0.1F*HandleUtility.GetHandleSize (center),cap,0);
+				Vector3 p6 = Handles.Slider (center, Vector3.up, HandleScale*HandleUtility.GetHandleSize (center),cap,0);
 				
 				Vector3 r1 = new Vector3 (p1.x,p6.y,p2.z);
 				Vector3 r2 = new Vector3 (p4.x,p6.y,p5.z);
-				
-				//Debug.Log (graph.boundsMatrix.MultiplyPoint3x4 (Vector3.zero)+" "+graph.boundsMatrix.MultiplyPoint3x4 (Vector3.one));
-				
-				//if (Tools.viewTool != ViewTool.Orbit) {
-				
+
+				if (EditorGUI.EndChangeCheck ()) {
 					graph.center = savedMatrix.MultiplyPoint3x4 ((r1+r2)/2F);
-					
+				
 					Vector3 tmp = r1-r2;
 					graph.unclampedSize = new Vector2(tmp.x,tmp.z);
-					
-				//}		
-			
-	#if UNITY_3_3
-			} else if (Tools.current == 1) {
-	#else
+				}
+
 			} else if (Tools.current == Tool.Move) {
-	#endif
 				
-				if (Tools.pivotRotation == PivotRotation.Local) {	
+				if (Tools.pivotRotation == PivotRotation.Local) {
+					EditorGUI.BeginChangeCheck ();
 					center = Handles.PositionHandle (center,Quaternion.identity);
 					
-					if (Tools.viewTool != ViewTool.Orbit) {
+					if (EditorGUI.EndChangeCheck () && Tools.viewTool != ViewTool.Orbit) {
 						graph.center = savedMatrix.MultiplyPoint3x4 (center);
+						Debug.Log (graph.center.ToString("R"));
 					}
 				} else {
 					Handles.matrix = Matrix4x4.identity;
-					
+
+					EditorGUI.BeginChangeCheck ();
 					center = Handles.PositionHandle (graph.center,Quaternion.identity);
 					
-					if (Tools.viewTool != ViewTool.Orbit) {
+					if (EditorGUI.EndChangeCheck () && Tools.viewTool != ViewTool.Orbit) {
 						graph.center = center;
 					}
 				}
-	#if UNITY_3_3
-			} else if (Tools.current == 2) {
-	#else
 			} else if (Tools.current == Tool.Rotate) {
-	#endif
 				//The rotation handle doesn't seem to be able to handle different matrixes of some reason
 				Handles.matrix = Matrix4x4.identity;
+
+				EditorGUI.BeginChangeCheck ();
+				var rot = Handles.RotationHandle (Quaternion.Euler (graph.rotation),graph.center);
 				
-				Quaternion rot = Handles.RotationHandle (Quaternion.Euler (graph.rotation),graph.center);
-				
-				if (Tools.viewTool != ViewTool.Orbit) {
+				if (EditorGUI.EndChangeCheck () && Tools.viewTool != ViewTool.Orbit) {
 					graph.rotation = rot.eulerAngles;
 				}
 			}
 			
-			//graph.size.x = Mathf.Max (graph.size.x,1);
-			//graph.size.y = Mathf.Max (graph.size.y,1);
-			//graph.size.z = Mathf.Max (graph.size.z,1);
-			
 			Handles.matrix = Matrix4x4.identity;
-			
-			
 			
 			
 		}

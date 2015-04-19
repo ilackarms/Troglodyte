@@ -29,20 +29,20 @@ namespace Pathfinding {
 		}
 
 #region Fields
-		[System.NonSerialized]
-		public NavMeshGraph navmesh; 	/**< Shortcut to the first NavMeshGraph. Updated at scanning time. This is the only reference to NavMeshGraph in the core pathfinding scripts */
+		/** Shortcut to the first NavMeshGraph. Updated at scanning time */
+		public NavMeshGraph navmesh {get; private set;}
 		
-		[System.NonSerialized]
-		public GridGraph gridGraph;		/**< Shortcut to the first GridGraph. Updated at scanning time. This is the only reference to GridGraph in the core pathfinding scripts */
+		/** Shortcut to the first GridGraph. Updated at scanning time */
+		public GridGraph gridGraph {get; private set;}
 
-		[System.NonSerialized]
-		public PointGraph pointGraph;		/**< Shortcut to the first PointGraph. Updated at scanning time. This is the only reference to PointGraph in the core pathfinding scripts */
+		/** Shortcut to the first PointGraph. Updated at scanning time */
+		public PointGraph pointGraph {get; private set;}
 
 
 		/** All supported graph types. Populated through reflection search */
-		public System.Type[] graphTypes = null;
+		public System.Type[] graphTypes {get; private set;}
 		
-#if ASTAR_FAST_NO_EXCEPTIONS || UNITY_WINRT
+#if ASTAR_FAST_NO_EXCEPTIONS || UNITY_WINRT || UNITY_WEBGL
 		/** Graph types to use when building with Fast But No Exceptions for iPhone.
 		 * If you add any custom graph types, you need to add them to this hard-coded list.
 		 */
@@ -53,31 +53,53 @@ namespace Pathfinding {
 		};
 #endif
 		
-		[System.NonSerialized]
 		/** All graphs this instance holds.
 		 * This will be filled only after deserialization has completed.
 		 * May contain null entries if graph have been removed.
 		 */
+		[System.NonSerialized]
 		public NavGraph[] graphs = new NavGraph[0];
 		
-		/** Links placed by the user in the scene view. */
+		/** Links placed by the user in the scene view.
+		 * \deprecated
+		 */
 		[System.NonSerialized]
 		public UserConnection[] userConnections = new UserConnection[0];
 		
 		//Serialization Settings
-
-		/** Has the data been reverted by an undo operation.
-		 * Used by the editor's undo logic to check if the AstarData has been reverted by an undo operation and should be deserialized.
-		 * \version Only used by Unity versions < U4.5
-		  */
-		public bool hasBeenReverted = false;
 		
-		[SerializeField]
 		/** Serialized data for all graphs and settings.
+		 * Stored as a base64 encoded string because otherwise Unity's Undo system would sometimes corrupt the byte data (because it only stores deltas).
+		 *
+		 * This can be accessed as a byte array from the #data property.
+		 *
+		 * \since 3.6.1
 		 */
-		private byte[] data;
-		
-		public uint dataChecksum;
+		[SerializeField]
+		string dataString;
+
+		/** Data from versions from before 3.6.1.
+		 * Used for handling upgrades
+		 * \since 3.6.1
+		 */
+		[SerializeField]
+		[UnityEngine.Serialization.FormerlySerializedAs("data")]
+		private byte[] upgradeData;
+
+		/** Serialized data for all graphs and settings */
+		private byte[] data {
+			get {
+				// Handle upgrading from earlier versions than 3.6.1
+				if (upgradeData != null && upgradeData.Length > 0) {
+					data = upgradeData;
+					upgradeData = null;
+				}
+				return dataString != null ? System.Convert.FromBase64String (dataString) : null;
+			}
+			set {
+				dataString = value != null ? System.Convert.ToBase64String (value) : null;
+			}
+		}
 		
 		/** Backup data if deserialization failed.
 		 */
@@ -90,10 +112,9 @@ namespace Pathfinding {
 
 		/** Serialized data for cached startup.
 		 * 
-		 * \deprecated
-		  */
+		 * \deprecated Deprecated since 3.6, #file_cachedStartup is now used instead
+		 */
 		public byte[] data_cachedStartup;
-
 
 		/** Should graph-data be cached.
 		 * Caching the startup means saving the whole graphs, not only the settings to an internal array (#data_cachedStartup) which can
@@ -110,9 +131,8 @@ namespace Pathfinding {
 			return data;
 		}
 		
-		public void SetData (byte[] data, uint checksum) {
+		public void SetData (byte[] data) {
 			this.data = data;
-			dataChecksum = checksum;
 		}
 		
 		/** Loads the graphs from memory, will load cached graphs if any exists */
@@ -289,10 +309,8 @@ namespace Pathfinding {
 		public void DeserializeGraphsPart (Pathfinding.Serialization.AstarSerializer sr) {
 			ClearGraphs ();
 			graphs = sr.DeserializeGraphs ();
-			if ( graphs != null ) for ( int i = 0; i<graphs.Length;i++ ) if ( graphs[i] != null ) graphs[i].graphIndex = (uint)i;
 			
 			userConnections = sr.DeserializeUserConnections();
-			//sr.DeserializeNodes();
 			sr.DeserializeExtraInfo();
 
 			//Assign correct graph indices.
@@ -316,20 +334,22 @@ namespace Pathfinding {
 			if (userConnections == null) userConnections = new UserConnection[0];
 			
 			List<NavGraph> gr = new List<NavGraph>(graphs);
+
+			// Set an offset so that the deserializer will load
+			// the graphs with the correct graph indexes
+			sr.SetGraphIndexOffset (gr.Count);
+
 			gr.AddRange (sr.DeserializeGraphs ());
 			graphs = gr.ToArray();
-			if ( graphs != null ) for ( int i = 0; i<graphs.Length;i++ ) if ( graphs[i] != null ) graphs[i].graphIndex = (uint)i;
 			
 			List<UserConnection> conns = new List<UserConnection>(userConnections);
 			conns.AddRange (sr.DeserializeUserConnections());
 			userConnections = conns.ToArray ();
-			sr.DeserializeNodes();
 			
 			//Assign correct graph indices. Issue #21
 			for (int i=0;i<graphs.Length;i++) {
 				if (graphs[i] == null) continue;
 				graphs[i].GetNodes (delegate (GraphNode node) {
-					//GraphNode[] nodes = graphs[i].nodes;
 					node.GraphIndex = (uint)i;
 					return true;
 				});
@@ -354,7 +374,7 @@ namespace Pathfinding {
 		/** Find all graph types supported in this build.
 		 * Using reflection, the assembly is searched for types which inherit from NavGraph. */
 		public void FindGraphTypes () {
-#if !ASTAR_FAST_NO_EXCEPTIONS && !UNITY_WINRT
+#if !ASTAR_FAST_NO_EXCEPTIONS && !UNITY_WINRT && !UNITY_WEBGL
 
 			System.Reflection.Assembly asm = System.Reflection.Assembly.GetAssembly (typeof(AstarPath));
 			
@@ -514,21 +534,26 @@ namespace Pathfinding {
 		 * 
 		 * \returns True if the graph was sucessfully removed (i.e it did exist in the #graphs array). False otherwise.
 		 * 
-		 * \see NavGraph.SafeOnDestroy
 		 * 
 		 * \version Changed in 3.2.5 to call SafeOnDestroy before removing
 		 * and nulling it in the array instead of removing the element completely in the #graphs array.
 		 * 
 		 */
 		public bool RemoveGraph (NavGraph graph) {
-			
-			//Safe OnDestroy is called since there is a risk that the pathfinding is searching through the graph right now,
-			//and if we don't wait until the search has completed we could end up with evil NullReferenceExceptions
-			graph.SafeOnDestroy ();
-			
-			int i=0;
-			for (;i<graphs.Length;i++) if (graphs[i] == graph) break;
-			if (i == graphs.Length) {
+
+			// Make sure all graph updates and other callbacks are done
+			active.FlushWorkItems (false, true);
+
+			// Make sure the pathfinding threads are stopped
+			active.BlockUntilPathQueueBlocked ();
+
+			// //Safe OnDestroy is called since there is a risk that the pathfinding is searching through the graph right now,
+			// //and if we don't wait until the search has completed we could end up with evil NullReferenceExceptions
+			graph.OnDestroy ();
+
+			int i = System.Array.IndexOf (graphs, graph);
+
+			if (i == -1) {
 				return false;
 			}
 			
@@ -568,38 +593,22 @@ namespace Pathfinding {
 			return data.graphs[(int)graphIndex];
 		}
 		
-		/** Returns the node at \a graphs[graphIndex].nodes[nodeIndex]. All kinds of error checking is done to make sure no exceptions are thrown. */
+		/** Returns the node at \a graphs[graphIndex].nodes[nodeIndex]. All kinds of error checking is done to make sure no exceptions are thrown.
+		 * \deprecated Use graph specific methods instead
+		 */
+		[System.Obsolete("Use graph specific methods instead")]
 		public GraphNode GetNode (int graphIndex, int nodeIndex) {
-			return GetNode (graphIndex,nodeIndex, graphs);
+			throw new System.NotImplementedException ();
 		}
 		
 		/** Returns the node at \a graphs[graphIndex].nodes[nodeIndex]. The graphIndex refers to the specified graphs array.\n
-		 * All kinds of error checking is done to make sure no exceptions are thrown */
+		 * All kinds of error checking is done to make sure no exceptions are thrown.
+		 * 
+		 * \obsolete Use graph specific methods instead
+		 */
+		[System.Obsolete("Use graph specific methods instead")]
 		public GraphNode GetNode (int graphIndex, int nodeIndex, NavGraph[] graphs) {
 			throw new System.NotImplementedException ();
-			
-			/*
-			if (graphs == null) {
-				return null;
-			}
-			
-			if (graphIndex < 0 || graphIndex >= graphs.Length) {
-				Debug.LogError ("Graph index is out of range"+graphIndex+ " [0-"+(graphs.Length-1)+"]");
-				return null;
-			}
-			
-			NavGraph graph = graphs[graphIndex];
-			
-			if (graph.nodes == null) {
-				return null;
-			}
-			
-			if (nodeIndex < 0 || nodeIndex >= graph.nodes.Length) {
-				Debug.LogError ("Node index is out of range : "+nodeIndex+ " [0-"+(graph.nodes.Length-1)+"]"+" (graph "+graphIndex+")");
-				return null;
-			}
-			
-			return graph.nodes[nodeIndex];*/
 		}
 		
 		/** Returns the first graph of type \a type found in the #graphs array. Returns null if none was found */
@@ -672,49 +681,8 @@ namespace Pathfinding {
 			Debug.LogError ("Graph doesn't exist");
 			return -1;
 		}
-	
-		/** Tries to find a graph with the specified GUID in the #graphs array.
-		 * If a graph is found it returns its index, otherwise it returns -1
-		 * \see GuidToGraph */
-		public int GuidToIndex (Guid guid) {
-			
-			if (graphs == null) {
-				return -1;
-				//CollectGraphs ();
-			}
-			
-			for (int i=0;i<graphs.Length;i++) {
-				if (graphs[i] == null) {
-					continue;
-				}
-				if (graphs[i].guid == guid) {
-					return i;
-				}
-			}
-			return -1;
-		}
 		
-		/** Tries to find a graph with the specified GUID in the #graphs array. Returns null if none is found
-		 * \see GuidToIndex */
-		public NavGraph GuidToGraph (Guid guid) {
-			
-			if (graphs == null) {
-				return null;
-				//CollectGraphs ();
-			}
-			
-			for (int i=0;i<graphs.Length;i++) {
-				if (graphs[i] == null) {
-					continue;
-				}
-				if (graphs[i].guid == guid) {
-					return graphs[i];
-				}
-			}
-			return null;
-		}
-		
-		#endregion
+#endregion
 		
 	}
 }

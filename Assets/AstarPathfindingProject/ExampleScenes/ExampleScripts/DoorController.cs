@@ -14,13 +14,16 @@ public class DoorController : MonoBehaviour {
 	Bounds bounds;
 	
 	public void Start () {
+		// Capture the bounds of the collider while it is closed
 		bounds = GetComponent<Collider>().bounds;
+
+		// Initially open the door
 		SetState (open);
 	}
-	
-	// Use this for initialization
+
 	void OnGUI () {
-		
+
+		// Show a UI button for opening and closing the door
 		if (GUI.Button (new Rect (5,yOffset,100,22), "Toggle Door")) {
 			SetState (!open);
 		}
@@ -30,25 +33,27 @@ public class DoorController : MonoBehaviour {
 		this.open = open;
 		
 		if (updateGraphsWithGUO) {
+			// Update the graph below the door
+			// Set the tag of the nodes below the door
+			// To something indicating that the door is open or closed
 			GraphUpdateObject guo = new GraphUpdateObject(bounds);
 			int tag = open ? opentag : closedtag;
+
+			// There are only 32 tags
 			if (tag > 31) { Debug.LogError ("tag > 31"); return; }
+
 			guo.modifyTag = true;
 			guo.setTag = tag;
 			guo.updatePhysics = false;
 			
 			AstarPath.active.UpdateGraphs (guo);
 		}
-		
+
+		// Play door animations
 		if (open) {
 			GetComponent<Animation>().Play ("Open");
 		} else {
 			GetComponent<Animation>().Play ("Close");
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

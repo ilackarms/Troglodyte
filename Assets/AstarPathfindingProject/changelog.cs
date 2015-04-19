@@ -1,10 +1,71 @@
 /** \page changelog Changelog
 
-- 3.5.9.1 (3.6 beta3, 2014-10-14)
-	- Added back isometric angle from 3.5.2 which had been removed by mistake from 3.5.9
+- TODO
+	https://github.com/MarkerMetro/MarkerMetro.Unity.JsonFx
+	
+	http://forum.arongranberg.com/t/terminology-in-documentation/1594
+	http://arongranberg.com/vanillaforums/discussion/3404/deserializegraphsadditive-and-relocatenodes#latest
+	http://arongranberg.com/vanillaforums/discussion/3419/what-is-the-correct-api-for-unloading-a-graph-at-runtime#latest
+	- Write fallback serializer for Point Graph!!
 
-- 3.5.9 (3.6 beta2, 2014-10-13)
-		
+- 3.6.2 (2015-04-14)
+	- Fixes
+		Fixed null reference exception in the PointGraph OnDrawGizmos method.
+		Fixed a few example scene errors in Unity 5
+
+- 3.6.1 (2015-04-06)
+	- Upgrade notes:
+		- The behaviour of NavGraph.RelocateNodes has changed.
+			The oldMatrix was previously treated as the newMatrix and vice versa so you might
+			need to switch the order of your parameters if you are calling it.
+	- Highlights:
+		- Works in WebGL/IL2CPP (Unity 5.0.0p3).
+			At least according to my limited tests.
+		- Implemented RelocateNodes for recast graphs (however it cannot be used on tiled recast graphs).
+		- Added support for hexagon graphs.
+			Enable it by changing the 'Connections' field on a grid graph to 'Six'.
+		- Fixed AstarData.DeserializeGraphsAdditive (thanks tmcsweeney).
+		- Fixed pathfinding threads sometimes not terminating correctly.
+			This would show up as a 'Could not terminate pathfinding thread...' error message.
+		- Added a version of GridGraph.RelocateNodes which takes grid settings instead of a matrix for ease of use.
+	- Changes:
+		- Removed NavGraph.SafeOnDestroy
+		- Removed GridGraph.scans because it is a pretty useless variable.
+		- Removed NavGraph.CreateNodes (and overriden methods) since they were not used.
+		- Made GridGraph.RemoveGridGraphFromStatic private.
+		- Removed NavMeshGraph.DeserializeMeshNodes since it was not used.
+		- Made Seeker.lastCompletedVectorPath, lastCompletedNodePath, OnPathComplete, OnMultiPathComplete, OnPartialPathComplete
+			private since they really shouldn't be used by other scripts.
+		- Removed Seeker.saveGetNearestHints, Seeker.startHint, Seeker.endHint, Seeker.DelayPathStart since they were not used.
+		- Removed unused methods of little use: AstarData.GuidToIndex and AstarData.GuidToGraph.
+		- Removed RecastGraph.vertices and RecastGraph.vectorVertices since they were obsolete and not used.
+		- Removed some old Unity 4.3 and Unity 3 compatibility code.
+		- Recast graphs' 'Snap to scene' button now takes into account the layer mask and the tag mask when snapping, it now also checks terrains and colliders instead of just meshes (thanks Kieran).
+	- Fixes:
+		- Fixed RecastGraph bounds gizmos could sometimes be drawn with the wrong color.
+		- Fixed a rare data race which would cause an exception with the message
+			'Trying to initialize a node when it is not safe to initialize any nodes' to be thrown
+		- Tweaked Undo behaviour, should be more stable now.
+		- Fixed grid graph editor changing the center field very little every frame (floating point errors)
+			causing an excessive amount of undo items to be created.
+		- Reduced unecessary dirtying of the scene (thanks Ben Hymers).
+		- Fixed RVOCoreSimulator.WallThickness (thanks tmcsweeney).
+		- Fixed recast graph not properly checking for the case where an object had a MeshFilter but no Renderer (thanks 3rinJax).
+		- Fixed disabling ASTAR_RECAST_ARRAY_BASED_LINKED_LIST would cause compiler errors.
+		- Fixed recast graphs could sometimes voxelize the world incorrectly and the resulting navmesh would have artifacts.
+		- Fixed graphMask code having been removed from the free version in some cases
+			due to old code which treated it as a pro only feature.
+		- Improved compatibility with Xbox One.
+		- Fixed RVOController layer field not working when multiple agents were selected.
+		- Fixed grid nodes not being able to have custom connections in the free version.
+		- Fixed runtime error on PS4
+
+- 3.6 (2015-02-02)
+	- Upgrade notes:
+		- Cache data for faster startup is now stored in a separate file.\n
+			This reduces the huge lag some users have been experiencing since Unity changed their Undo system.\n
+			You will need to open the AstarPath components which used cached startup, go to the save and load tab
+			and press a button labeled "Transfer cache data to a separate file".
 	- Highlights:
 		- Added support for the Jump Point Search algorithm on grid graphs (pro only).\n
 			The JPS algorithm can be used to speed up pathfinding on grid graphs *without any penalties or tag weights applied* (it only works on uniformly weighted graphs).
@@ -19,10 +80,6 @@
 		- Added PointNode.gameObject which will contain the GameObject each node was created from.
 		- Added support for RVO obstacles.\n
 			It is by no means perfect at this point, but at least it works.
-		- Cache data for faster startup is now stored in a separate file.\n
-			This reduces the huge lag some users have been experiencing since Unity changed their Undo system.\n
-			[Upgrade Note] You will need to open the AstarPath components which used cached startup, go to the save and load tab
-			and press a button labeled "Transfer cache data to a separate file".
 		- Undo works reasonably well again.\n
 			It took a lot of time working around weird Unity behaviours.
 			For example Unity seems to send undo events when dragging items to object fields (why? no idea).
@@ -34,9 +91,15 @@
 		- Extended the max number of graphs in the inspector to 256 up from 4 or 32 depending on settings.\n
 			No memory usage increase, just shuffling bits around.
 			I still don't recommend that you actually use this many graphs.
+		- Added RecastTileUpdate and RecastTileUpdateHandler scripts for easier recast tile updating with good performance.
+		- When using A* Inspector -> Settings -> Debug -> Path Debug Mode = {G,F,H,Penalties}
+			you previously had to set the limits for what should be displayed as "red" in the scene view yourself, this is now
+			optionally automatically calculated. The UI for it has also been improved.
+	- Improvements:
 		- Added penaltyAnglePower to Grid Graph -> Extra -> Penalty from Angle.\n
 			This can be used to increase the penalty even more for large angles than for small angles (more than it already does, that is).
 		- ASTAR_NO_JSON now works for recast graphs as well.
+		- Added custom inspector for RecastMeshObj, hopefully it will not be as confusing anymore.
 	- Changes:
 		- FleePath now has a default flee strength of 1 to avoid confusion when the FleePath doesn't seem to flee from anything.
 		- Removed some irrelevant defines from the Optimizations tab.
@@ -44,6 +107,7 @@
 		- Exposed GraphUpdateObject.changedNodes.
 		- Deprecated the threadSafe paremeter on RegisterSafeUpdate, it is always treated as true now.
 		- The default value for AstarPath.minAreaSize is now 0 since the number of areas (connected component) indices has been greatly increased (see highlights).
+		- Tweaked ProceduralWorld script (used for the "Procedural" example scene) to reduce FPS drops.
 	- Fixes:
 		- AstarPath.FlushGraphUpdates will now complete all graph updates instead of just making sure they have started.\n
 			In addition to avoiding confusion, this fixes a rare null reference exception which could happen when using 
@@ -67,9 +131,30 @@
 		- Fixed some misspelled words in the documentation.
 		- Removed some unused and/or redundant variables.
 		- Fixed a case where graphs added using code might not always be configured correctly (and would throw exceptions when scanning).
-
-- 3.5.8 (3.6 beta1)
-	- Windows Store beta
+		- Improved Windows Store compatibility.
+		- Fixed a typo in the GridGraph which could cause compilation to fail when building for Windows Phone or Windows Store (thanks MariuszP)
+		- Lots of code cleanups and comments added to various scripts.
+		- Fixed some cases where MonoDevelop would pick up the wrong documention for fields since it doesn't support all features that Doxygen supports.
+		- Fixed a bug which caused the points field on GraphUpdateScene to sometimes not be editable.
+		- Fixed a bug which could cause RVO agents not to move if the fps was low and Interpolation and Double Buffering was used.
+		- Set the execution order for RVOController and RVOSimulator to make sure that other scripts will
+			get the latest position in their Update method.
+		- Fixed a bug which could cause some nearest point on line methods in AstarMath to return NaN.
+			This could happen when Seeker->Start End Modifier->StartPoint and EndPoint was set to Interpolate.
+		- Fixed a runtime error on PS Vita.
+		- Fixed an index out of range exception which could occur when scanning LayeredGridGraphs.
+		- Fixed an index out of range exception which could occur when drawing gizmos for a LayeredGridGraph.
+		- Fixed a bug which could cause ProduralGridMover to update the graph every frame regardless
+		  of if the target moved or not (thanks Makak for finding the bug).
+		- Fixed a number of warnings in Unity 5.
+		
+- 3.5.9.7 (3.6 beta 6, 2015-01-28)
+- 3.5.9.6 (3.6 beta 5, 2015-01-28)
+- 3.5.9.5 (3.6 beta 4, 2015-01-27)
+- 3.5.9.1 (3.6 beta 3, 2014-10-14)
+- 3.5.9   (3.6 beta 2, 2014-10-13)
+- 3.5.8   (3.6 beta 1)
+	 - See release notes for 3.6
 
 - 3.5.2 (2013-09-01) (tiny bugfix and small feature release)
 	- Added isometric angle option for grid graphs to help with isometric 2D games.

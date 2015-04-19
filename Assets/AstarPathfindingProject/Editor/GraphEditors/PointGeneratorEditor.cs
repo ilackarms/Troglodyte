@@ -102,8 +102,7 @@ namespace Pathfinding {
 			
 			if (graph.root != null) {
 				DrawChildren (graph, graph.root);
-			} else {
-				
+			} else if (!string.IsNullOrEmpty (graph.searchTag)) {
 				GameObject[] gos = GameObject.FindGameObjectsWithTag (graph.searchTag);
 				for (int i=0;i<gos.Length;i++) {
 					Gizmos.DrawCube (gos[i].transform.position,Vector3.one*HandleUtility.GetHandleSize(gos[i].transform.position)*0.1F);

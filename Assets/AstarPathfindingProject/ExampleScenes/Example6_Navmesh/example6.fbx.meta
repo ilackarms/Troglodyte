@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 7fdfb9a3e0fdf4df880ebc7fa5f56398
 ModelImporter:
-  serializedVersion: 16
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
@@ -39,11 +39,13 @@ ModelImporter:
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -66,3 +68,5 @@ ModelImporter:
   animationType: 1
   additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 

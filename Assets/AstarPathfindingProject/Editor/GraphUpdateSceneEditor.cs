@@ -40,7 +40,7 @@ public class GraphUpdateSceneEditor : Editor {
 			} else if (script.GetComponent<Renderer>() != null) {
 				EditorGUILayout.HelpBox ("No points, using renderer.bounds", MessageType.Info);
 			} else {
-				EditorGUILayout.HelpBox ("No points and no collider or renderer attached, will not affect anything", MessageType.Warning);
+				EditorGUILayout.HelpBox ("No points and no collider or renderer attached, will not affect anything\nPoints can be added using the transform tool and holding shift", MessageType.Warning);
 			}
 		}
 		
@@ -48,6 +48,9 @@ public class GraphUpdateSceneEditor : Editor {
 
 #if UNITY_4
 		EditorGUILayout.PropertyField (serializedObject.FindProperty("points"), true );
+		if (GUI.changed) {
+			serializedObject.ApplyModifiedProperties ();
+		}
 #else
 		DrawDefaultInspector ();
 #endif
@@ -69,7 +72,10 @@ public class GraphUpdateSceneEditor : Editor {
 
 		script.updateErosion = EditorGUILayout.Toggle (new GUIContent ("Update Erosion", "Recalculate erosion for grid graphs.\nSee online documentation for more info"), script.updateErosion );
 
-		if (prePoints != script.points) { script.RecalcConvex (); HandleUtility.Repaint (); }
+		if (prePoints != script.points) {
+			script.RecalcConvex ();
+			HandleUtility.Repaint ();
+		}
 		
 		bool preConvex = script.convex;
 		script.convex = EditorGUILayout.Toggle (new GUIContent ("Convex","Sets if only the convex hull of the points should be used or the whole polygon"),script.convex);
@@ -139,13 +145,6 @@ public class GraphUpdateSceneEditor : Editor {
 		
 		EditorGUILayout.Separator ();
 		
-		if (GUI.changed) {
-#if UNITY_LE_4_3
-			Undo.RegisterUndo (script,"Modify Settings on GraphUpdateObject");
-#endif
-			EditorUtility.SetDirty (target);
-		}
-		
 		if (GUILayout.Button ("Clear all points")) {
 #if UNITY_LE_4_3
 			Undo.RegisterUndo (script,"Removed All Points");
@@ -154,7 +153,13 @@ public class GraphUpdateSceneEditor : Editor {
 			EditorUtility.SetDirty (target);
 			script.RecalcConvex ();
 		}
-		
+
+		if (GUI.changed) {
+			#if UNITY_LE_4_3
+			Undo.RegisterUndo (script,"Modify Settings on GraphUpdateObject");
+			#endif
+			EditorUtility.SetDirty (target);
+		}
 	}
 	
 	public void OnSceneGUI () {

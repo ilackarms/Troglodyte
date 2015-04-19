@@ -17,6 +17,10 @@ namespace Pathfinding {
 		private static GridGraph[] _gridGraphs = new GridGraph[0];
 		public static GridGraph GetGridGraph (uint graphIndex) { return _gridGraphs[(int)graphIndex]; }
 
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+		public GraphNode[] connections;
+		public uint[] connectionCosts;
+#endif
 		
 		public static void SetGridGraph (int graphIndex, GridGraph graph) {
 			if (_gridGraphs.Length <= graphIndex) {
@@ -150,6 +154,13 @@ namespace Pathfinding {
 			
 			ResetConnectionsInternal ();
 			
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+			if ( alsoReverse ) {
+				if ( connections != null ) for (int i=0;i<connections.Length;i++) connections[i].RemoveConnection ( this );
+			}
+			connections = null;
+			connectionCosts = null;
+#endif
 		}
 		
 		public override void GetConnections (GraphNodeDelegate del)
@@ -166,6 +177,9 @@ namespace Pathfinding {
 				}
 			}
 			
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+			if ( connections != null ) for (int i=0;i<connections.Length;i++) del(connections[i]);
+#endif
 		}
 		
 		public override bool GetPortal (GraphNode other, List<Vector3> left, List<Vector3> right, bool backwards)
@@ -234,15 +248,96 @@ namespace Pathfinding {
 				}
 			}
 			
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+			if ( connections != null ) for (int i=0;i<connections.Length;i++) {
+				GraphNode other = connections[i];
+				if (other.Area != region) {
+					other.Area = region;
+					stack.Push (other);
+				}
+			}
+#endif
 		}
 		
+#if !ASTAR_GRID_CUSTOM_CONNECTIONS
 		public override void AddConnection (GraphNode node, uint cost) {
-			throw new System.NotImplementedException("GridNodes do not have support for adding manual connections");
+			throw new System.NotImplementedException("GridNodes do not have support for adding manual connections with your current settings."
+				"\nPlease enable ASTAR_GRID_CUSTOM_CONNECTIONS in the Optimizations tab in the A* Inspector or open the GridNode.cs script and uncomment the #define.");
 		}
 
 		public override void RemoveConnection (GraphNode node) {
-			throw new System.NotImplementedException("GridNodes do not have support for adding manual connections");
+			throw new System.NotImplementedException("GridNodes do not have support for adding manual connections with your current settings."
+				"\nPlease enable ASTAR_GRID_CUSTOM_CONNECTIONS in the Optimizations tab in the A* Inspector or open the GridNode.cs script and uncomment the #define.");
 		}
+#else
+		/** Add a connection from this node to the specified node.
+		 * If the connection already exists, the cost will simply be updated and
+		 * no extra connection added.
+		 * 
+		 * \note Only adds a one-way connection. Consider calling the same function on the other node
+		 * to get a two-way connection.
+		 */
+		public override void AddConnection (GraphNode node, uint cost) {
+			
+			if (connections != null) { 
+				for (int i=0;i<connections.Length;i++) {
+					if (connections[i] == node) {
+						connectionCosts[i] = cost;
+						return;
+					}
+				}
+			}
+			
+			int connLength = connections != null ? connections.Length : 0;
+			
+			GraphNode[] newconns = new GraphNode[connLength+1];
+			uint[] newconncosts = new uint[connLength+1];
+			for (int i=0;i<connLength;i++) {
+				newconns[i] = connections[i];
+				newconncosts[i] = connectionCosts[i];
+			}
+			
+			newconns[connLength] = node;
+			newconncosts[connLength] = cost;
+			
+			connections = newconns;
+			connectionCosts = newconncosts;
+		}
+		
+		/** Removes any connection from this node to the specified node.
+		 * If no such connection exists, nothing will be done.
+		 * 
+		 * \note This only removes the connection from this node to the other node.
+		 * You may want to call the same function on the other node to remove its eventual connection
+		 * to this node.
+		 */
+		public override void RemoveConnection (GraphNode node) {
+			
+			if (connections == null) return;
+			
+			for (int i=0;i<connections.Length;i++) {
+				if (connections[i] == node) {
+					
+					int connLength = connections.Length;
+			
+					GraphNode[] newconns = new GraphNode[connLength-1];
+					uint[] newconncosts = new uint[connLength-1];
+					for (int j=0;j<i;j++) {
+						newconns[j] = connections[j];
+						newconncosts[j] = connectionCosts[j];
+					}
+					for (int j=i+1;j<connLength;j++) {
+						newconns[j-1] = connections[j];
+						newconncosts[j-1] = connectionCosts[j];
+					}
+					
+					connections = newconns;
+					connectionCosts = newconncosts;
+					return;
+				}
+			}
+		}
+#endif
 		
 		public override void UpdateRecursiveG (Path path, PathNode pathNode, PathHandler handler) {
 			GridGraph gg = GetGridGraph (GraphIndex);
@@ -262,6 +357,13 @@ namespace Pathfinding {
 				}
 			}
 			
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+			if ( connections != null ) for (int i=0;i<connections.Length;i++) {
+				GraphNode other = connections[i];
+				PathNode otherPN = handler.GetPathNode (other);
+				if (otherPN.parent == pathNode && otherPN.pathID == pid) other.UpdateRecursiveG (path, otherPN,handler);
+			}
+#endif
 		}
 
 
@@ -331,6 +433,56 @@ namespace Pathfinding {
 				}
 			}
 
+#if ASTAR_GRID_CUSTOM_CONNECTIONS
+			if (connections != null) for (int i=0;i<connections.Length;i++) {
+				
+				GraphNode other = connections[i];
+				if (!path.CanTraverse (other)) continue;
+				
+				PathNode otherPN = handler.GetPathNode (other);
+
+				uint tmpCost = (connectionCosts[i] * (256 + path.GetTraversalCost(this) + path.GetTraversalCost(other)))/128;
+
+				if (otherPN.pathID != pid) {
+					otherPN.parent = pathNode;
+					otherPN.pathID = pid;
+
+					otherPN.cost = tmpCost;
+
+					otherPN.H = path.CalculateHScore (other);
+					other.UpdateG (path, otherPN);
+					
+					//Debug.Log ("G " + otherPN.G + " F " + otherPN.F);
+					handler.PushNode (otherPN);
+					//Debug.DrawRay ((Vector3)otherPN.node.Position, Vector3.up,Color.blue);
+				} else {
+
+					// Sorry for the huge number of #ifs
+
+					//If not we can test if the path from the current node to this one is a better one then the one already used
+					
+					if (pathNode.G+tmpCost < otherPN.G)
+					{
+						//Debug.Log ("Path better from " + NodeIndex + " to " + otherPN.node.NodeIndex + " " + (pathNode.G+tmpCost+path.GetTraversalCost(other)) + " < " + otherPN.G);
+						otherPN.cost = tmpCost;
+						
+						otherPN.parent = pathNode;
+						
+						other.UpdateRecursiveG (path,otherPN, handler);
+						
+					//Or if the path from this node ("other") to the current ("current") is better
+					}
+					else if (otherPN.G+tmpCost < pathNode.G && other.ContainsConnection (this))
+					{
+						//Debug.Log ("Path better from " + otherPN.node.NodeIndex + " to " + NodeIndex + " " + (otherPN.G+tmpCost+path.GetTraversalCost (this)) + " < " + pathNode.G);
+						pathNode.parent = otherPN;
+						pathNode.cost = tmpCost;
+						
+						UpdateRecursiveG(path, pathNode, handler);
+					}
+				}
+			}
+#endif
 		}
 		
 		public override void SerializeNode (GraphSerializationContext ctx) {

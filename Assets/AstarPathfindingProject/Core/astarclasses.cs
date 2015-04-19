@@ -107,8 +107,6 @@ namespace Pathfinding {
 			_MeshEdgeColor = new Color (0,0,0,0.5F);
 			_MeshColor = new Color (0.125F, 0.686F, 0, 0.19F);
 		}
-		
-		//new Color (0.909F,0.937F,0.243F,0.6F);
 	}
 	
 	
@@ -155,17 +153,27 @@ namespace Pathfinding {
 		 * 
 		 * \see AstarPath.GetNearest */
 		public int graphMask = -1;
-		
-		public bool constrainArea = false; /**< Only treat nodes in the area #area as suitable. Does not affect anything if #area is less than 0 (zero) */ 
-		public int area = -1; /**< Area ID to constrain to. Will not affect anything if less than 0 (zero) or if #constrainArea is false */
-		
-		public bool constrainWalkability = true; /**< Only treat nodes with the walkable flag set to the same as #walkable as suitable */
-		public bool walkable = true; /**< What must the walkable flag on a node be for it to be suitable. Does not affect anything if #constrainWalkability if false */
-		
-		public bool distanceXZ = false; /**< if available, do an XZ check instead of checking on all axes. The RecastGraph supports this */
-		
-		public bool constrainTags = true; /**< Sets if tags should be constrained */
-		public int tags = -1; /**< Nodes which have any of these tags set are suitable. This is a bitmask, i.e bit 0 indicates that tag 0 is good, bit 3 indicates tag 3 is good etc. */
+
+		/** Only treat nodes in the area #area as suitable. Does not affect anything if #area is less than 0 (zero) */ 
+		public bool constrainArea = false;
+
+		/** Area ID to constrain to. Will not affect anything if less than 0 (zero) or if #constrainArea is false */
+		public int area = -1;
+
+		/** Only treat nodes with the walkable flag set to the same as #walkable as suitable */
+		public bool constrainWalkability = true;
+
+		/** What must the walkable flag on a node be for it to be suitable. Does not affect anything if #constrainWalkability if false */
+		public bool walkable = true;
+
+		/** if available, do an XZ check instead of checking on all axes. The RecastGraph supports this */
+		public bool distanceXZ = false;
+
+		/** Sets if tags should be constrained */
+		public bool constrainTags = true;
+
+		/** Nodes which have any of these tags set are suitable. This is a bitmask, i.e bit 0 indicates that tag 0 is good, bit 3 indicates tag 3 is good etc. */
+		public int tags = -1;
 		
 		/** Constrain distance to node.
 		 * Uses distance from AstarPath.maxNearestNodeDistance.
@@ -189,7 +197,7 @@ namespace Pathfinding {
 			
 			if (constrainArea && area >= 0 && node.Area != area) return false;
 			
-			if (constrainTags && (tags >> (int)node.Tag & 0x1) == 0) return false;
+			if (constrainTags && ((tags >> (int)node.Tag) & 0x1) == 0) return false;
 			
 			return true;
 		}

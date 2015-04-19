@@ -232,7 +232,8 @@ public class AIPath : MonoBehaviour {
 			return repathRate;
 		} else {
 			//StartCoroutine (WaitForRepath ());
-			float v = repathRate - (Time.time-lastRepath);
+            float v = repathRate - (Time.time - lastRepath);
+            //Debug.LogWarning("Time until next repath: " + v);
 			return v < 0 ? 0 : v;
 		}
 	}

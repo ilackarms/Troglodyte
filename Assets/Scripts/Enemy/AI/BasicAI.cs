@@ -112,7 +112,7 @@ public abstract class BasicAI : Hittable
             }
         }
 
-        debugStateName = state.ToString();
+        debugStateName = state.getName();
     }
 
     protected void setState(AIState state)
@@ -524,6 +524,8 @@ public abstract class BasicAI : Hittable
             aiPath = GetComponent<AIPath>();
             if (aiPath == null)
             {
+                aiPath.repathRate = 0.25f;
+
                 aiPath = gameObject.AddComponent<AIPath>();
                 Seeker seeker = gameObject.GetComponent<Seeker>();
                 /*
@@ -537,11 +539,12 @@ public abstract class BasicAI : Hittable
                 seeker.RegisterModifier(simpleSmooth);
                                
 
-                //Pathfinding.FunnelModifier funnel = gameObject.AddComponent<Pathfinding.FunnelModifier>();
-                //seeker.RegisterModifier(funnel);
+                Pathfinding.FunnelModifier funnel = gameObject.AddComponent<Pathfinding.FunnelModifier>();
+                seeker.RegisterModifier(funnel);
 
                 //seeker.DeregisterModifier(seeker.startEndModifier);
-                
+
+                aiPath.pickNextWaypointDist = 3.5f;
             }
             canMove = true;
         }
@@ -550,7 +553,6 @@ public abstract class BasicAI : Hittable
         {
             if (canMove)
             {
-                aiPath.repathRate = 0.01f;
                 aiPath.target = target;
                 aiPath.speed = speed / 2.5f;
                 aiPath.endReachedDistance = endReachedDistance;

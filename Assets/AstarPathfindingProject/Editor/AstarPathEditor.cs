@@ -1,14 +1,6 @@
 //#define ASTARDEBUG   //"Enables some debugging messages"
 //#define ProfileAstar //"Enables profiling of the pathfinder. Use the context menu to get log results"
 
-#if UNITY_3_5 || UNITY_3_4 || UNITY_3_3
-#define UNITY_BEFORE_4
-#endif
-
-#if UNITY_4_2 || UNITY_4_1 || UNITY_4_0 || UNITY_3_5 || UNITY_3_4 || UNITY_3_3
-	#define UNITY_LE_4_3
-#endif
-
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
@@ -23,8 +15,7 @@ public class AstarPathEditor : Editor {
 	public static Dictionary<string,CustomGraphEditor> graphEditorTypes = new Dictionary<string,CustomGraphEditor> ();
 
 	public static Dictionary<NavGraph,KeyValuePair<float,KeyValuePair<int,int> > > graphNodeCounts;
-
-
+	
 	/** List of all graph editors for graphs attached */
 	public GraphEditor[] graphEditors;
 	
@@ -33,11 +24,8 @@ public class AstarPathEditor : Editor {
 			return script.astarData.graphTypes;
 		}
 	}
-	
-#if !UNITY_LE_4_3
+
 	static int lastUndoGroup = -1000;
-	static int lastDragFrame = -1000;
-#endif
 	static uint ignoredChecksum = 0;
 
 	/** Path to the editor assets folder for the A* Pathfinding Project. If this path turns out to be incorrect, the script will try to find the correct path
@@ -204,10 +192,12 @@ public class AstarPathEditor : Editor {
 		
 		//Enables the editor to get a callback on OnDrawGizmos to enable graph editors to draw gizmos
 		script.OnDrawGizmosCallback = OnDrawGizmos;
-		
+
 		// Make sure all references are set up to avoid NullReferenceExceptions
 		script.SetUpReferences ();
-		
+
+		Undo.undoRedoPerformed += OnUndoRedoPerformed;
+
 		//Search the assembly for graph types and graph editors
 		if ( graphEditorTypes == null || graphEditorTypes.Count == 0 )
 			FindGraphTypes ();
@@ -228,7 +218,9 @@ public class AstarPathEditor : Editor {
 
 	/** Cleans up editor stuff */
 	public void OnDisable () {
-		
+
+		Undo.undoRedoPerformed -= OnUndoRedoPerformed;
+
 		if (target == null) {
 			return;
 		}
@@ -236,12 +228,8 @@ public class AstarPathEditor : Editor {
 		SetAstarEditorSettings ();
 		CheckGraphEditors ();
 		
-		//This doesn't get saved by Unity anyway for some reason
-		//SerializeGraphs (new AstarSerializer (script));
-		
 		for (int i=0;i<graphEditors.Length;i++) {
 			if (graphEditors[i] != null) graphEditors[i].OnDisable ();
-			//graphEditors[i].OnDisableUndo ();
 		}
 		
 		SaveGraphsAndUndo ();
@@ -256,7 +244,7 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Reads settings frome EditorPrefs */
-	public void GetAstarEditorSettings () {
+	void GetAstarEditorSettings () {
 		EditorGUILayoutx.fancyEffects = EditorPrefs.GetBool ("EditorGUILayoutx.fancyEffects",true);
 		
 		try {
@@ -292,13 +280,11 @@ public class AstarPathEditor : Editor {
 		ParseServerMessage (serverMessage);
 	}
 	
-	public void SetAstarEditorSettings () {
+	void SetAstarEditorSettings () {
 		EditorPrefs.SetBool ("EditorGUILayoutx.fancyEffects",EditorGUILayoutx.fancyEffects);;
 		EditorPrefs.SetBool ("AstarUseDarkSkin",useDarkSkin);
 		EditorPrefs.SetBool ("AstarForcedNoDarkSkin",hasForcedNoDarkSkin);
 		EditorPrefs.SetString ("AstarEditorAssets",editorAssets);
-		
-		//EditorPrefs.SetInt ("UseDarkSkin",useDarkSkin ? 1 : 0);
 	}
 	
 	/** Checks if JS support is enabled. This is done by checking if the directory 'Assets/AstarPathfindingEditor/Editor' exists */
@@ -375,7 +361,7 @@ public class AstarPathEditor : Editor {
 	
 	/** Discards the first run window.
 	 * It will not be shown for this project again */
-	public static void DiscardFirstRun () {
+	static void DiscardFirstRun () {
 		string runBeforeProjects = EditorPrefs.GetString ("AstarUsedProjects","");
 
 		string projectName = System.IO.Path.GetFileName(System.IO.Path.GetDirectoryName(Application.dataPath));
@@ -389,17 +375,14 @@ public class AstarPathEditor : Editor {
 	
 	/** Repaints Scene View.
 	 * \warning Uses Undocumented Unity Calls (should be safe for Unity 3.x though) */
-	public void RepaintSceneView () {
+	void RepaintSceneView () {
 		if (!Application.isPlaying || EditorApplication.isPaused) SceneView.RepaintAll();
 	}
-
-#if !UNITY_LE_4_3
+	
 	/** Tell Unity that we want to use the whole inspector width */
-	public override bool UseDefaultMargins ()
-	{
+	public override bool UseDefaultMargins () {
 		return false;
 	}
-#endif
 
 	public override void OnInspectorGUI () {
 
@@ -419,14 +402,10 @@ public class AstarPathEditor : Editor {
 		GUI.changed = false;
 		
 		EditorGUILayoutx.editor = this;
-		GUILayoutx.ClearStack ();
-		
-#if !UNITY_LE_4_3
-		//if ( Undo.GetCurrentGroup () != lastUndoGroup ) {
-			Undo.RecordObject (script,"A* inspector");
-		//}
-#endif
-		
+		GUILayoutx.ClearFadeAreaStack ();
+
+		Undo.RecordObject (script, "A* inspector");
+
 		AstarProfiler.StartProfile ("Check Updates and Editors");
 		CheckForUpdates ();
 		CheckGraphEditors ();
@@ -437,10 +416,6 @@ public class AstarPathEditor : Editor {
 		AstarProfiler.StartProfile ("DrawMainArea");
 		
 		EditorGUI.indentLevel = 1;
-
-#if UNITY_LE_4_3
-		EditorGUIUtility.LookLikeInspector ();
-#endif
 
 		// Apparently these can sometimes get eaten by unity components
 		// so I catch them here for later use
@@ -458,12 +433,6 @@ public class AstarPathEditor : Editor {
 		
 		AstarProfiler.EndProfile ("DrawMainArea");
 		
-		
-		//bool reverted = HandleUndo ();
-		
-		//if (GUI.changed && !reverted) {
-		//	SaveGraphs ();
-		//}
 		
 		AstarProfiler.StartProfile ("Undo");
 
@@ -483,18 +452,12 @@ public class AstarPathEditor : Editor {
 		AstarProfiler.EndProfile ("Repaint");
 		
 		AstarProfiler.EndProfile ("OnInspectorGUI");
-
-#if UNITY_LE_4_3
-		EditorGUIUtility.LookLikeInspector ();
-#endif
-		//m_object.ApplyModifiedProperties ();
 	}
 	
 	/** Loads GUISkin and sets up styles. \see #editorAssets
 	  * \returns True if all styles were found, false if there was an error somewhere */
 	public static bool LoadStyles () {
-		
-		
+
 		//Correct paths if necessary
 		
 		string projectPath = Application.dataPath;
@@ -548,18 +511,6 @@ public class AstarPathEditor : Editor {
 			astarSkin = AssetDatabase.LoadAssetAtPath (editorAssets + "/AstarEditorSkinLight.guiskin",typeof(GUISkin)) as GUISkin;
 		}
 		
-		/*if (astarSkin == null) {
-			if (useDarkSkin) {
-				astarSkin = AssetDatabase.LoadAssetAtPath (alternativeEditorAssets + "/AstarEditorSkinDark.guiskin",typeof(GUISkin)) as GUISkin;
-			} else {
-				astarSkin = AssetDatabase.LoadAssetAtPath (alternativeEditorAssets + "/AstarEditorSkinLight.guiskin",typeof(GUISkin)) as GUISkin;
-			}
-			
-			if (astarSkin != null) {
-				editorAssets = alternativeEditorAssets;
-			}
-		}*/
-		
 		GUISkin inspectorSkin = EditorGUIUtility.GetBuiltinSkin(EditorSkin.Inspector);
 		
 		if (astarSkin != null) {
@@ -573,9 +524,6 @@ public class AstarPathEditor : Editor {
 			} else {
 				return false;
 			}
-			//Error is shown in the inspector instead
-			//Debug.LogWarning ("Couldn't find 'AstarEditorSkin' at '"+editorAssets + "/AstarEditorSkin.guiskin"+"'");
-			
 		}
 		
 		EditorGUILayoutx.defaultAreaStyle = astarSkin.FindStyle ("PixelBox");
@@ -611,7 +559,7 @@ public class AstarPathEditor : Editor {
 	 * It must be called repeatedly to ensure that the result is processed.
 	 * \returns True if an update check is progressing (WWW request)
 	 */
-	public static bool CheckForUpdates () {
+	static bool CheckForUpdates () {
 
 		if (updateCheckObject != null && updateCheckObject.isDone) {
 			
@@ -631,10 +579,7 @@ public class AstarPathEditor : Editor {
 			Debug.Log ("Checking For Updates... " + System.DateTime.UtcNow.ToString (System.Globalization.CultureInfo.InvariantCulture)+"\nA* Pathfinding Project");
 
 			bool use = AstarPath.active != null || GameObject.FindObjectOfType(typeof(AstarPath)) != null;
-			bool mecanim = false;
-#if !UNITY_BEFORE_4
-			mecanim = GameObject.FindObjectOfType(typeof(Animator)) != null;
-#endif
+			bool mecanim = GameObject.FindObjectOfType(typeof(Animator)) != null;
 			string query = updateURL+"?v="+AstarPath.Version.ToString()+"&pro="+(AstarPath.HasPro ? "1":"0")+
 				"&check="+updateCheckRate+"&distr="+AstarPath.Distribution+
 				"&unitypro="+(Application.HasProLicense()?"1":"0")+
@@ -652,12 +597,11 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Handles the data from the update page */
-	public static void UpdateCheckCompleted (string result) {
-		
+	static void UpdateCheckCompleted (string result) {
 		ParseServerMessage (result);
 	}
 	
-	public static void ParseServerMessage (string result) {
+	static void ParseServerMessage (string result) {
 		if (string.IsNullOrEmpty (result)) {
 			return;
 		}
@@ -667,10 +611,6 @@ public class AstarPathEditor : Editor {
 		string versionString = splits[0];
 		string descriptionString = splits.Length > 1 ? splits[1] : "";
 		string url = splits.Length > 2 ? splits[2] : "http://arongranberg.com/astar/";
-		/*Debug.Log (updateCheckObject.text);
-		if (splits.Length > 3) {
-			Debug.Log ("Split 3 "+splits[3]);
-		}*/
 		
 		System.Version newVersion = null;
 		
@@ -743,8 +683,9 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Draws the first run dialog.
-	 * Asks if the user wants to enable JS support */
-	public void DrawFirstRun () {
+	 * Asks if the user wants to enable JS support
+	 */
+	void DrawFirstRun () {
 		if (!firstRun) {
 			return;
 		}
@@ -755,13 +696,8 @@ public class AstarPathEditor : Editor {
 		}
 		
 		GUILayoutx.BeginFadeArea (true,"Do you want to enable Javascript support?","enableJs");
-#if UNITY_BEFORE_4
-		GUILayout.Label ("Folders can be restructured to enable pathfinding calls from Js\n" +
-			"This setting can be edited later in Settings-->Editor",helpBox);
-#else
 		EditorGUILayout.HelpBox ("Folders can be restructured to enable pathfinding calls from Js\n" +
 		                 "This setting can be edited later in Settings-->Editor", MessageType.Info);
-#endif
 		GUILayout.BeginHorizontal ();
 		if (GUILayout.Button ("Yes")) {
 			EnableJs ();
@@ -773,43 +709,12 @@ public class AstarPathEditor : Editor {
 		GUILayoutx.EndFadeArea ();
 	}
 	
-	/** Draws a dialog asking the user if he/she wants to use a dark skin */
-	public void DrawDarkSkinDialog () {
-#if UNITY_3_4
-		if (!askForDarkSkin || hasForcedNoDarkSkin || useDarkSkin) {
-			return;
-		}
-		
-		GUILayoutx.BeginFadeArea (true,"Use Dark Skin?","enableDarkSkin");
-		GUILayout.Label ("It looks like the rest of Unity uses a dark skin\n" +
-			"Do you want to use it for the A* plugin too?\n" +
-			"This can be changed later in Settings-->Editor",helpBox);
-		GUILayout.BeginHorizontal ();
-		
-		if (GUILayout.Button ("Yes")) {
-			useDarkSkin = true;
-			askForDarkSkin = false;
-			hasForcedNoDarkSkin = false;
-			LoadStyles ();
-		}
-		if (GUILayout.Button ("No")) {
-			useDarkSkin = false;
-			askForDarkSkin = false;
-			hasForcedNoDarkSkin = true;
-			LoadStyles ();
-		}
-		GUILayout.EndHorizontal ();
-		GUILayoutx.EndFadeArea ();
-#endif
-	}
-	
 	/** Draws the main area in the inspector */
-	public void DrawMainArea () {
+	void DrawMainArea () {
 		
 		AstarProfiler.StartProfile ("Draw Graphs");
 		
 		DrawFirstRun ();
-		DrawDarkSkinDialog ();
 		
 		//Show the graph inspectors
 		CheckGraphEditors ();
@@ -859,17 +764,10 @@ public class AstarPathEditor : Editor {
 		
 			if (script.astarData.data_backup != null && script.astarData.data_backup.Length != 0) {
 				GUILayoutx.BeginFadeArea (true, "Backup data detected","backupData",graphBoxStyle);
-	#if UNITY_BEFORE_4
-				GUILayout.Label ("Backup data was found, this can have been stored because there was an error during deserialization. Check the log.\n" +
-					"If you load again and everything goes well, you can discard the backup data\n" +
-					"When trying to load again, the deserializer will ignore version differences (for example 3.0 would try to load 3.0.1 files)\n" +
-					"The backup data is stored in AstarData.data_backup",helpBox);
-	#else
 				EditorGUILayout.HelpBox ("Backup data was found, this can have been stored because there was an error during deserialization. Check the log.\n" +
 				                 "If you load again and everything goes well, you can discard the backup data\n" +
 				                 "When trying to load again, the deserializer will ignore version differences (for example 3.0 would try to load 3.0.1 files)\n" +
 				                 "The backup data is stored in AstarData.data_backup", MessageType.Warning);
-	#endif
 				GUILayout.BeginHorizontal ();
 				if (GUILayout.Button ("Try loading data again")) {
 					if (script.astarData.graphs == null || script.astarData.graphs.Length == 0
@@ -877,7 +775,7 @@ public class AstarPathEditor : Editor {
 					                                           "Are you sure you want to load from backup data?\nThis will delete your current graphs.",
 					                                           "Yes",
 					                                           "Cancel")) {	
-						script.astarData.SetData(script.astarData.data_backup,0);
+						script.astarData.SetData(script.astarData.data_backup);
 						LoadGraphs ();
 					}
 				}
@@ -890,11 +788,6 @@ public class AstarPathEditor : Editor {
 		}
 
 		GUILayoutx.EndFadeArea ();
-
-		/*AstarProfiler.StartProfile ("DrawLinkSettings");
-		DrawLinkSettings ();
-		
-		AstarProfiler.EndProfile ("DrawLinkSettings");*/
 		
 		AstarProfiler.StartProfile ("DrawSettings");
 		//Draw the settings area
@@ -946,7 +839,7 @@ public class AstarPathEditor : Editor {
 		
 	}
 	
-	public void DrawAboutArea () {
+	void DrawAboutArea () {
 		
 		Color tmp1 = GUI.color;
 		EditorGUILayoutx.FadeArea fadeArea = GUILayoutx.BeginFadeArea (aboutArea,"aboutArea", 20,EditorGUILayoutx.defaultAreaStyle);
@@ -977,11 +870,7 @@ public class AstarPathEditor : Editor {
 			GUILayout.Label ("The A* Pathfinding Project was made by Aron Granberg\nYour current version is "+AstarPath.Version.ToString ());
 			
 			if (latestAstarVersion > AstarPath.Version) {
-#if UNITY_BEFORE_4
-				GUILayout.Label ("A new version of the A* Pathfinding Project is available, the new version is "+latestAstarVersion.ToString ()+(latestAstarVersionDesc != null && latestAstarVersionDesc != "" ? "\n"+latestAstarVersionDesc : ""),helpBox);
-#else
 				EditorGUILayout.HelpBox ("A new version of the A* Pathfinding Project is available, the new version is "+latestAstarVersion.ToString ()+(latestAstarVersionDesc != null && latestAstarVersionDesc != "" ? "\n"+latestAstarVersionDesc : ""), MessageType.Info);
-#endif
 				
 				if (GUILayout.Button ("What's new?")) {
 					Application.OpenURL (GetURL ("changelog"));
@@ -1014,7 +903,7 @@ public class AstarPathEditor : Editor {
 		GUILayoutx.EndFadeArea ();
 	}
 	
-	public void DrawLinkSettings () {
+	void DrawLinkSettings () {
 		//linkSettings = GUILayoutx.BeginFadeArea (linkSettings,"Links", );
 		
 		Color tmp1 = GUI.color;
@@ -1049,7 +938,7 @@ public class AstarPathEditor : Editor {
 		GUILayoutx.EndFadeArea ();
 	}
 	
-	public bool DrawGraph (NavGraph graph, GraphEditor graphEditor) {
+	bool DrawGraph (NavGraph graph, GraphEditor graphEditor) {
 		
 		Color tmp1 = GUI.color;
 		EditorGUILayoutx.FadeArea topFadeArea = GUILayoutx.BeginFadeArea (graph.open,"","graph_"+graph.guid,graphBoxStyle);
@@ -1245,11 +1134,11 @@ public class AstarPathEditor : Editor {
 	}
 	
 	
-	public int selectedUserConnection = -1;
+	int selectedUserConnection = -1;
 	
-	public GraphNode firstShiftNode;
+	GraphNode firstShiftNode;
 	
-	public void DrawUserConnections () {
+	void DrawUserConnections () {
 		
 		
 		UserConnection[] conns = script.astarData.userConnections;
@@ -1417,20 +1306,9 @@ public class AstarPathEditor : Editor {
 			
 			Handles.EndGUI();
 		}
-		
-		//Debug.Log("id: " + GUIUtility.hotControl+" "+GUIUtility.keyboardControl+ " "+Event.current.GetTypeForControl (GUIUtility.hotControl) +" Name : "+GUI.GetNameOfFocusedControl ());
-		
-		/*if (Event.current.type == EventType.MouseDown) {
-			if (HandleUtility.nearestControl > 0 && HandleUtility.nearestControl <= conns.Length && selectedUserConnection != HandleUtility.nearestControl-1) {
-				selectedUserConnection = HandleUtility.nearestControl-1;
-				HandleUtility.nearestControl = 0;
-				HandleUtility.Repaint ();
-				//return;
-			}
-		}*/
 	}
 	
-	public void DrawUserConnectionsWindow () {
+	void DrawUserConnectionsWindow () {
 		
 		UserConnection[] conns = script.astarData.userConnections;
 
@@ -1519,10 +1397,6 @@ public class AstarPathEditor : Editor {
 				RemoveConnection (conn);
 				return;
 			}
-
-#if UNITY_LE_4_3
-			EditorGUIUtility.LookLikeInspector ();
-#endif
 		}
 		
 		GUILayout.FlexibleSpace ();
@@ -1566,7 +1440,7 @@ public class AstarPathEditor : Editor {
 		return AssetDatabase.LoadAssetAtPath (path, typeof(TextAsset)) as TextAsset;
 	}
 
-	public void DrawSerializationSettings () {
+	void DrawSerializationSettings () {
 		
 		AstarProfiler.StartProfile ("Serialization step 1");
 		
@@ -1662,15 +1536,7 @@ public class AstarPathEditor : Editor {
 				}
 			}
 
-	#if UNITY_BEFORE_4
-			GUILayout.Label ("When using 'cache startup', the 'Nodes' toggle should always be enabled otherwise the graphs' nodes won't be saved and the caching is quite useless",helpBox);
-	#else
 			EditorGUILayout.HelpBox ("When using 'cache startup', the 'Nodes' toggle should always be enabled otherwise the graphs' nodes won't be saved and the caching is quite useless", MessageType.Info);
-	#endif
-
-			/*GUI.enabled = false;
-			script.astarData.compress = EditorGUILayout.Toggle ("Compress",false);//script.astarData.compress);
-			GUI.enabled = preEnabled;*/
 			
 			GUILayout.Space (5);
 			
@@ -1729,7 +1595,7 @@ public class AstarPathEditor : Editor {
 		AstarProfiler.EndProfile ("SerializationEndFadeArea");
 	}
 	
-	public void DrawSettings () {
+	void DrawSettings () {
 		EditorGUILayoutx.FadeArea fadeArea = GUILayoutx.BeginFadeArea (showSettings,"Settings","settings", EditorGUILayoutx.defaultAreaStyle, topBoxHeaderStyle);
 		showSettings = fadeArea.open;
 
@@ -1760,10 +1626,13 @@ public class AstarPathEditor : Editor {
 		                                                                "See docs for more info\nThis is an A* Pathfinding Project Pro feature"),script.threadCount);
 			GUI.enabled = true;
 		*/
-			script.maxFrameTime = EditorGUILayout.FloatField ("Max Frame Time",script.maxFrameTime);
-			
-			script.minAreaSize = EditorGUILayout.IntField (new GUIContent ("Min Area Size","The minimum number of nodes an area must have to be granted an unique area id. 2^17 area ids are available (131072). This merges small areas to use the same area id and helps keeping the area count below 131072. Usually this is not required. [default = 0]"),script.minAreaSize);
-			
+
+			if (script.threadCount == ThreadCount.None) {
+				script.maxFrameTime = EditorGUILayout.FloatField (new GUIContent ("Max Frame Time", "Max number of milliseconds to use for path calculation per frame"),script.maxFrameTime);
+			} else {
+				script.maxFrameTime = 10;
+			}
+
 			script.heuristic = (Heuristic)EditorGUILayout.EnumPopup ("Heuristic",script.heuristic);
 			
 			GUILayoutx.BeginFadeArea (script.heuristic == Heuristic.Manhattan || script.heuristic == Heuristic.Euclidean || script.heuristic == Heuristic.DiagonalManhattan,"hScale");
@@ -1774,7 +1643,17 @@ public class AstarPathEditor : Editor {
 			}
 			GUILayoutx.EndFadeArea ();
 
-			// BEGIN HEURISTIC OPTIMIZATIOn
+			script.maxNearestNodeDistance = EditorGUILayout.FloatField (new GUIContent ("Max Nearest Node Distance",
+			                                                                            "Normally, if the nearest node to e.g the start point of a path was not walkable" +
+			                                                                            " a search will be done for the nearest node which is walkble. This is the maximum distance (world units) which it will serarch"),
+			                                                            script.maxNearestNodeDistance);
+
+			GUILayout.Label (new GUIContent ("Advanced"), EditorStyles.boldLabel);
+
+			script.minAreaSize = EditorGUILayout.IntField (new GUIContent ("Min Area Size","The minimum number of nodes an area must have to be granted an unique area id. 2^17 area ids are available (131072). This merges small areas to use the same area id and helps keeping the area count below 131072. Usually this is not required. [default = 0]"),script.minAreaSize);
+
+			// BEGIN HEURISTIC OPTIMIZATION
+
 
 			script.euclideanEmbedding.mode = (HeuristicOptimizationMode)EditorGUILayout.EnumPopup ( new GUIContent ("Heuristic Optimization"), script.euclideanEmbedding.mode);
 			
@@ -1839,11 +1718,6 @@ public class AstarPathEditor : Editor {
 				EditorGUI.indentLevel--;
 			}
 			GUILayoutx.EndFadeArea ();
-			
-			script.maxNearestNodeDistance = EditorGUILayout.FloatField (new GUIContent ("Max Nearest Node Distance",
-		                                                                            "Normally, if the nearest node to e.g the start point of a path was not walkable" +
-		                                                                            " a search will be done for the nearest node which is walkble. This is the maximum distance (world units) which it will serarch"),
-		                                                            script.maxNearestNodeDistance);
 		
 			script.fullGetNearestSearch = EditorGUILayout.Toggle (new GUIContent ("Full Get Nearest Node Search","Forces more accurate searches on all graphs. " +
 				"Normally only the closest graph in the initial fast check will perform additional searches, " +
@@ -1861,7 +1735,8 @@ public class AstarPathEditor : Editor {
 				
 		GUILayoutx.EndFadeArea ();
 	}
-	
+
+	/** Opens the A* Inspector and shows the section for editing tags */
 	public static void EditTags () {
 		AstarPath a = AstarPath.active;
 		if (a == null) a = GameObject.FindObjectOfType (typeof(AstarPath)) as AstarPath;
@@ -1874,7 +1749,7 @@ public class AstarPathEditor : Editor {
 		}
 	}
 	
-	public void DrawTagSettings () {
+	void DrawTagSettings () {
 		editTags = GUILayoutx.BeginFadeArea (editTags,"Tag Names","tags",graphBoxStyle);
 		
 		if (GUILayoutx.DrawID ("tags")) {
@@ -1890,7 +1765,7 @@ public class AstarPathEditor : Editor {
 		GUILayoutx.EndFadeArea ();
 	}
 	
-	public void DrawEditorSettings () {
+	void DrawEditorSettings () {
 		
 		editorSettings = GUILayoutx.BeginFadeArea (editorSettings,"Editor","editorSettings",graphBoxStyle);
 		
@@ -1928,8 +1803,37 @@ public class AstarPathEditor : Editor {
 		
 		GUILayoutx.EndFadeArea ();
 	}
-	
-	public void DrawDebugSettings () {
+
+	static void DrawColorSlider ( ref float left, ref float right, bool editable ) {
+		GUILayout.BeginHorizontal ();
+		
+		GUILayout.Space (20);
+		
+		GUILayout.BeginVertical ();
+		
+		GUILayout.Box ("", astarSkin.GetStyle("ColorInterpolationBox"));
+		GUILayout.BeginHorizontal ();
+		if (editable) {
+			left = EditorGUILayout.IntField ((int)left);
+		} else {
+			GUILayout.Label (left.ToString ("0"));
+		}
+		GUILayout.FlexibleSpace ();
+		if (editable) {
+			right = EditorGUILayout.IntField ((int)right);
+		} else {
+			GUILayout.Label (right.ToString ("0"));
+		}
+		GUILayout.EndHorizontal ();
+		
+		GUILayout.EndVertical ();
+		
+		GUILayout.Space (4);
+		
+		GUILayout.EndHorizontal ();
+	}
+
+	void DrawDebugSettings () {
 		GUILayoutx.BeginFadeArea (true,"Debug","debugSettings",graphBoxStyle);
 		
 		if (GUILayoutx.DrawID ("debugSettings")) {
@@ -1939,11 +1843,11 @@ public class AstarPathEditor : Editor {
 			
 			bool show = script.debugMode == GraphDebugMode.G || script.debugMode == GraphDebugMode.H || script.debugMode == GraphDebugMode.F || script.debugMode == GraphDebugMode.Penalty;
 			GUILayoutx.BeginFadeArea (show,"debugRoof");
-			
+
 			if (GUILayoutx.DrawID ("debugRoof")) {
-				EditorGUI.indentLevel++;
-				script.debugRoof = EditorGUILayout.FloatField ("Gradient Max (red)",script.debugRoof);
-				EditorGUI.indentLevel--;
+				script.manualDebugFloorRoof = !EditorGUILayout.Toggle ("Automatic Limits", !script.manualDebugFloorRoof);
+
+				DrawColorSlider (ref script.debugFloor, ref script.debugRoof, script.manualDebugFloorRoof);
 			}
 			
 			GUILayoutx.EndFadeArea ();
@@ -1963,7 +1867,7 @@ public class AstarPathEditor : Editor {
 		GUILayoutx.EndFadeArea ();
 	}
 	
-	public void DrawColorSettings () {
+	void DrawColorSettings () {
 		
 		colorSettings = GUILayoutx.BeginFadeArea (colorSettings,"Colors","colorSettings",graphBoxStyle);
 		
@@ -2050,7 +1954,7 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Make sure every graph has a graph editor */
-	public void CheckGraphEditors (bool forceRebuild = false) {
+	void CheckGraphEditors (bool forceRebuild = false) {
 		if (forceRebuild || graphEditors == null || script.graphs == null || script.graphs.Length != graphEditors.Length) {
 				
 			if (script.graphs == null) {
@@ -2109,7 +2013,7 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Creates a link between start and end. \see \link Pathfinding.AstarData.userConnections AstarData.userConnections \endlink */
-	public int CreateNewUserConnection (Vector3 start, Vector3 end) {
+	int CreateNewUserConnection (Vector3 start, Vector3 end) {
 		UserConnection[] conns = script.astarData.userConnections;
 
 		if ( conns == null ) conns = new UserConnection[0];
@@ -2140,7 +2044,7 @@ public class AstarPathEditor : Editor {
 	}
 	
 	/** Creates a GraphEditor for a graph */
-	public GraphEditor CreateGraphEditor (string graphType) {
+	GraphEditor CreateGraphEditor (string graphType) {
 		
 		if (graphEditorTypes.ContainsKey (graphType)) {
 			GraphEditor ge = System.Activator.CreateInstance (graphEditorTypes[graphType].editorType) as GraphEditor;
@@ -2177,27 +2081,18 @@ public class AstarPathEditor : Editor {
 		AstarProfiler.EndProfile ("OnDrawGizmosEditor");
 	}
 	
-	public bool HandleUndo () {
+	bool HandleUndo () {
 		//The user has tried to undo something, apply that
-#if UNITY_LE_4_3
-		if (script.astarData.hasBeenReverted) {
-#endif
-			if (script.astarData.GetData() == null) {
-				script.astarData.SetData (new byte[0], 0);
-			} else {
-
-				//Debug.Log ("Undo: " + hash (script.astarData.GetData()));
-				LoadGraphs ();
-
-				return true;
-			}
-#if UNITY_LE_4_3
+		if (script.astarData.GetData() == null) {
+			script.astarData.SetData (new byte[0]);
+		} else {
+			LoadGraphs ();
+			return true;
 		}
-#endif
 		return false;
 	}
 
-	int hash ( byte[] arr ) {
+	int ByteArrayHash ( byte[] arr ) {
 		if ( arr == null ) return -1;
 		int h = -1;
 		for ( int i=0;i<arr.Length;i++) {
@@ -2205,7 +2100,63 @@ public class AstarPathEditor : Editor {
 		}
 		return h;
 	}
-	
+
+	void SerializeIfDataChanged () {
+		uint checksum;
+		byte[] bytes = SerializeGraphs (out checksum);
+
+		int byteHash = ByteArrayHash(bytes);
+		int dataHash = ByteArrayHash(script.astarData.GetData());
+		//Check if the data is different than the previous data, use checksums
+		bool isDifferent = checksum != ignoredChecksum && dataHash != byteHash;
+
+		//Only save undo if the data was different from the last saved undo
+		if (isDifferent) {
+			//Assign the new data
+			script.astarData.SetData (bytes);
+			
+			EditorUtility.SetDirty (script);
+			Undo.IncrementCurrentGroup ();
+			Undo.RegisterCompleteObjectUndo (script, "A* Graph Settings");
+		}
+	}
+
+	UndoPropertyModification[] OnPostProcessModifications (UndoPropertyModification[] mods) {
+		var s =  "";
+		for (int i = 0; i < mods.Length; i++) {
+			s += mods[i].propertyModification.propertyPath + "\n";
+		}
+		Debug.Log ("Saved:\n"+s);
+		return mods;
+	}
+
+	void OnWillFlushUndoRecord () {
+		//Debug.Log ("Flushing... " + Undo.GetCurrentGroup ());
+	}
+
+	/** Called when an undo or redo operation has been performed */
+	void OnUndoRedoPerformed () {
+
+		if (!this) return;
+
+		uint checksum;
+		byte[] bytes = SerializeGraphs (out checksum);
+		
+		//Check if the data is different than the previous data, use checksums
+		bool isDifferent = ByteArrayHash(script.astarData.GetData()) != ByteArrayHash(bytes);
+
+		if (isDifferent ) {
+			HandleUndo ();
+		}
+		
+		CheckGraphEditors ();
+		// Deserializing a graph does not necessarily yield the same hash as the data loaded from
+		// this is (probably) because editor settings are not saved all the time
+		// so we explicitly ignore the new hash
+		bytes = SerializeGraphs (out checksum);
+		ignoredChecksum = checksum;
+	}
+
 	public void SaveGraphsAndUndo (EventType et = EventType.Used, string eventCommand = "" ) {
 		//Serialize the settings of the graphs
 
@@ -2214,108 +2165,21 @@ public class AstarPathEditor : Editor {
 			return;
 		}
 
-#if !UNITY_LE_4_3
-		// For some reason unity sends undo events while dragging stuff
-		// Ignore those
-		// Pretty hacky, but I haven't been able to find another way
-		if ( et == EventType.DragPerform || et == EventType.DragUpdated ) {
-			lastDragFrame = Time.frameCount;
-		}
-#endif
+		if ( (Undo.GetCurrentGroup () != lastUndoGroup || et == EventType.MouseUp) && eventCommand != "UndoRedoPerformed") {
+			SerializeIfDataChanged ();
 
-		// Capture undo events
-		// The frame thing at the end is a workaround for
-		// Unity sending undo events when dragging to assign things to object fields
-		if ( et == EventType.Layout && eventCommand == "UndoRedoPerformed" && Time.frameCount - lastDragFrame > 2 ) {
-
-			uint checksum;
-			byte[] bytes = SerializeGraphs (out checksum);
-
-			//Check if the data is different than the previous data, use checksums
-			bool isDifferent = hash(script.astarData.GetData()) != hash(bytes);
-
-			if (isDifferent ) {
-				HandleUndo ();
-			}
-
-			CheckGraphEditors ();
-			// Deserializing a graph does not necessarily yield the same hash as the data loaded from
-			// this is (probably) because editor settings are not saved all the time
-			// so we explicitly ignore the new hash
-			bytes = SerializeGraphs (out checksum);
-			ignoredChecksum = checksum;
-			return;
-		}
-
-#if UNITY_LE_4_3
-		Event e = Event.current;
-		if ((e.button == 0 && (et == EventType.MouseDown || et == EventType.MouseUp)) || (e.isKey && (e.keyCode == KeyCode.Tab || e.keyCode == KeyCode.Return)) || et == EventType.ExecuteCommand)
-#else
-		if ( Undo.GetCurrentGroup () != lastUndoGroup && eventCommand != "UndoRedoPerformed" )
-#endif
-		{
-			
-			//To serialize settings for a grid graph takes from 0.00 ms to 7.8 ms (usually 0.0, but sometimes jumps up to 7.8 (no values in between)
-			
-			uint checksum;
-			byte[] bytes = SerializeGraphs (out checksum);
-			
-			int byteHash = hash(bytes);
-			int dataHash = hash(script.astarData.GetData());
-			//Check if the data is different than the previous data, use checksums
-			bool isDifferent = checksum != ignoredChecksum && dataHash != byteHash;//script.astarData.dataChecksum != checksum;
-
-			//Only save undo if the data was different from the last saved undo
-			if (isDifferent) {
-#if UNITY_LE_4_3
-				//This flag is set to true so we can detect if the object has been reverted
-				script.astarData.hasBeenReverted = true;
-				Undo.RegisterUndo (script,"A* inspector");
-#else
-				Undo.RegisterCompleteObjectUndo (script, "A* Graph Settings");
-#endif
-				
-				//Assign the new data
-				script.astarData.SetData (bytes, checksum);
-
-#if UNITY_LE_4_3
-				script.astarData.hasBeenReverted = false;
-#endif
-
-				EditorUtility.SetDirty (script);
-			}
-			
-#if !UNITY_LE_4_3
 			lastUndoGroup = Undo.GetCurrentGroup ();
-#endif
 		}
 
 		if (Event.current == null || script.astarData.GetData() == null) {
-			uint checksum;
-			byte[] bytes = SerializeGraphs (out checksum);
-			script.astarData.SetData (bytes,checksum);
-			EditorUtility.SetDirty (target);
+			SerializeIfDataChanged ();
 			return;
 		}
-
-#if UNITY_LE_4_3
-		if (HandleUndo ()) {
-			return;
-		}
-#endif
-
-
-		
-		
 	}
 	
 	public void LoadGraphs () {
 		//Load graphs from serialized data
 		DeserializeGraphs ();
-
-#if UNITY_LE_4_3
-		script.astarData.hasBeenReverted = false;
-#endif
 	}
 	
 	public byte[] SerializeGraphs () {
@@ -2325,7 +2189,7 @@ public class AstarPathEditor : Editor {
 	
 	public byte[] SerializeGraphs (out uint checksum) {
 		
-		Pathfinding.Serialization.SerializeSettings settings = Pathfinding.Serialization.SerializeSettings.Settings;
+		var settings = Pathfinding.Serialization.SerializeSettings.Settings;
 		settings.editorSettings = true;
 		byte[] bytes = SerializeGraphs (settings, out checksum);
 		return bytes;
@@ -2335,7 +2199,7 @@ public class AstarPathEditor : Editor {
 		byte[] bytes = null;
 		uint ch = 0;
 		AstarPath.active.AddWorkItem (new AstarPath.AstarWorkItem (delegate (bool force) {
-			Pathfinding.Serialization.AstarSerializer sr = new Pathfinding.Serialization.AstarSerializer(script.astarData, settings);
+			var sr = new Pathfinding.Serialization.AstarSerializer(script.astarData, settings);
 			sr.OpenSerialize();
 			script.astarData.SerializeGraphsPart (sr);
 			sr.SerializeEditorSettings (graphEditors);
@@ -2344,13 +2208,10 @@ public class AstarPathEditor : Editor {
 			return true;
 		}));
 		
-		//Make sure the above work item is run directly
+		//Make sure the above work item is run immetiately
 		AstarPath.active.FlushWorkItems();
 		checksum = ch;
 		return bytes;
-		
-		//Forward to runtime serializer
-		//return script.astarData.SerializeGraphs(Pathfinding.Serialization.SerializeSettings.Settings, out checksum);
 	}
 	
 	public void DeserializeGraphs () {
@@ -2421,13 +2282,6 @@ public class AstarPathEditor : Editor {
 
 	/** Searches in the current assembly for GraphEditor and NavGraph types */
 	public void FindGraphTypes () {
-		
-		//Skip if we have already found the graph types
-		//if (script.astarData.graphTypes != null && script.astarData.graphTypes.Length != 0) {
-		//	return;
-		//}
-		
-		
 		graphEditorTypes = new Dictionary<string,CustomGraphEditor> ();
 		
 		Assembly asm = Assembly.GetAssembly (typeof(AstarPathEditor));
@@ -2464,38 +2318,9 @@ public class AstarPathEditor : Editor {
 			}
 		}
 		
-		
-		
-		asm = Assembly.GetAssembly (typeof(AstarPath));
-		types = asm.GetTypes ();
+		// Make sure graph types (not graph editor types) are also up to date
+		script.astarData.FindGraphTypes ();
 
-
-		//Not really required, but it's so fast so why not make a check and see if any graph types didn't have any editors
-		foreach (System.Type type in types) {
-			
-			System.Type baseType = type.BaseType;
-			while (baseType != null) {
-				if (System.Type.Equals ( baseType, typeof(NavGraph) )) {
-					
-					bool alreadyFound = false;
-					for (int i=0;i<graphList.Count;i++) {
-						if (graphList[i] == type) {
-							alreadyFound = true;
-							break;
-						}
-					}
-					if (!alreadyFound) {
-						graphList.Add (type);
-					}
-					break;
-				}
-				
-				baseType = baseType.BaseType;
-			}
-		}
-		
-		script.astarData.graphTypes = graphList.ToArray ();
-		
 	}
 	
 	[InitializeOnLoad]

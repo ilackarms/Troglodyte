@@ -1,7 +1,3 @@
-#if UNITY_4_2 || UNITY_4_1 || UNITY_4_0 || UNITY_3_5 || UNITY_3_4 || UNITY_3_3
-	#define UNITY_LE_4_3
-#endif
-
 using Pathfinding;
 using UnityEditor;
 using UnityEngine;
@@ -36,27 +32,19 @@ namespace Pathfinding {
 		}
 		
 		public Object ObjectField (GUIContent label, Object obj, System.Type objType, bool allowSceneObjects) {
-			
-	#if UNITY_3_3
-			allowSceneObjects = true;
-	#endif
-			
-	#if UNITY_3_3
-			obj = EditorGUILayout.ObjectField (label, obj, objType);
-	#else
+
 			obj = EditorGUILayout.ObjectField (label, obj, objType, allowSceneObjects);
-	#endif
 			
 			if (obj != null) {
 				if (allowSceneObjects && !EditorUtility.IsPersistent (obj)) {
 					//Object is in the scene
-					Component com = obj as Component;
-					GameObject go = obj as GameObject;
+					var com = obj as Component;
+					var go = obj as GameObject;
 					if (com != null) {
 						go = com.gameObject;
 					}
 					if (go != null) {
-						UnityReferenceHelper urh = go.GetComponent<UnityReferenceHelper> ();
+						var urh = go.GetComponent<UnityReferenceHelper> ();
 						if (urh == null) {
 							
 							if (FixLabel ("Object's GameObject must have a UnityReferenceHelper component attached")) {
@@ -155,7 +143,9 @@ namespace Pathfinding {
 			return returnValue;
 		}
 		
-		/** Draws a small help box. Works with EditorGUI.indentLevel */
+		/** Draws a small help box.
+		 * Works with EditorGUI.indentLevel
+		 */
 		public void HelpBox (string label) {
 			GUILayout.BeginHorizontal ();
 			GUILayout.Space (14*EditorGUI.indentLevel);
@@ -188,34 +178,16 @@ namespace Pathfinding {
 			if (collision == null) {
 				collision = new GraphCollision ();
 			}
-			
-			/*GUILayout.Space (5);
-			Rect r = EditorGUILayout.BeginVertical (AstarPathEditor.graphBoxStyle);
-			GUI.Box (r,"",AstarPathEditor.graphBoxStyle);
-			GUILayout.Space (2);*/
+
 			Separator ();
 			
 			collision.use2D = EditorGUILayout.Toggle (new GUIContent ("Use 2D Physics", "Use the Physics2D API for collision checking"), collision.use2D );
-			
-#if UNITY_LE_4_3
-			if ( collision.use2D ) EditorGUILayout.HelpBox ("2D Physics is only supported from Unity 4.3 and up", MessageType.Error);
-#endif
-			
-			/*GUILayout.BeginHorizontal ();
-			GUIStyle boxHeader = AstarPathEditor.astarSkin.FindStyle ("CollisionHeader");
-			GUILayout.Label ("Collision testing",boxHeader);
-			collision.collisionCheck = GUILayout.Toggle (collision.collisionCheck,"");
-			
-			bool preEnabledRoot = GUI.enabled;
-			GUI.enabled = collision.collisionCheck;
-			GUILayout.EndHorizontal ();*/
+
 			collision.collisionCheck = ToggleGroup ("Collision testing",collision.collisionCheck);
 			bool preEnabledRoot = GUI.enabled;
 			GUI.enabled = collision.collisionCheck;
-			
-			//GUILayout.BeginHorizontal ();
+
 			collision.type = (ColliderType)EditorGUILayout.EnumPopup("Collider type",collision.type);
-			//new string[3] {"Sphere","Capsule","Ray"}
 			
 			bool preEnabled = GUI.enabled;
 			if (collision.type != ColliderType.Capsule && collision.type != ColliderType.Sphere) {
@@ -233,8 +205,6 @@ namespace Pathfinding {
 			
 			collision.collisionOffset = EditorGUILayout.FloatField (new GUIContent("Offset","Offset upwards from the node. Can be used so that obstacles can be used as ground and at the same time as obstacles for lower positioned nodes"),collision.collisionOffset);
 			
-			//collision.mask = 1 << EditorGUILayout.LayerField ("Mask",Mathf.Clamp ((int)Mathf.Log (collision.mask,2),0,31));
-			
 			collision.mask = EditorGUILayoutx.LayerMaskField ("Mask",collision.mask);
 			
 			GUILayout.Space (2);
@@ -248,16 +218,10 @@ namespace Pathfinding {
 			
 			collision.heightCheck = ToggleGroup ("Height testing",collision.heightCheck);
 			GUI.enabled = collision.heightCheck && GUI.enabled;
-			/*GUILayout.BeginHorizontal ();
-			GUILayout.Label ("Height testing",boxHeader);
-			collision.heightCheck = GUILayout.Toggle (collision.heightCheck,"");
-			GUI.enabled = collision.heightCheck;
-			GUILayout.EndHorizontal ();*/
-			
+
 			collision.fromHeight = EditorGUILayout.FloatField (new GUIContent ("Ray length","The height from which to check for ground"),collision.fromHeight);
 			
 			collision.heightMask = EditorGUILayoutx.LayerMaskField ("Mask",collision.heightMask);
-			//collision.heightMask = 1 << EditorGUILayout.LayerField ("Mask",Mathf.Clamp ((int)Mathf.Log (collision.heightMask,2),0,31));
 			
 			collision.thickRaycast = EditorGUILayout.Toggle (new GUIContent ("Thick Raycast", "Use a thick line instead of a thin line"),collision.thickRaycast);
 			
@@ -274,10 +238,6 @@ namespace Pathfinding {
 			collision.unwalkableWhenNoGround = EditorGUILayout.Toggle (new GUIContent ("Unwalkable when no ground","Make nodes unwalkable when no ground was found with the height raycast. If height raycast is turned off, this doesn't affect anything"), collision.unwalkableWhenNoGround);
 			
 			GUI.enabled = preEnabledRoot;
-			
-			//GUILayout.Space (2);
-			//EditorGUILayout.EndVertical ();
-			//GUILayout.Space (5);
 		}
 		
 		/** Draws a wire cube using handles */
@@ -298,15 +258,7 @@ namespace Pathfinding {
 			Vector3 p6 = center+dy-dz+dx;
 			Vector3 p7 = center+dy+dz+dx;
 			Vector3 p8 = center+dy+dz-dx;
-			
-			/*Handles.DrawAAPolyLine (new Vector3[4] {p1,p2,p3,p4});
-			Handles.DrawAAPolyLine (new Vector3[4] {p5,p6,p7,p8});
-			
-			Handles.DrawAAPolyLine (new Vector3[2] {p1,p5});
-			Handles.DrawAAPolyLine (new Vector3[2] {p2,p6});
-			Handles.DrawAAPolyLine (new Vector3[2] {p3,p7});
-			Handles.DrawAAPolyLine (new Vector3[2] {p4,p8});*/
-			
+
 			Handles.DrawLine (p1,p2);
 			Handles.DrawLine (p2,p3);
 			Handles.DrawLine (p3,p4);
@@ -322,30 +274,5 @@ namespace Pathfinding {
 			Handles.DrawLine (p3,p7);
 			Handles.DrawLine (p4,p8);
 		}
-		
-		/** \cond */
-		public static Texture2D lineTex;
-		
-		/** \deprecated Test function, might not work. Uses undocumented editor features */
-		public static void DrawAALine (Vector3 a, Vector3 b) {
-			
-			if (lineTex == null) {
-				lineTex = new Texture2D (1,4);
-				lineTex.SetPixels (new Color[4] {
-					Color.clear,
-					Color.black,
-					Color.black,
-					Color.clear,
-				});
-				lineTex.Apply ();
-			}
-			
-			SceneView c = SceneView.lastActiveSceneView;
-			
-			Vector3 tangent1 = Vector3.Cross ((b-a).normalized, c.camera.transform.position-a).normalized;
-			
-			Handles.DrawAAPolyLine (lineTex,new Vector3[3] {a,b,b+tangent1*10});//,b+tangent1,a+tangent1});
-		}
-		/** \endcond */
 	}
 }

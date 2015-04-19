@@ -42,7 +42,13 @@ public class SeekerEditor : Editor {
 			for (int i=0;i<script.tagPenalties.Length;i++) {
 				int tmp = EditorGUILayout.IntField ((i < tagNames.Length ? tagNames[i] : "Tag "+i),(int)script.tagPenalties[i]);
 				if (tmp < 0) tmp = 0;
-				script.tagPenalties[i] = tmp;
+
+				// If the new value is different than the old one
+				// Update the value and mark the script as dirty
+				if (script.tagPenalties[i] != tmp) {
+					script.tagPenalties[i] = tmp;
+					EditorUtility.SetDirty (target);
+				}
 			}
 			if (GUILayout.Button ("Edit Tag Names...")) {
 				AstarPathEditor.EditTags ();
@@ -207,6 +213,11 @@ public class SeekerEditor : Editor {
 #if UNITY_LE_4_3
 			EditorGUI.indentLevel-= 2;
 #endif
+
+		}
+
+		if (GUI.changed) {
+			EditorUtility.SetDirty (target);
 		}
 	}
 }

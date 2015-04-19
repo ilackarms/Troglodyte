@@ -9,10 +9,20 @@ public class ProceduralWorld : MonoBehaviour {
 
 	public ProceduralPrefab[] prefabs;
 
-	public int range = 0;
+	/** How far away to generate tiles */
+	public int range = 1;
 
+	/** World size of tiles */
 	public float tileSize = 100;
 	public int subTiles = 20;
+
+	/** Enable static batching on generated tiles.
+	 * Will improve overall FPS, but might cause FPS on
+	 * some frames when static batching is done
+	 */
+	public bool staticBatching = false;
+
+	Queue<IEnumerator> tileGenerationQueue = new Queue<IEnumerator>();
 
 	[System.Serializable]
 	public class ProceduralPrefab {
@@ -58,6 +68,8 @@ public class ProceduralWorld : MonoBehaviour {
 		// and then recalculate the graph
 		Update ();
 		AstarPath.active.Scan ();
+
+		StartCoroutine (GenerateTiles ());
 	}
 	
 	// Update is called once per frame
@@ -89,7 +101,11 @@ public class ProceduralWorld : MonoBehaviour {
 			for ( int z = p.y-range; z <= p.y+range; z++ ) {
 				if ( !tiles.ContainsKey ( new Int2(x,z) ) ) {
 					ProceduralTile tile = new ProceduralTile ( this, x, z );
-					StartCoroutine ( tile.Generate () );
+					var generator = tile.Generate ();
+					// Tick it one step forward
+					generator.MoveNext ();
+					// Calculate the rest later
+					tileGenerationQueue.Enqueue (generator);
 					tiles.Add ( new Int2(x,z), tile );
 				}
 			}
@@ -106,14 +122,27 @@ public class ProceduralWorld : MonoBehaviour {
 
 	}
 
+	IEnumerator GenerateTiles () {
+		while (true) {
+			if (tileGenerationQueue.Count > 0) {
+				var generator = tileGenerationQueue.Dequeue ();
+				yield return StartCoroutine (generator);
+			}
+			yield return null;
+		}
+	}
+
 	class ProceduralTile {
 		
 		int x, z;
 		System.Random rnd;
+		bool staticBatching;
 
 		ProceduralWorld world;
 
-		public ProceduralTile ( ProceduralWorld world, int x, int z ) {
+		public bool destroyed { get; private set; }
+
+		public ProceduralTile ( ProceduralWorld world, int x, int z) {
 			this.x = x;
 			this.z = z;
 			this.world = world;
@@ -218,24 +247,24 @@ public class ProceduralWorld : MonoBehaviour {
 
 			ditherMap = null;
 
-			// Wait a bit so that less tiles are being generated right now to avoid larger FPS spikes
-			yield return new WaitForSeconds(0.5f);
-
-			//for ( int i=0;i<objs.Count;i++) {
-			//	objs[i].SetActive ( true );
-				//if ( i % 4 == 0 ) yield return 0;
-			//}
+			yield return null;
+			yield return null;
 
 			//Batch everything for improved performance
-			if (Application.HasProLicense ()) {
+			if (Application.HasProLicense () && world.staticBatching) {
 				StaticBatchingUtility.Combine (root.gameObject);
 			}
 		}
 
 		public void Destroy () {
-			Debug.Log ("Destroying tile "+x + ", " + z);
-			GameObject.Destroy ( root.gameObject );
-			root = null;
+			if (root != null) {
+				Debug.Log ("Destroying tile " + x + ", " + z);
+				GameObject.Destroy (root.gameObject);
+				root = null;
+			}
+
+			// Make sure the tile generator coroutine is destroyed
+			ie = null;
 		}
 	}
 }

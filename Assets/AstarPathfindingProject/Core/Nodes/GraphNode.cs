@@ -46,8 +46,7 @@ namespace Pathfinding {
 		
 		/** Constructor for a graph node. */
 		public GraphNode (AstarPath astar) {
-			//this.nodeIndex = NextNodeIndex++;
-			if (astar != null) {
+			if (!System.Object.ReferenceEquals (astar, null)) {
 				this.nodeIndex = astar.GetNewNodeIndex();
 				astar.InitializeNode (this);
 			} else {
@@ -279,6 +278,9 @@ namespace Pathfinding {
 		public virtual void DeserializeNode (GraphSerializationContext ctx) {
 			Penalty = ctx.reader.ReadUInt32();
 			Flags = ctx.reader.ReadUInt32();
+
+			// Set the correct graph index (which might have changed, e.g if loading additively)
+			GraphIndex = (uint)ctx.graphIndex;
 		}
 		
 		/** Used to serialize references to other nodes e.g connections.

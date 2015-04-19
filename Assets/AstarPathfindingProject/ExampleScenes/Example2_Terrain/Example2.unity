@@ -517,6 +517,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 32}
+  m_RootOrder: 0
 --- !u!4 &32
 Transform:
   m_ObjectHideFlags: 0
@@ -529,6 +530,7 @@ Transform:
   m_Children:
   - {fileID: 31}
   m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!4 &33
 Transform:
   m_ObjectHideFlags: 0
@@ -540,6 +542,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 3}
   m_Children: []
   m_Father: {fileID: 34}
+  m_RootOrder: 0
 --- !u!4 &34
 Transform:
   m_ObjectHideFlags: 0
@@ -552,6 +555,7 @@ Transform:
   m_Children:
   - {fileID: 33}
   m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!4 &35
 Transform:
   m_ObjectHideFlags: 0
@@ -563,6 +567,7 @@ Transform:
   m_LocalScale: {x: 9.58592796, y: 1, z: 12.5386944}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!4 &36
 Transform:
   m_ObjectHideFlags: 0
@@ -574,6 +579,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!4 &37
 Transform:
   m_ObjectHideFlags: 0
@@ -587,6 +593,7 @@ Transform:
   - {fileID: 50}
   - {fileID: 38}
   m_Father: {fileID: 39}
+  m_RootOrder: 0
 --- !u!4 &38
 Transform:
   m_ObjectHideFlags: 0
@@ -598,6 +605,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 37}
+  m_RootOrder: 1
 --- !u!4 &39
 Transform:
   m_ObjectHideFlags: 0
@@ -611,6 +619,7 @@ Transform:
   - {fileID: 37}
   - {fileID: 51}
   m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!4 &40
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +631,7 @@ Transform:
   m_LocalScale: {x: 1.00000012, y: 1, z: 1.00000024}
   m_Children: []
   m_Father: {fileID: 41}
+  m_RootOrder: 0
 --- !u!4 &41
 Transform:
   m_ObjectHideFlags: 0
@@ -634,6 +644,7 @@ Transform:
   m_Children:
   - {fileID: 40}
   m_Father: {fileID: 49}
+  m_RootOrder: 1
 --- !u!4 &42
 Transform:
   m_ObjectHideFlags: 0
@@ -645,6 +656,7 @@ Transform:
   m_LocalScale: {x: 1.00000024, y: 1, z: .999999881}
   m_Children: []
   m_Father: {fileID: 43}
+  m_RootOrder: 0
 --- !u!4 &43
 Transform:
   m_ObjectHideFlags: 0
@@ -657,6 +669,7 @@ Transform:
   m_Children:
   - {fileID: 42}
   m_Father: {fileID: 49}
+  m_RootOrder: 3
 --- !u!4 &44
 Transform:
   m_ObjectHideFlags: 0
@@ -668,6 +681,7 @@ Transform:
   m_LocalScale: {x: 1.00000012, y: .99999994, z: .999999821}
   m_Children: []
   m_Father: {fileID: 45}
+  m_RootOrder: 0
 --- !u!4 &45
 Transform:
   m_ObjectHideFlags: 0
@@ -680,6 +694,7 @@ Transform:
   m_Children:
   - {fileID: 44}
   m_Father: {fileID: 49}
+  m_RootOrder: 0
 --- !u!4 &46
 Transform:
   m_ObjectHideFlags: 0
@@ -691,6 +706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 49}
+  m_RootOrder: 2
 --- !u!4 &47
 Transform:
   m_ObjectHideFlags: 0
@@ -702,6 +718,7 @@ Transform:
   m_LocalScale: {x: .999999881, y: 1.00000012, z: 1.00000012}
   m_Children: []
   m_Father: {fileID: 48}
+  m_RootOrder: 0
 --- !u!4 &48
 Transform:
   m_ObjectHideFlags: 0
@@ -714,6 +731,7 @@ Transform:
   m_Children:
   - {fileID: 47}
   m_Father: {fileID: 49}
+  m_RootOrder: 4
 --- !u!4 &49
 Transform:
   m_ObjectHideFlags: 0
@@ -730,6 +748,7 @@ Transform:
   - {fileID: 43}
   - {fileID: 48}
   m_Father: {fileID: 50}
+  m_RootOrder: 0
 --- !u!4 &50
 Transform:
   m_ObjectHideFlags: 0
@@ -742,6 +761,7 @@ Transform:
   m_Children:
   - {fileID: 49}
   m_Father: {fileID: 37}
+  m_RootOrder: 0
 --- !u!4 &51
 Transform:
   m_ObjectHideFlags: 0
@@ -753,6 +773,7 @@ Transform:
   m_LocalScale: {x: .25, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 39}
+  m_RootOrder: 1
 --- !u!4 &52
 Transform:
   m_ObjectHideFlags: 0
@@ -764,6 +785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!4 &53
 Transform:
   m_ObjectHideFlags: 0
@@ -775,6 +797,7 @@ Transform:
   m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!4 &54
 Transform:
   m_ObjectHideFlags: 0
@@ -786,6 +809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!4 &55
 Transform:
   m_ObjectHideFlags: 0
@@ -797,6 +821,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!4 &56
 Transform:
   m_ObjectHideFlags: 0
@@ -808,6 +833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!20 &57
 Camera:
   m_ObjectHideFlags: 0
@@ -835,8 +861,11 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!20 &58
 Camera:
   m_ObjectHideFlags: 0
@@ -864,8 +893,11 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
 --- !u!23 &59
 Renderer:
   m_ObjectHideFlags: 0
@@ -884,9 +916,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &60
 Renderer:
   m_ObjectHideFlags: 0
@@ -905,9 +936,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &61
 Renderer:
   m_ObjectHideFlags: 0
@@ -926,9 +956,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &62
 Renderer:
   m_ObjectHideFlags: 0
@@ -947,9 +976,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &63
 Renderer:
   m_ObjectHideFlags: 0
@@ -968,9 +996,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &64
 Renderer:
   m_ObjectHideFlags: 0
@@ -989,9 +1016,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &65
 Renderer:
   m_ObjectHideFlags: 0
@@ -1010,9 +1036,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &66
 Renderer:
   m_ObjectHideFlags: 0
@@ -1031,9 +1056,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &67
 Renderer:
   m_ObjectHideFlags: 0
@@ -1052,9 +1076,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &68
 Renderer:
   m_ObjectHideFlags: 0
@@ -1073,9 +1096,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &69
 Renderer:
   m_ObjectHideFlags: 0
@@ -1094,9 +1116,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &70
 Renderer:
   m_ObjectHideFlags: 0
@@ -1115,9 +1136,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &71
 Renderer:
   m_ObjectHideFlags: 0
@@ -1136,9 +1156,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &72
 Renderer:
   m_ObjectHideFlags: 0
@@ -1157,9 +1176,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &73
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1716,6 +1734,7 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
+  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!114 &114
 MonoBehaviour:
@@ -1730,17 +1749,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   astarData:
     hasBeenReverted: 0
-    data: 504b0304140000080800b66d4d4536e4121d2f0200005d0400000b0024006772617068302e6a736f6e0a0020000000000001001800c66b4739dbe6cf01c66b4739dbe6cf01bc6b4739dbe6cf015d53db8eda3010fd95cacfe92a849016deb6d0a5adb6bb6869d5878a87211988856347be94cb8a7fefd88490a048b99c99f19c3367f2ceb68e176cf2cefe8170c8260cb3418c6991254991a649967d1c2743186749968ec6c32cfd3c66e78881a931b76f60b9629341c4b4b2fe5dfa830e6c1247ec18ee27ba537a8ed2a26e82c9a81ba62f4a70321750d5582cf9099bbc517cc9a327654855e025983c8ce8442504374d477bac3df329d4c60964112b3854183aa6112b916f4b4b759daad7cdc6a00d1c341c675c939a7018fba26c49275460769da924e7eb393ffb8161fc6948b18d56d5b7a6cf20f6c46dc9f3dd1b1c7330846d4018ec83b396e3c0ebdf83d8c15ae09f12e58b9a6be564d1d63983c9acfd6a554c4bcc898cd50eaff47a90ab7b7e0c1a3fce5ede612a78b526010fc3f1edfbf1c04d48246029941f6b92450c354dff3b910d269b304bc23c87df067fc1d6b4e41af8896b6329100e0367d53397bbb9e6c52df38aceb8b1cfbce2617464b4d7b1564e5326fb1a464a929d9d2a2dd183176d354a10f6b8a06eb66fe85da4ed77873f416e95ee563cca2d6dcf5d7a00afb9491cbced86166aef3d1c05937eb8aa5e282eed1241e7e5cd773c58a7710616bc23544e4edfec35a436a7ced20941bb149a91d0bf7144d78ad49720250a0fb11725fd86771f2b32944b12056271611654917bf23a2d49bb46e3f4067c986ba8fd8a171af6737eaa543b532e376a996b44f91a6a1b7a1558cd0fedd27b1afe1f8c9b6bd0bef5d0d5f9fc1f504b0304140000080800b66d4d457b2b80ab3c00000047000000120024006772617068305f656469746f722e6a736f6e0a00200000000000010018003a7a4739dbe6cf01307a4739dbe6cf01307a4739dbe6cf01ab56cac94fce4e4d51b22a292a4dd5512acec82f77ad28294a840994a456949416a58665166726e5a4c2440b32cbf24b94ac949c53f34a528b946a01504b0304140000080800b66d4d452cb81d997400000083000000090024006d6574612e6a736f6e0a0020000000000001001800c8824739dbe6cf01c8824739dbe6cf01be824739dbe6cf011d8cb10e82301040ffe5666ce05a2e1eab039b71370c4dee840eb6a4141363fc77a9db1bde7b1f7869de428a308035bd616860ce7e5d3618ba03f72007dd41a96bd509218a73487462b49e09c9f56cc99d19a606ca7bd5ab7feabfb8f9b23c4294106733e62063bd562b26d14bda63a95a3b7d7f504b01022d00140000080800b66d4d4536e4121d2f0200005d0400000b00240000000000000000000000000000006772617068302e6a736f6e0a0020000000000001001800c66b4739dbe6cf01c66b4739dbe6cf01bc6b4739dbe6cf01504b01022d00140000080800b66d4d457b2b80ab3c0000004700000012002400000000000000000000007c0200006772617068305f656469746f722e6a736f6e0a00200000000000010018003a7a4739dbe6cf01307a4739dbe6cf01307a4739dbe6cf01504b01022d00140000080800b66d4d452cb81d99740000008300000009002400000000000000000000000c0300006d6574612e6a736f6e0a0020000000000001001800c8824739dbe6cf01c8824739dbe6cf01be824739dbe6cf01504b050600000000030003001c010000cb0300000000
+    data: 504b0304140000080800a5a04246678c30db4b020000980400000b0024006772617068302e6a736f6e0a002000000000000100180008ae742b1b3fd00108ae742b1b3fd001fead742b1b3fd00165535d73da3010fc2b1d3d3b195b18a7e42d8584b693264c68a70f9d3c5cec036b90258f3e1a4886ffde933006a77806a3bdd3ddeeedf1ced65e54ecfa9dfd05e9915d332cb214f3aae0bcca735e1417133e8249c18b7c3c1915f9e709db270c6c8ba57b022734bbce1226ac6ed01951dea8b5a42a69c28c7621ac42ed6d4476f1fb8dbea94289caa1e9827c7c1ea6132578554a685aac96e20dbbbc717ac8a33765285de121c82fc754514b296cd7d1edda20660aadf5442861950062183ae609ab51ac6b47f7ce6e3dae5616dd813aec66c290c0588c7dd1aea60a0dd8cdd9a0f8fe58e7c730304aaf46145b19dd7cedfa646920ee6a516e9e605782256c05d2e2109cf51cb3a0ff15e4065e24feae513de8b9d15e55fd3d6f91cffa53af625a6349649cf178a437807c3bf023ebfcd80779dba914cd0b09b81c4d4ee79badb0319180a5d461acbc48181a9afe37221b4db6719684050ebf2cfe84b5edc975f09d30d651201603eff4bd509bb911d529f388ce8475f7a21171746474d0f1a2bda14c761b474a92bd9b6aa33080076d2d2a906eb7a06e6e68e88748dfef037e07a5d3e6fc46b7cec3f4081e73791abd3d0f2df46bf0701c4dfaee9b76a185724b0453d627df71ebbcc11938088ed07572fa64af25b52575565e4adaa5d88c84fe49137a9e497d0d4aa10c107bd02a6cf8f9eb990c158a44815c1c984555e49e3a4e4bd1aed13883019fe606dab0e29581d7b9786b743f53a1567a591a44f518ef76f41aa03ffbb65ffa40835fe693f0b92a92b47bb2fed72098d121cdb222e3b717e9f87f207bdeefff01504b0304140000080800a5a04246287e18aa4300000048000000120024006772617068305f656469746f722e6a736f6e0a002000000000000100180074ba742b1b3fd00174ba742b1b3fd0016aba742b1b3fd001ab56cac94fce4e4d51b22a292a4dd5512acec82f77ad28294a54b24a4bcc29068a94a456949416a58665166726e5a4c2d4156496e59728592939a7e695a41629d50200504b0304140000080800a5a042469c19b24f7600000085000000090024006d6574612e6a736f6e0a0020000000000001001800fec1742b1b3fd001fec1742b1b3fd001fec1742b1b3fd0011d8cb10e82301040ffe5666ca02da765656033ec86a1c99d70832d29c5c418fe5deaf686f7de17de9c3689013a30aa554e5da18239f975d9a06b4edc854e7a006353b325d49aacd58817a78d77a8d1b6cea0bd39982ac89f95effec5ff62f479794a2009b31a92d050aec50a91b88f7bc845aba7e307504b01022d00140000080800a5a04246678c30db4b020000980400000b00240000000000000000000000000000006772617068302e6a736f6e0a002000000000000100180008ae742b1b3fd00108ae742b1b3fd001fead742b1b3fd001504b01022d00140000080800a5a04246287e18aa43000000480000001200240000000000000000000000980200006772617068305f656469746f722e6a736f6e0a002000000000000100180074ba742b1b3fd00174ba742b1b3fd0016aba742b1b3fd001504b01022d00140000080800a5a042469c19b24f760000008500000009002400000000000000000000002f0300006d6574612e6a736f6e0a0020000000000001001800fec1742b1b3fd001fec1742b1b3fd001fec1742b1b3fd001504b050600000000030003001c010000f00300000000
     data_backup: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     revertData: 
     cacheStartup: 0
-  showNavGraphs: 1
+  showNavGraphs: 0
   showUnwalkableNodes: 1
   debugMode: 4
   debugFloor: 0
-  debugRoof: 3000
+  debugRoof: 1
+  manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: .200000003
   logPathResults: 1

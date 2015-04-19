@@ -1,0 +1,116 @@
+-debug
+-target:library
+-i:UnityEngine
+-i:System.Collections
+-base:UnityEngine.MonoBehaviour
+-nowarn:BCW0016
+-nowarn:BCW0003
+-method:Main
+-out:Temp/Assembly-UnityScript.dll
+-x-type-inference-rule-attribute:UnityEngineInternal.TypeInferenceRuleAttribute
+-define:UNITY_5_0_0
+-define:UNITY_5_0
+-define:UNITY_5
+-define:ENABLE_LICENSE_RENAME
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_2D_PHYSICS
+-define:ENABLE_4_6_FEATURES
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_NEW_HIERARCHY
+-define:ENABLE_PHYSICS
+-define:ENABLE_PHYSICS_PHYSX3
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_AUDIOMIXER_SUSPEND
+-define:ENABLE_NONPRO
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll
+-r:Assets/AstarPathfindingProject/Plugins/JsonFx/Pathfinding.JsonFx.dll
+-r:Assets/RAIN/RAIN.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:\Program Files\Unity\Editor\Data\PlaybackEngines\iossupport\UnityEditor.iOS.Extensions.Xcode.dll"
+-i:UnityEditor
+"Assets/0000 ats V2 package/ats vertexLitShader Package/Script/setupVertexLitShaderV2.js"
+Assets/Download/FT_CaveWorm/Script/SampleSceneGUI.js
+Assets/Download/FT_CaveWorm/Script/StopCAM.js
+Assets/Download/FT_CaveWorm/Script/VisibleBG.js
+Assets/Download/KY_magicEffectsFree/Script/ConGUI.js
+Assets/Download/KY_magicEffectsFree/Script/Lighting.js
+Assets/JoveFree/Scenes/JoveDemo/Demo/Script/AlphaChanger.js
+Assets/JoveFree/Scenes/JoveDemo/Demo/Script/AutoMovement.js
+Assets/JoveFree/Scenes/JoveDemo/Demo/Script/PlayerMovement.js
+"Assets/Lux/Demos/00 Shared assets/keyboardInput03.js"
+Assets/Scripts/Player/RunningAndCrouchingAddon.js
+Assets/Shaders/Sources/CrumpleMesh.js
+Assets/Shaders/Sources/ExtrudedMeshTrail.js
+Assets/Shaders/Sources/FractalTexture.js
+Assets/Shaders/Sources/HeightmapGenerator.js
+Assets/Shaders/Sources/InitialRigidbodyVelocity.js
+Assets/Shaders/Sources/MouseOrbit.js
+Assets/Shaders/Sources/PaintVertices.js
+Assets/Shaders/Sources/SinusCurveModifier.js
+Assets/Shaders/Sources/SmoothRandomPosition.js
+Assets/Shaders/Sources/TronTrail.js
+Assets/Shaders/Sources/Twist.js
+"Assets/Shaders/Sources/~ControlScripts/DragTransform.js"
+"Assets/Shaders/Sources/~ControlScripts/KeyboardOrbit.js"
+"Assets/Shaders/Sources/~ControlScripts/VPS.js"
+Assets/SimpleBloodSplatterSystem/Scripts/BloodSplatter.js
+Assets/SimpleBloodSplatterSystem/Scripts/EnemyHealth.js
+Assets/SimpleBloodSplatterSystem/Scripts/SplatterInitialization.js
+Assets/Underworld/Origin/Tools/ScreenshotTakerPro.js
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/AntialiasingAsPostEffect.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/CameraInfo.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/ColorCorrectionCurves.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/ContrastEnhance.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/Crease.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/DepthOfField34.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/DepthOfFieldScatter.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/EdgeDetectEffectNormals.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/Fisheye.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/GlobalFog.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/NoiseAndGrain.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/Quads.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/ScreenOverlay.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/SunShafts.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/TiltShift.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/Tonemapping.js"
+"Assets/Underworld/Standard Assets/Image Effects (Pro Only)/Triangles.js"
+Assets/splatterCast.js
+Assets/splatterCore.js

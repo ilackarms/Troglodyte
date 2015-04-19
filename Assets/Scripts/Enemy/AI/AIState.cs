@@ -40,4 +40,8 @@ public abstract class AIState {
 		executedThisCycle = false;
 	}
 
+    public string getName()
+    {
+        return this.GetType().Name;
+    }
 }

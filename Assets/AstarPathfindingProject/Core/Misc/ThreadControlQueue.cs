@@ -78,7 +78,9 @@ namespace Pathfinding {
 		/** True if blocking and all receivers are waiting for unblocking */
 		public bool AllReceiversBlocked {
 			get {
-				return blocked && blockedReceivers == numReceivers;
+				lock (lockObj) {
+					return blocked && Thread.VolatileRead (ref blockedReceivers) == numReceivers;
+				}
 			}
 		}
 		
@@ -161,9 +163,7 @@ namespace Pathfinding {
 				
 				while (blocked || starving) {
 					blockedReceivers++;
-					
-					if (terminate) throw new QueueTerminationException();
-					
+
 					if (blockedReceivers == numReceivers) {
 						//Last alive
 						
@@ -173,9 +173,13 @@ namespace Pathfinding {
 					
 					Monitor.Exit (lockObj);
 					block.WaitOne();
+
+					if (terminate) throw new QueueTerminationException();
+
 					Monitor.Enter (lockObj);
+
 					blockedReceivers--;
-					
+
 					if (head == null) {
 						Starving ();
 					}
