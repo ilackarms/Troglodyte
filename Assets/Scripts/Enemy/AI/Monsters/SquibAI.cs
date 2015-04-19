@@ -12,7 +12,7 @@ public class SquibAI : BasicAI {
 
 	float becomeAgressiveChance = 0.001f;
 
-	const float WANDER_TIME = 30.0f;
+	const float WANDER_TIME = 5.0f;
 	const float SEARCH_TIME = 15.0f;
 	float ATTACK_TIME;
 		
@@ -113,7 +113,7 @@ public class SquibAI : BasicAI {
 		if (state.Equals (wanderState)) {
 			if (detectPlayer () && Random.Range(0.0f,1.1f)<= becomeAgressiveChance) {
 				setState (chasing);
-			} else if (closeEnough (((WanderingState)state).wanderDestination, 2.1f)) {
+			} else if (closeEnough (((WanderingState)state).wanderDestination, 2.1f) || state.stateTime >= WANDER_TIME) {
 				setState (wanderState);
 			}
 		} 
@@ -170,6 +170,7 @@ public class SquibAI : BasicAI {
 			executeOncePerCycle();
             ai.setDestination(randomPoint);
             ai.pathfinder.target = ai.destination.transform;
+			ai.pathfinder.speed = ai.baseMoveSpeed / 2;
 		}
 		
 		public override void initialize() {
@@ -217,7 +218,7 @@ public class SquibAI : BasicAI {
 	//attacking state
 	public class AttackingState : AIState {
 		
-		Weapon w = new Weapon(0,0,null,"Claws",5,ai.statistics.AttackSpeed);
+		Weapon w = new Weapon(0,0,null,"Claws",  ai.statistics.PhysicalDamage, ai.statistics.AttackSpeed);
 		
 		public AttackingState(BasicAI ai) : base(ai, "Attack", ai.statistics.AttackSpeed){
 			Weapon.WeaponPropertyBundle clawProperties = new Weapon.WeaponPropertyBundle(Item.ItemPropertyBundle.Rarity.Common, ai.statistics.Level);
@@ -254,8 +255,9 @@ public class SquibAI : BasicAI {
 			
 		}
 		protected override void execute ()
-		{
+		{			
 			ai.pathfinder.canMove = false;
+			ai.pathfinder.speed = 0;
 			//so animation only plays once
 			animationClip = null; 
 			

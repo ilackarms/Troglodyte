@@ -17,7 +17,7 @@ public class CaveWormAI : BasicAI {
 	public int CurrentDest = 1;
 	
 	const float IDLE_TIME = 10.0f;
-	const float WANDER_TIME = 30.0f;
+	const float WANDER_TIME = 15.0f;
 	const float SEARCH_TIME = 30.0f;
 	float ATTACK_TIME;
 

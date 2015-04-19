@@ -535,10 +535,12 @@ public abstract class BasicAI : Hittable
                 seeker.RegisterModifier(altPath);
                 */
                                 
-                Pathfinding.SimpleSmoothModifier simpleSmooth = gameObject.AddComponent<Pathfinding.SimpleSmoothModifier>();
+                //Pathfinding.SimpleSmoothModifier simpleSmooth = gameObject.AddComponent<Pathfinding.SimpleSmoothModifier>();
                 //simpleSmooth.priority = 1;
-                seeker.RegisterModifier(simpleSmooth);
-                               
+                //seeker.RegisterModifier(simpleSmooth);
+
+                CharacterController cc = gameObject.GetComponent<CharacterController>();
+                cc.slopeLimit = 90;
 
                 //Pathfinding.FunnelModifier funnel = gameObject.AddComponent<Pathfinding.FunnelModifier>();
                 //seeker.RegisterModifier(funnel);
