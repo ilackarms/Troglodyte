@@ -1,0 +1,2092 @@
+fileFormatVersion: 2
+guid: 0a12155b11b05ab448264cc7b93f7e1f
+timeCreated: 1429547606
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Camera
+    100002: CS.BackFoot
+    100004: CS.BackFootHeel
+    100006: CS.BackFootToeAll
+    100008: CS.BackKneeIK1
+    100010: CS.BackKneeIK2
+    100012: CS.chestIK
+    100014: CS.DriverArrow
+    100016: CS.FrontFoot
+    100018: CS.frontfootHeel
+    100020: CS.frontFootToeAll
+    100022: CS.FrontKneeIK
+    100024: CS.Head
+    100026: CS.Jaw
+    100028: CS.TailIK
+    100030: CS.TailIK2
+    100032: CS.WasteIK
+    100034: Empty
+    100036: //RootNode
+    100038: Plane.003
+    100040: ricin
+    100042: ricin_MeshPart0
+    100044: ricin_MeshPart1
+    100046: ricin_MeshPart2
+    100048: rig
+    100050: rig|BackAnkleIK.L
+    100052: rig|BackAnkleIK.R
+    100054: rig|BackFoot.L
+    100056: rig|BackFoot.R
+    100058: rig|BackfootIK.L
+    100060: rig|BackfootIK.R
+    100062: rig|BackFootTargetIK.L
+    100064: rig|BackFootTargetIK.R
+    100066: rig|BackLegIK1.L
+    100068: rig|BackLegIK1.R
+    100070: rig|BackLegIK2.L
+    100072: rig|BackLegIK2.R
+    100074: rig|BackMidLeg.L
+    100076: rig|BackMidLeg.R
+    100078: rig|BackToe.L
+    100080: rig|BackToe.R
+    100082: rig|BackUpperLeg.L
+    100084: rig|BackUpperLeg.R
+    100086: rig|bc1-1.L
+    100088: rig|bc1-1.R
+    100090: rig|bc1-2.L
+    100092: rig|bc1-2.R
+    100094: rig|bc2-1.L
+    100096: rig|bc2-1.R
+    100098: rig|bc2-2.L
+    100100: rig|bc2-2.R
+    100102: rig|bc3-1.L
+    100104: rig|bc3-1.R
+    100106: rig|bc3-2.L
+    100108: rig|bc3-2.R
+    100110: rig|BlueDriver
+    100112: rig|BodySpike1-1.L
+    100114: rig|BodySpike1-1.R
+    100116: rig|BodySpike1-2.L
+    100118: rig|BodySpike1-2.R
+    100120: rig|BodySpike2--1.L
+    100122: rig|BodySpike2--1.R
+    100124: rig|BodySpike2-2.L
+    100126: rig|BodySpike2-2.R
+    100128: rig|BrightnessDriver
+    100130: rig|Butt
+    100132: rig|Chest
+    100134: rig|ChestIK
+    100136: rig|ColorDriverHolder
+    100138: rig|fc1-1.L
+    100140: rig|fc1-1.R
+    100142: rig|fc1-2.L
+    100144: rig|fc1-2.R
+    100146: rig|fc1-3.L
+    100148: rig|fc1-3.R
+    100150: rig|fc2-1.L
+    100152: rig|fc2-1.R
+    100154: rig|fc2-2.L
+    100156: rig|fc2-2.R
+    100158: rig|fc2-3.L
+    100160: rig|fc2-3.R
+    100162: rig|fc3-1.L
+    100164: rig|fc3-1.R
+    100166: rig|fc3-2.L
+    100168: rig|fc3-2.R
+    100170: rig|fc3-3.L
+    100172: rig|fc3-3.R
+    100174: rig|FrontAnkleIK.L
+    100176: rig|FrontAnkleIK.R
+    100178: rig|FrontFoot.L
+    100180: rig|FrontFoot.R
+    100182: rig|FrontFootIK.L
+    100184: rig|FrontFootIK.R
+    100186: rig|FrontLegKneeIK.L
+    100188: rig|FrontLegKneeIK.R
+    100190: rig|FrontLowerleg.L
+    100192: rig|FrontLowerleg.R
+    100194: rig|FrontToe.L
+    100196: rig|FrontToe.R
+    100198: rig|FrontUpperLeg.L
+    100200: rig|FrontUpperLeg.R
+    100202: rig|GreenDriver
+    100204: rig|Head
+    100206: rig|HeadSpike1-1.L
+    100208: rig|HeadSpike1-1.R
+    100210: rig|HeadSpike1-2.L
+    100212: rig|HeadSpike1-2.R
+    100214: rig|HeadSpike2-1.L
+    100216: rig|HeadSpike2-1.R
+    100218: rig|HeadSpike2-2.L
+    100220: rig|HeadSpike2-2.R
+    100222: rig|jaw
+    100224: rig|Lower torso
+    100226: rig|Lower torsoIK
+    100228: rig|Neck
+    100230: rig|NeckStraight
+    100232: rig|RedDriver
+    100234: rig|Ribs
+    100236: rig|Root
+    100238: rig|Tail1
+    100240: rig|Tail2
+    100242: rig|Tail2IK
+    100244: rig|Tail3
+    100246: rig|Tail4
+    100248: rig|Tail4IK
+    100250: rig|tongue1
+    100252: rig|tongue2
+    100254: rig|tongue3
+    100256: rig|tongue4
+    400000: Camera
+    400002: CS.BackFoot
+    400004: CS.BackFootHeel
+    400006: CS.BackFootToeAll
+    400008: CS.BackKneeIK1
+    400010: CS.BackKneeIK2
+    400012: CS.chestIK
+    400014: CS.DriverArrow
+    400016: CS.FrontFoot
+    400018: CS.frontfootHeel
+    400020: CS.frontFootToeAll
+    400022: CS.FrontKneeIK
+    400024: CS.Head
+    400026: CS.Jaw
+    400028: CS.TailIK
+    400030: CS.TailIK2
+    400032: CS.WasteIK
+    400034: Empty
+    400036: //RootNode
+    400038: Plane.003
+    400040: ricin
+    400042: ricin_MeshPart0
+    400044: ricin_MeshPart1
+    400046: ricin_MeshPart2
+    400048: rig
+    400050: rig|BackAnkleIK.L
+    400052: rig|BackAnkleIK.R
+    400054: rig|BackFoot.L
+    400056: rig|BackFoot.R
+    400058: rig|BackfootIK.L
+    400060: rig|BackfootIK.R
+    400062: rig|BackFootTargetIK.L
+    400064: rig|BackFootTargetIK.R
+    400066: rig|BackLegIK1.L
+    400068: rig|BackLegIK1.R
+    400070: rig|BackLegIK2.L
+    400072: rig|BackLegIK2.R
+    400074: rig|BackMidLeg.L
+    400076: rig|BackMidLeg.R
+    400078: rig|BackToe.L
+    400080: rig|BackToe.R
+    400082: rig|BackUpperLeg.L
+    400084: rig|BackUpperLeg.R
+    400086: rig|bc1-1.L
+    400088: rig|bc1-1.R
+    400090: rig|bc1-2.L
+    400092: rig|bc1-2.R
+    400094: rig|bc2-1.L
+    400096: rig|bc2-1.R
+    400098: rig|bc2-2.L
+    400100: rig|bc2-2.R
+    400102: rig|bc3-1.L
+    400104: rig|bc3-1.R
+    400106: rig|bc3-2.L
+    400108: rig|bc3-2.R
+    400110: rig|BlueDriver
+    400112: rig|BodySpike1-1.L
+    400114: rig|BodySpike1-1.R
+    400116: rig|BodySpike1-2.L
+    400118: rig|BodySpike1-2.R
+    400120: rig|BodySpike2--1.L
+    400122: rig|BodySpike2--1.R
+    400124: rig|BodySpike2-2.L
+    400126: rig|BodySpike2-2.R
+    400128: rig|BrightnessDriver
+    400130: rig|Butt
+    400132: rig|Chest
+    400134: rig|ChestIK
+    400136: rig|ColorDriverHolder
+    400138: rig|fc1-1.L
+    400140: rig|fc1-1.R
+    400142: rig|fc1-2.L
+    400144: rig|fc1-2.R
+    400146: rig|fc1-3.L
+    400148: rig|fc1-3.R
+    400150: rig|fc2-1.L
+    400152: rig|fc2-1.R
+    400154: rig|fc2-2.L
+    400156: rig|fc2-2.R
+    400158: rig|fc2-3.L
+    400160: rig|fc2-3.R
+    400162: rig|fc3-1.L
+    400164: rig|fc3-1.R
+    400166: rig|fc3-2.L
+    400168: rig|fc3-2.R
+    400170: rig|fc3-3.L
+    400172: rig|fc3-3.R
+    400174: rig|FrontAnkleIK.L
+    400176: rig|FrontAnkleIK.R
+    400178: rig|FrontFoot.L
+    400180: rig|FrontFoot.R
+    400182: rig|FrontFootIK.L
+    400184: rig|FrontFootIK.R
+    400186: rig|FrontLegKneeIK.L
+    400188: rig|FrontLegKneeIK.R
+    400190: rig|FrontLowerleg.L
+    400192: rig|FrontLowerleg.R
+    400194: rig|FrontToe.L
+    400196: rig|FrontToe.R
+    400198: rig|FrontUpperLeg.L
+    400200: rig|FrontUpperLeg.R
+    400202: rig|GreenDriver
+    400204: rig|Head
+    400206: rig|HeadSpike1-1.L
+    400208: rig|HeadSpike1-1.R
+    400210: rig|HeadSpike1-2.L
+    400212: rig|HeadSpike1-2.R
+    400214: rig|HeadSpike2-1.L
+    400216: rig|HeadSpike2-1.R
+    400218: rig|HeadSpike2-2.L
+    400220: rig|HeadSpike2-2.R
+    400222: rig|jaw
+    400224: rig|Lower torso
+    400226: rig|Lower torsoIK
+    400228: rig|Neck
+    400230: rig|NeckStraight
+    400232: rig|RedDriver
+    400234: rig|Ribs
+    400236: rig|Root
+    400238: rig|Tail1
+    400240: rig|Tail2
+    400242: rig|Tail2IK
+    400244: rig|Tail3
+    400246: rig|Tail4
+    400248: rig|Tail4IK
+    400250: rig|tongue1
+    400252: rig|tongue2
+    400254: rig|tongue3
+    400256: rig|tongue4
+    2300000: CS.BackFoot
+    2300002: CS.BackFootHeel
+    2300004: CS.BackFootToeAll
+    2300006: CS.BackKneeIK1
+    2300008: CS.BackKneeIK2
+    2300010: CS.chestIK
+    2300012: CS.DriverArrow
+    2300014: CS.FrontFoot
+    2300016: CS.frontfootHeel
+    2300018: CS.frontFootToeAll
+    2300020: CS.FrontKneeIK
+    2300022: CS.Head
+    2300024: CS.Jaw
+    2300026: CS.TailIK
+    2300028: CS.TailIK2
+    2300030: CS.WasteIK
+    2300032: Plane.003
+    3300000: CS.BackFoot
+    3300002: CS.BackFootHeel
+    3300004: CS.BackFootToeAll
+    3300006: CS.BackKneeIK1
+    3300008: CS.BackKneeIK2
+    3300010: CS.chestIK
+    3300012: CS.DriverArrow
+    3300014: CS.FrontFoot
+    3300016: CS.frontfootHeel
+    3300018: CS.frontFootToeAll
+    3300020: CS.FrontKneeIK
+    3300022: CS.Head
+    3300024: CS.Jaw
+    3300026: CS.TailIK
+    3300028: CS.TailIK2
+    3300030: CS.WasteIK
+    3300032: Plane.003
+    4300000: CS.DriverArrow
+    4300002: CS.frontfootHeel
+    4300004: CS.frontFootToeAll
+    4300006: CS.BackFootToeAll
+    4300008: CS.BackFootHeel
+    4300010: CS.chestIK
+    4300012: CS.WasteIK
+    4300014: CS.TailIK2
+    4300016: CS.TailIK
+    4300018: CS.BackKneeIK2
+    4300020: CS.BackKneeIK1
+    4300022: CS.FrontKneeIK
+    4300024: CS.FrontFoot
+    4300026: CS.BackFoot
+    4300028: Plane.003
+    4300030: CS.Head
+    4300032: CS.Jaw
+    4300034: ricin_MeshPart0
+    4300036: ricin_MeshPart1
+    4300038: ricin_MeshPart2
+    7400000: idle
+    7400002: walk
+    7400004: crouch
+    7400006: pounce
+    7400008: swipe
+    7400010: death
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: ricin_MeshPart0
+    13700002: ricin_MeshPart1
+    13700004: ricin_MeshPart2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: rig|rigAction.001
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: walk
+      takeName: rig|rigAction.001
+      firstFrame: 60
+      lastFrame: 98
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crouch
+      takeName: rig|rigAction.001
+      firstFrame: 100
+      lastFrame: 130
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: pounce
+      takeName: rig|rigAction.001
+      firstFrame: 130
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: swipe
+      takeName: rig|rigAction.001
+      firstFrame: 200
+      lastFrame: 230
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: rig|rigAction.001
+      firstFrame: 230
+      lastFrame: 244
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: CS.BackFoot
+        weight: 1
+      - path: CS.BackFootHeel
+        weight: 1
+      - path: CS.BackFootToeAll
+        weight: 1
+      - path: CS.BackKneeIK1
+        weight: 1
+      - path: CS.BackKneeIK2
+        weight: 1
+      - path: CS.chestIK
+        weight: 1
+      - path: CS.DriverArrow
+        weight: 1
+      - path: CS.FrontFoot
+        weight: 1
+      - path: CS.frontfootHeel
+        weight: 1
+      - path: CS.frontFootToeAll
+        weight: 1
+      - path: CS.FrontKneeIK
+        weight: 1
+      - path: CS.Head
+        weight: 1
+      - path: CS.Jaw
+        weight: 1
+      - path: CS.TailIK
+        weight: 1
+      - path: CS.TailIK2
+        weight: 1
+      - path: CS.WasteIK
+        weight: 1
+      - path: Empty
+        weight: 1
+      - path: Plane.003
+        weight: 1
+      - path: ricin
+        weight: 1
+      - path: ricin/ricin_MeshPart0
+        weight: 1
+      - path: ricin/ricin_MeshPart1
+        weight: 1
+      - path: ricin/ricin_MeshPart2
+        weight: 1
+      - path: rig
+        weight: 1
+      - path: rig/rig|NeckStraight
+        weight: 1
+      - path: rig/rig|Root
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc1-1.L/rig|bc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc2-1.L/rig|bc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.L/rig|BackFoot.L/rig|BackToe.L/rig|bc3-1.L/rig|bc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc1-1.R/rig|bc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc2-1.R/rig|bc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackfootIK.R/rig|BackFoot.R/rig|BackToe.R/rig|bc3-1.R/rig|bc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK1.R
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.L
+        weight: 1
+      - path: rig/rig|Root/rig|BackLegIK2.R
+        weight: 1
+      - path: rig/rig|Root/rig|ChestIK
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BlueDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|BrightnessDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|GreenDriver
+        weight: 1
+      - path: rig/rig|Root/rig|ColorDriverHolder/rig|RedDriver
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontAnkleIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc1-1.L/rig|fc1-2.L/rig|fc1-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc2-1.L/rig|fc2-2.L/rig|fc2-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.L/rig|FrontFoot.L/rig|FrontToe.L/rig|fc3-1.L/rig|fc3-2.L/rig|fc3-3.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontAnkleIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc1-1.R/rig|fc1-2.R/rig|fc1-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc2-1.R/rig|fc2-2.R/rig|fc2-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontFootIK.R/rig|FrontFoot.R/rig|FrontToe.R/rig|fc3-1.R/rig|fc3-2.R/rig|fc3-3.R
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|FrontLegKneeIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.L/rig|BackMidLeg.L/rig|BackFootTargetIK.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BackUpperLeg.R/rig|BackMidLeg.R/rig|BackFootTargetIK.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.L/rig|BodySpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|BodySpike2--1.R/rig|BodySpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Butt/rig|Tail1/rig|Tail2/rig|Tail3/rig|Tail4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.L/rig|BodySpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|BodySpike1-1.R/rig|BodySpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.L/rig|HeadSpike1-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike1-1.R/rig|HeadSpike1-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.L/rig|HeadSpike2-2.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|HeadSpike2-1.R/rig|HeadSpike2-2.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|Chest/rig|Neck/rig|Head/rig|jaw/rig|tongue1/rig|tongue2/rig|tongue3/rig|tongue4
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.L/rig|FrontLowerleg.L
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Lower torsoIK/rig|Lower torso/rig|Ribs/rig|FrontUpperLeg.R/rig|FrontLowerleg.R
+        weight: 1
+      - path: rig/rig|Root/rig|Tail2IK
+        weight: 1
+      - path: rig/rig|Root/rig|Tail4IK
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .400000006
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
