@@ -75,19 +75,9 @@ public abstract class BasicAI : Hittable
     public abstract void setBaseStats(); //called at START, what base stats should i have
     public abstract void setLoot(); //called at START; what loot should i have
     public abstract void checkStateConditions(); //how to pick my next state
-    public abstract void notifyHostileDetected(); //what to do when an ally notifies me to be hostile
-    public abstract void alertDamage(); //what to do when i get damaged
     public abstract void onDeath(); //what to do when i die
     public abstract void becomeAggressive(); //called when they get hit (tell them to become hostile)
-
-    public void notifyAllies()
-    {
-        foreach (GameObject ally in Allies)
-        {
-            if (ally.activeSelf) ally.SendMessage("notifyHostileEncountered", SendMessageOptions.DontRequireReceiver);
-        }
-    }
-
+    
     public string stateName;
     // Update is called once per frame
     protected void Update()

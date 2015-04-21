@@ -917,7 +917,7 @@ ModelImporter:
       takeName: rig|rigAction.001
       firstFrame: 100
       lastFrame: 130
-      wrapMode: 0
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -1201,7 +1201,7 @@ ModelImporter:
       takeName: rig|rigAction.001
       firstFrame: 130
       lastFrame: 200
-      wrapMode: 0
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -1485,7 +1485,7 @@ ModelImporter:
       takeName: rig|rigAction.001
       firstFrame: 200
       lastFrame: 230
-      wrapMode: 0
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -1769,7 +1769,7 @@ ModelImporter:
       takeName: rig|rigAction.001
       firstFrame: 230
       lastFrame: 244
-      wrapMode: 0
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -2051,7 +2051,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .400000006
+    globalScale: .300000012
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

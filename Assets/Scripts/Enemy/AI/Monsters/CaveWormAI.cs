@@ -14,8 +14,6 @@ public class CaveWormAI : BasicAI {
 	AIState chasing;
 	AIState dead;
 	
-	public int CurrentDest = 1;
-	
 	const float IDLE_TIME = 10.0f;
 	const float WANDER_TIME = 15.0f;
 	const float SEARCH_TIME = 30.0f;
@@ -86,26 +84,7 @@ public class CaveWormAI : BasicAI {
 		loot.Add ("Scroll of FlameArrow");
 		loot.Add ("Health Potion");
 	}
-
-	/// <summary>
-	/// Called by ALLIES when they detect a hostile. Turns all allies hostile.
-	/// </summary>
-	public override void notifyHostileDetected(){
-		if(!state.Equals(chasing)){
-			setState(chasing);
-			Debug.Log("I was notified by a friend.");
-		}
-	}
-
-	/// <summary>
-	/// Called when getHit; for caveworm, just sets hostile
-	/// </summary>
-	public override void alertDamage(){
-		if(!state.Equals(chasing)){
-			setState(chasing);
-		}
-	}
-
+    
 	/// <summary>
 	/// anything that happens on death unique to the subclass. Death animation defined here.
 	/// </summary>
@@ -139,7 +118,7 @@ public class CaveWormAI : BasicAI {
 					setState (chasing);
 			} else if (state.stateTime >= WANDER_TIME) {
 					setState (idleState);
-			} else if (closeEnough (((WanderingState)state).wanderDestination, 2.1f)) {
+			} else if (closeEnough (((WanderingState)state).randomPoint, 2.1f)) {
 					setState (idleState);
 			}
 		} 
@@ -159,13 +138,9 @@ public class CaveWormAI : BasicAI {
 			}
 		}
 	}
-
-	bool inRange(){//make sure angle is good
-		if (!visualSensor.sensesObject(target)) return false;
-		Vector3 distance = transform.position - target.transform.position;
-		return (baseAttackRange <= distance.magnitude);
-	}
-
+    
+    ///!!!STATES!!!
+    ///
 
 	//idle state
 	public class IdleState : AIState {
@@ -189,8 +164,6 @@ public class CaveWormAI : BasicAI {
 	
 	//wandering state
 	public class WanderingState : AIState {
-		public Vector3 wanderDestination;
-		public const float WANDER_RANGE = 5.0f;
 		public Vector3 randomPoint;
 		
 		public WanderingState(BasicAI ai) : base(ai, "Walk", 0.5f){
@@ -242,18 +215,19 @@ public class CaveWormAI : BasicAI {
 		{
 			if(!executedThisCycle){
 				executedThisCycle = true;
-				ai.notifyAllies();
-				Debug.Log("Trying to notify allies");
 			}
 		}
 	}
 	
 	//attacking state
 	public class AttackingState : AIState {
-				
-		Weapon w = new Weapon(0,0,null,"Claws", ai.statistics.PhysicalDamage, ai.statistics.AttackSpeed);
 
-		public AttackingState(BasicAI ai) : base(ai, "Attack", 1){
+        Weapon w;
+
+        public AttackingState(BasicAI ai)
+            : base(ai, "Attack", ai.statistics.AttackSpeed)
+        {
+            w = new Weapon(0, 0, null, "Claws", ai.statistics.PhysicalDamage, ai.statistics.AttackSpeed);
 			Weapon.WeaponPropertyBundle clawProperties = new Weapon.WeaponPropertyBundle(Item.ItemPropertyBundle.Rarity.Common, ai.statistics.Level);
 			//w.baseDamage += ai.statistics
 			//Debug.Log("Damage = "+ai.statistics.PhysicalDamage);

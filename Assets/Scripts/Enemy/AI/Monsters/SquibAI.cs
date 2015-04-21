@@ -8,8 +8,6 @@ public class SquibAI : BasicAI {
 	AIState chasing;
 	AIState dead;
 	
-	public int CurrentDest = 1;
-
 	float becomeAgressiveChance = 0.001f;
 
 	const float WANDER_TIME = 5.0f;
@@ -75,26 +73,7 @@ public class SquibAI : BasicAI {
 		loot.Add ("Scroll of FlameArrow");
 		loot.Add ("Health Potion");
 	}
-	
-	/// <summary>
-	/// Called by ALLIES when they detect a hostile. Turns all allies hostile.
-	/// </summary>
-	public override void notifyHostileDetected(){
-		if(!state.Equals(chasing)){
-			setState(chasing);
-			Debug.Log("I was notified by a friend.");
-		}
-	}
-	
-	/// <summary>
-	/// Called when getHit; for caveworm, just sets hostile
-	/// </summary>
-	public override void alertDamage(){
-		if(!state.Equals(chasing)){
-			setState(chasing);
-		}
-	}
-	
+
 	/// <summary>
 	/// anything that happens on death unique to the subclass. Death animation defined here.
 	/// </summary>
@@ -121,7 +100,9 @@ public class SquibAI : BasicAI {
 		if (state.Equals (wanderState)) {
 			if (detectPlayer () && Random.Range(0.0f,1.1f)<= becomeAgressiveChance) {
 				setState (chasing);
-			} else if (closeEnough (((WanderingState)state).wanderDestination, 2.1f) || state.stateTime >= WANDER_TIME) {
+            }
+            else if (closeEnough(((WanderingState)state).randomPoint, 2.1f) || state.stateTime >= WANDER_TIME)
+            {
 				setState (wanderState);
 			}
 		} 
@@ -164,8 +145,6 @@ public class SquibAI : BasicAI {
 	
 	//wandering state
 	public class WanderingState : AIState {
-		public Vector3 wanderDestination;
-		public const float WANDER_RANGE = 5.0f;
 		public Vector3 randomPoint;
 		
 		public WanderingState(BasicAI ai) : base(ai, "Floating", 0.5f){
@@ -217,18 +196,17 @@ public class SquibAI : BasicAI {
 		{
 			if(!executedThisCycle){
 				executedThisCycle = true;
-				ai.notifyAllies();
-//				Debug.Log("Trying to notify allies");
 			}
 		}
 	}
 	
 	//attacking state
 	public class AttackingState : AIState {
-		
-		Weapon w = new Weapon(0,0,null,"Claws",  ai.statistics.PhysicalDamage, ai.statistics.AttackSpeed);
+
+        Weapon w;
 		
 		public AttackingState(BasicAI ai) : base(ai, "Attack", ai.statistics.AttackSpeed){
+            w = new Weapon(0,0,null,"Claws", ai.statistics.PhysicalDamage, ai.statistics.AttackSpeed);
 			Weapon.WeaponPropertyBundle clawProperties = new Weapon.WeaponPropertyBundle(Item.ItemPropertyBundle.Rarity.Common, ai.statistics.Level);
 			clawProperties.bonusAttackSpeed = ai.statistics.AttackSpeed;
 			clawProperties.fireDamage = ai.statistics.FireDamage;
