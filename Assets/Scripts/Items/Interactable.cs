@@ -27,7 +27,14 @@ public class Interactable : MonoBehaviour {
 			if(GetComponentInChildren<MeshRenderer>() != null)
 				renderObject = GetComponentInChildren<MeshRenderer>().gameObject;
 			else{
-				renderObject = GetComponentInChildren<SkinnedMeshRenderer>().gameObject;
+                if (GetComponentInChildren<SkinnedMeshRenderer>() != null)
+                {
+                    renderObject = GetComponentInChildren<SkinnedMeshRenderer>().gameObject;
+                }
+                else if (renderObject == null)
+                {
+                    renderObject = gameObject.AddComponent<SkinnedMeshRenderer>().gameObject;
+                }
 			}
 //			Debug.Log(renderObject.name+" found");
 		}
