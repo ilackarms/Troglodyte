@@ -185,6 +185,7 @@
      <Compile Include="Assets\Scripts\Enemy\AI\DetectMe.cs" />
      <Compile Include="Assets\Scripts\Enemy\AI\Monsters\CaveWormAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\AI\Monsters\Claw.cs" />
+     <Compile Include="Assets\Scripts\Enemy\AI\Monsters\GoblinBowAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\AI\Monsters\GoblinMaceAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\AI\Monsters\LeaperAI.cs" />
      <Compile Include="Assets\Scripts\Enemy\AI\Monsters\SquibAI.cs" />

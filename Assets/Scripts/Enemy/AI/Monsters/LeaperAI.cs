@@ -417,7 +417,7 @@ public class LeaperAI : BasicAI {
             if (!executedThisCycle)
             {
                 //JUMP!
-                float jumpSpeed = 12.5f;
+                float jumpSpeed = 8.5f;
                 Vector3 jumpDirection = (ai.target.transform.position - ai.transform.position).normalized;                
                 jumpDirection.y = 2; //jump height
                 ((LeaperAI)ai).pounceVector = jumpDirection * jumpSpeed;
