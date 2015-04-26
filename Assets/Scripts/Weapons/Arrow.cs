@@ -28,7 +28,7 @@ public class Arrow : WeaponCollision{
 			if (attacking){				
 				RaycastHit hit;
 				if(Physics.Raycast(transform.position, transform.forward, out hit)){
-					Debug.Log("Point of contact :" + hit.point);
+					//Debug.Log("Point of contact :" + hit.point);
 				}
 				//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
 				//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "bleed", hit, SendMessageOptions.DontRequireReceiver);

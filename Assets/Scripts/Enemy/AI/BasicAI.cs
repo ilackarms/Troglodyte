@@ -191,9 +191,12 @@ public abstract class BasicAI : Hittable
     /// <param name="target">Target.</param>
     public void RotateTowards(Transform target)
     {
-        Vector3 direction = (target.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime);
+        //OLD way:
+        //Vector3 direction = (target.position - transform.position).normalized;
+        //Quaternion lookRotation = Quaternion.LookRotation(direction);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime);
+
+        transform.LookAt(target);
     }
 
 
