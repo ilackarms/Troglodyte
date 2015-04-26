@@ -35,7 +35,7 @@ public class WeaponCollision : MonoBehaviour {
 			RaycastHit hit;
 			if(Physics.Raycast(transform.position, transform.forward, out hit))
 			{
-				Debug.Log("Point of contact :" + hit.point);
+				//Debug.Log("Point of contact :" + hit.point);
 			}
 			//CustomSendMessage<Hittable>.SendMessageUpwards(other.transform, "GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);
 			other.transform.SendMessageUpwards("GetHit", new DamageBundle(weapon, parent, hit), SendMessageOptions.DontRequireReceiver);

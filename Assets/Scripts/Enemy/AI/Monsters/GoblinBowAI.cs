@@ -160,12 +160,12 @@ public class GoblinBowAI : BasicAI
     //Fire Arrow!
     public void fireArrow(Weapon weapon){
         float speed = 10.0f;
-        GameObject arrow = (GameObject) MonoBehaviour.Instantiate(Global.LoadArrow, transform.position + transform.forward.normalized * 1.5f + new Vector3(0, transform.lossyScale.y,0) * 1.4f, transform.rotation);
+        GameObject arrow = (GameObject) MonoBehaviour.Instantiate(Global.LoadArrow, transform.position + transform.forward.normalized * 2.0f + new Vector3(0, transform.lossyScale.y,0) * 1.4f, transform.rotation);
         arrow.transform.Rotate(Vector3.up, 90);
         arrow.SetActive(true);
         arrow.layer = 0;
         Rigidbody cloneRigidBody = arrow.AddComponent<Rigidbody>();
-		cloneRigidBody.velocity = transform.forward * speed;
+		cloneRigidBody.velocity = (target.transform.position + Vector3.up- transform.position).normalized * speed;
 		Arrow arrowCollision = arrow.AddComponent<Arrow>();
 		arrowCollision.weapon = weapon;
 		arrowCollision.parent = this.gameObject;

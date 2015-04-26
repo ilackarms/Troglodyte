@@ -191,12 +191,17 @@ public abstract class BasicAI : Hittable
     /// <param name="target">Target.</param>
     public void RotateTowards(Transform target)
     {
-        //OLD way:
-        //Vector3 direction = (target.position - transform.position).normalized;
-        //Quaternion lookRotation = Quaternion.LookRotation(direction);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime);
+        //rotate on x/z axis only
+        Vector3 lookAtPos = target.position;
+        //first get a position relative to object
+        Vector3 lookAtPosLocalised = transform.InverseTransformPoint(target.position);
+        //offset it
+        lookAtPosLocalised.y = 0f; //replace zero with any offset needed
+        //convert localised position back
+        lookAtPos = gameObject.transform.TransformPoint(lookAtPosLocalised);
+        transform.LookAt(lookAtPos);
 
-        transform.LookAt(target);
+        //transform.LookAt(target);
     }
 
 
